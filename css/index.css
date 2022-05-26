@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: Pretendard;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #777777;
+}
+
+a:hover {
+  color: #777777;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.1rem;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+ul, li {
+  list-style: none;
+  list-style-position: inside;
+}
+
+body {
+  background-color: #2f2e2d;
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-sans;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: $color-a;
+    &:hover {
+        color: $color-grey;
+    }
+}
+
+h1 {
+    font: {
+        size: 3rem;
+        weight: 600;
+    }
+}
+
+h2 {
+    font: {
+        size: 1.8rem;
+        weight: 400;
+    }
+}
+
+h3 {
+    font: {
+        size: 1.5rem;
+        weight: 600;
+    }
+}
+
+h4 {
+    font: {
+        size: 1.1rem;
+    }
+}
+
+// h5 {
+//     font: {
+//         size: 0.8rem;
+//     }
+// }
+
+p {
+    font: {
+        size: 1.1rem;
+    }
+    line-height: 1.4rem;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+ul, li {
+    list-style: none;
+    list-style-position: inside;
+}
