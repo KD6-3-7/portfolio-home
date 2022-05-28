@@ -11,9 +11,10 @@ body {
 a {
     display: block;
     text-decoration: none;
-    color: $color-a;
+    color: $color-grey;
+
     &:hover {
-        color: $color-grey;
+        color: $color-black;
     }
 }
 

@@ -18,7 +18,7 @@ a {
 }
 
 a:hover {
-  color: #777777;
+  color: #231f20;
 }
 
 h1 {
@@ -57,5 +57,371 @@ ul, li {
 
 body {
   background-color: #2f2e2d;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+body div.dotted-border {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  margin: 10px;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23777777FF' stroke-width='1' stroke-dasharray='100%2c 2%2c 30%2c 2%2c 1%2c 2' stroke-dashoffset='70' stroke-linecap='butt'/%3e%3c/svg%3e");
+  z-index: -1;
+}
+
+@media screen and (min-width: 1320px) {
+  body {
+    max-width: 1320px;
+    padding: 0;
+  }
+}
+
+body section#intro div.flexbox {
+  width: 100%;
+  height: 100vh;
+  padding: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body section#intro div.flexbox div.compass {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  body section#intro div.flexbox div.compass {
+    width: 65%;
+  }
+}
+
+@media screen and (min-width: 1320px) {
+  body section#intro div.flexbox div.compass {
+    width: 40%;
+  }
+}
+
+body section#intro div.flexbox div.compass svg circle, body section#intro div.flexbox div.compass svg polygon, body section#intro div.flexbox div.compass svg line {
+  stroke: #f4b322;
+  stroke-miterlimit: 10;
+  fill-opacity: 0;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-name: draw-line;
+          animation-name: draw-line;
+}
+
+@-webkit-keyframes draw-line {
+  to {
+    stroke-dashOffset: 0;
+    fill-opacity: 1;
+    stroke-opacity: 1;
+  }
+}
+
+@keyframes draw-line {
+  to {
+    stroke-dashOffset: 0;
+    fill-opacity: 1;
+    stroke-opacity: 1;
+  }
+}
+
+body section#intro div.flexbox div.compass svg circle, body section#intro div.flexbox div.compass svg line, body section#intro div.flexbox div.compass svg .box {
+  fill: none;
+}
+
+body section#intro div.flexbox div.compass svg .star {
+  fill: #2f2e2d;
+}
+
+body section#intro div.flexbox div.compass svg .scale {
+  stroke-opacity: 0;
+  stroke-width: 20px;
+  stroke-dashArray: 0.99 29.74;
+}
+
+body section#intro div.flexbox div.compass svg .small-circle {
+  stroke-dashArray: 1260;
+  stroke-dashoffset: 1260;
+}
+
+body section#intro div.flexbox div.compass svg .big-circle {
+  stroke-dashArray: 1570;
+  stroke-dashoffset: 1570;
+}
+
+body section#intro div.flexbox div.compass svg .small-star {
+  stroke-dashArray: 1810;
+  stroke-dashoffset: 1810;
+}
+
+body section#intro div.flexbox div.compass svg .big-star {
+  stroke-dashArray: 2370;
+  stroke-dashoffset: 2370;
+}
+
+body section#intro div.flexbox div.compass svg .short {
+  stroke-dashArray: 520;
+  stroke-dashoffset: 520;
+}
+
+body section#intro div.flexbox div.compass svg .long {
+  stroke-dashArray: 680;
+  stroke-dashoffset: 680;
+}
+
+body section#intro div.flexbox div.compass svg .box {
+  stroke-dashArray: 570;
+  stroke-dashoffset: 570;
+}
+
+body section#intro div.flexbox div.compass svg g {
+  -webkit-animation-duration: 60s;
+          animation-duration: 60s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-delay: 3.7s;
+          animation-delay: 3.7s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
+body section#intro div.flexbox div.compass svg g#Layer_circle {
+  -webkit-animation-name: rotate-compass2;
+          animation-name: rotate-compass2;
+}
+
+@-webkit-keyframes rotate-compass2 {
+  to {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@keyframes rotate-compass2 {
+  to {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+body section#intro div.flexbox div.compass svg g#Layer_star {
+  -webkit-animation-name: rotate-compass1;
+          animation-name: rotate-compass1;
+}
+
+@-webkit-keyframes rotate-compass1 {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-compass1 {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+body section#intro div.flexbox .animate-fade {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-name: fade-in;
+          animation-name: fade-in;
+}
+
+@-webkit-keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+body section#intro div.flexbox a {
+  font-family: "Noto Serif KR", serif;
+  font-size: 1.5rem;
+  font-weight: 200;
+  margin: 5vh 0;
+  text-align: center;
+  color: #f2ece4;
+  letter-spacing: 1.3vw;
+  margin-right: -1.3vw;
+  opacity: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(60%, transparent), color-stop(40%, #f4b322));
+  background-image: linear-gradient(transparent 60%, #f4b322 40%);
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  -webkit-transition: background-size 0.8s;
+  transition: background-size 0.8s;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  body section#intro div.flexbox a {
+    font-size: 2.2rem;
+    letter-spacing: 8px;
+    margin-right: -8px;
+  }
+}
+
+body section#intro div.flexbox a:hover {
+  background-size: calc(100% - 1.3vw) 100%;
+}
+
+@media screen and (min-width: 768px) {
+  body section#intro div.flexbox a:hover {
+    background-size: calc(100% - 8px) 100%;
+  }
+}
+
+body section#intro div.flexbox h1.text-flexbox {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  line-height: 1.4em;
+  color: #f2ece4;
+  opacity: 0;
+  font-size: 1rem;
+  font-weight: 100;
+}
+
+@media screen and (min-width: 768px) {
+  body section#intro div.flexbox h1.text-flexbox {
+    font-size: 1.3rem;
+  }
+}
+
+body section#intro div.flexbox h1.text-flexbox div.text {
+  word-break: keep-all;
+}
+
+body section#intro div.flexbox h1.text-flexbox div.text:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body section#intro div.flexbox h1.text-flexbox div.lettering {
+  position: relative;
+  width: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  body section#intro div.flexbox h1.text-flexbox div.lettering {
+    width: 40px;
+  }
+}
+
+body section#intro div.flexbox h1.text-flexbox div.lettering span {
+  -webkit-animation: clock 15s linear infinite;
+          animation: clock 15s linear infinite;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  opacity: 0;
+  font-weight: 400;
+  color: #f4b322;
+}
+
+body section#intro div.flexbox h1.text-flexbox div.lettering span:nth-child(2) {
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+
+body section#intro div.flexbox h1.text-flexbox div.lettering span:last-child {
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
+}
+
+@-webkit-keyframes clock {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes clock {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 /*# sourceMappingURL=index.css.map */

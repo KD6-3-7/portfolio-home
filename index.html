@@ -9,28 +9,47 @@
     <script src="./js/index.js"></script>
     <title>Welcome to my Universe</title>
 </head>
-<body>    
+<body>
+    <div class="dotted-border"></div> <!-- dotted-border -->
     <main>
         <section id="intro">
-            <div id="tsParticles">
+            <div class="flexbox">
                 <div class="compass">
-                    <img src="./images/compass.svg" alt="compass">
-                </div>
-                <h1>안녕하세요, 김희주의 <span>공간</span><span>세계</span><span>우주</span>에 오신 것을 환영합니다.</h1>
-            </div> <!-- tsparticles -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 686.15 686.15">
+                        <g id="Layer_circle">
+                            <circle class="small-circle circle" cx="343.08" cy="343.08" r="200"/>
+                            <circle class="big-circle circle" cx="343.08" cy="343.08" r="250"/>
+                            <circle class="scale" cx="343.08" cy="343.08" r="225"/>
+                        </g> <!-- Layer_circle -->
+                        <g id="Layer_star">
+                            <polygon class="small-star star" points="343.08 291.03 527.08 159.08 395.12 343.08 527.08 527.08 343.08 395.12 159.08 527.08 291.03 343.08 159.08 159.08 343.08 291.03"/>
+                            <polygon class="big-star star" points="294.99 294.99 343.08 3.08 391.16 294.99 683.08 343.08 391.16 391.16 343.08 683.08 294.99 391.16 3.08 343.08 294.99 294.99"/>
+                            <line class="short line" x1="159.08" y1="159.08" x2="527.08" y2="527.08"/>
+                            <line class="short line" x1="159.08" y1="527.08" x2="527.08" y2="159.08"/>
+                            <line class="long line" x1="343.08" y1="2.58" x2="343.08" y2="683.58"/>
+                            <line class="long line" x1="2.58" y1="343.08" x2="683.58" y2="343.08"/>
+                            <polygon class="box" points="385.58 260.58 300.58 260.58 260.58 300.58 260.58 385.58 300.58 425.58 385.58 425.58 425.58 385.58 425.58 300.58 385.58 260.58"/>
+                        </g> <!-- Layer_star -->
+                    </svg>
+                </div> <!-- compass -->
+                <a href="./main.html" class="animate-fade">WELCOME ABOARD</a>
+                <h1 class="text-flexbox animate-fade">
+                    <div class="text">
+                        안녕하세요, 프론트엔드 개발자를 꿈꾸는 김희주입니다.
+                    </div>
+                    <div class="text">
+                        목표를 향한 작은 걸음들을 모아 기록했습니다.
+                    </div>
+                    <div class="text">
+                        저의&nbsp;
+                        <div class="lettering">
+                            <span>우주</span><span>공간</span><span>세계</span>
+                        </div> <!-- lettering -->
+                        에 오신 것을 환영합니다.
+                    </div>
+                </h1> <!-- text-flexbox -->
+            </div> <!-- flexbox -->
         </section> <!-- intro -->
     </main>
-    
-    <footer>
-        <div class="logo">
-            <img src="./images/logo.svg" alt="logo">
-        </div>
-        <p>Page created by H. Kim</p>
-        <div class="icons-flexbox">
-            <button type="button"><img src="./images/phone.svg" alt="phone"></button>
-            <button type="button"><img src="./images/kakaotalk.svg" alt="kakaotalk"></button>
-            <button type="button"><img src="./images/github.svg" alt="github"></button>
-        </div> <!-- icons-flexbox -->
-    </footer>
 </body>
 </html>

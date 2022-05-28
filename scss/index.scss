@@ -1,6 +1,271 @@
 @import "./_style.scss";
 @import "./_common.scss";
+@import "./_mixin.scss";
 
 body {
     background-color: $color-intro;
-}
+
+    div.dotted-border {
+        @include dotted-border();
+    }
+
+    @include wrapper();
+    
+    // main > intro
+    section#intro {
+        div.flexbox {
+            width: 100%;
+            height: 100vh;
+            padding: 5%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            div.compass {
+                width: 100%;
+
+                @include responsive(tablet-size) {
+                    width: 65%;
+                }
+
+                @include responsive(pc-size) {
+                    width: 40%;
+                }
+
+                svg {
+                    circle, polygon, line {
+                        stroke: $color-yellow;
+                        stroke-miterlimit: 10;
+                        fill-opacity: 0;
+
+                        animation-duration: 4s;
+                        animation-timing-function: ease-in-out;
+                        animation-fill-mode: forwards;
+                        animation-name: draw-line;
+
+                        @keyframes draw-line {
+                            to {
+                                stroke-dashOffset: 0;
+                                fill-opacity: 1;
+                                stroke-opacity: 1;
+                            }
+                        }
+                    }
+                    
+                    circle, line, .box {
+                        fill: none;
+                    }
+                    
+                    .star {
+                        fill: $color-intro;
+                    }
+
+                    .scale {
+                        stroke-opacity: 0;
+                        stroke-width: 20px;
+                        stroke-dashArray: 0.99 29.74;
+                    }
+
+                    // draw line
+                    .small-circle {
+                        stroke-dashArray: 1260;
+                        stroke-dashoffset: 1260;
+                    }
+
+                    .big-circle {
+                        stroke-dashArray: 1570;
+                        stroke-dashoffset: 1570;
+                    }
+
+                    .small-star {
+                        stroke-dashArray: 1810;
+                        stroke-dashoffset: 1810;
+                    }
+
+                    .big-star {
+                        stroke-dashArray: 2370;
+                        stroke-dashoffset: 2370;
+                    }
+
+                    .short {
+                        stroke-dashArray: 520;
+                        stroke-dashoffset: 520;
+                    }
+
+                    .long {
+                        stroke-dashArray: 680;
+                        stroke-dashoffset: 680;
+                    }
+
+                    .box {
+                        stroke-dashArray: 570;
+                        stroke-dashoffset: 570;
+                    }
+                    
+                    g {
+                        animation-duration: 60s;
+                        animation-timing-function: linear;
+                        animation-delay: 3.7s;
+                        animation-iteration-count: infinite;
+                        transform-origin: 50% 50%;
+                        
+                        &#Layer_circle {
+                            animation-name: rotate-compass2;
+                            
+                            @keyframes rotate-compass2 {
+                                to {
+                                    transform: rotate(-360deg);
+                                }
+                            }
+                        }
+
+                        &#Layer_star {
+                            animation-name: rotate-compass1;
+            
+                            @keyframes rotate-compass1 {
+                                to {
+                                    transform: rotate(360deg);
+                                }
+                            }
+                        }
+                    }
+                } // svg
+            } // compass
+            
+            .animate-fade {
+                animation-duration: 2s;
+                animation-timing-function: linear;
+                animation-delay: 4s;
+                animation-fill-mode: forwards;
+                animation-name: fade-in;
+
+                @keyframes fade-in {
+                    to {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            a {
+                font: {
+                    family: $font-serif;
+                    size: 1.5rem;
+                    weight: 200;
+                }
+
+                margin: 5vh 0;
+                text-align: center;
+                color: $color-main;
+                letter-spacing: 1.3vw;
+                margin-right: -1.3vw; // 마지막 글자의 letter-spacing 제거
+                opacity: 0;
+
+                // 마우스 호버 시 밑줄
+                background-image: linear-gradient(transparent 60%, $color-yellow 40%);
+                background-repeat: no-repeat;
+                background-size: 0% 100%;
+                transition: background-size 0.8s;
+                cursor: pointer;
+                
+                @include responsive(tablet-size) {
+                    font-size: 2.2rem;
+                    letter-spacing: 8px;
+                    margin-right: -8px; // 마지막 글자의 letter-spacing 제거
+                }
+
+                &:hover {
+                    background-size: calc(100% - 1.3vw) 100%;
+
+                    @include responsive(tablet-size) {
+                        background-size: calc(100% - 8px) 100%;
+                    }
+                }
+            } // a
+
+            h1.text-flexbox {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                line-height: 1.4em;
+                color: $color-main;
+                opacity: 0;
+                
+                font: {
+                    size: 1rem;
+                    weight: 100;
+                }
+
+                @include responsive(tablet-size) {
+                    font-size: 1.3rem;
+                }
+                
+                div.text {
+                    word-break: keep-all;
+
+                    &:last-child {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                    }
+                }
+
+                div.lettering {
+                    position: relative;
+                    width: 30px;
+
+                    @include responsive(tablet-size) {
+                        width: 40px;
+                    }
+                    
+                    span {
+                        animation: clock 15s linear infinite;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        opacity: 0;
+                        font-weight: 400;
+                        color: $color-yellow;
+
+                        &:nth-child(2) {
+                            animation-delay: 5s;
+                        }
+
+                        &:last-child {
+                            animation-delay: 10s;
+                        }
+
+                        @keyframes clock {
+                            0% {
+                                opacity: 0;
+                            }
+
+                            10% {
+                                opacity: 1;
+                            }
+
+                            25% {
+                                opacity: 1;
+                            }
+
+                            30% {
+                                opacity: 0;
+                            }
+
+                            80% {
+                                opacity: 0;
+                            }
+
+                            100% {
+                                opacity: 0;
+                            }
+                        }
+                    } // span
+                } // lettering
+            } // text-flexbox
+        } // flexbox
+    } // intro
+} // body

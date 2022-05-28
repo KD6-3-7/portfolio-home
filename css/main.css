@@ -14,7 +14,7 @@ body {
 a {
   display: block;
   text-decoration: none;
-  color: #777777;
+  color: #fcfbfa;
 }
 
 a:hover {
@@ -57,5 +57,27 @@ ul, li {
 
 body {
   background-color: #f2ece4;
+}
+
+body footer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body footer div#logo {
+  width: 10%;
+}
+
+body footer p {
+  color: #f2ece4;
 }
 /*# sourceMappingURL=main.css.map */
