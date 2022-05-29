@@ -10,6 +10,7 @@ body {
     }
 
     @include wrapper();
+    max-width: $break-pc;
     
     // main > intro
     section#intro {
@@ -36,6 +37,7 @@ body {
                 svg {
                     circle, polygon, line {
                         stroke: $color-yellow;
+                        stroke-width: 1.5;
                         stroke-miterlimit: 10;
                         fill-opacity: 0;
 

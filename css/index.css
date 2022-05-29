@@ -27,8 +27,8 @@ h1 {
 }
 
 h2 {
-  font-size: 1.8rem;
-  font-weight: 400;
+  font-size: 2rem;
+  font-weight: 900;
 }
 
 h3 {
@@ -41,8 +41,9 @@ h4 {
 }
 
 p {
-  font-size: 1.1rem;
-  line-height: 1.4rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1rem;
 }
 
 img {
@@ -60,6 +61,7 @@ body {
   width: 100%;
   margin: 0 auto;
   padding: 0 5%;
+  max-width: 1320px;
 }
 
 body div.dotted-border {
@@ -75,8 +77,7 @@ body div.dotted-border {
 
 @media screen and (min-width: 1320px) {
   body {
-    max-width: 1320px;
-    padding: 0;
+    padding: 0 20px;
   }
 }
 
@@ -117,6 +118,7 @@ body section#intro div.flexbox div.compass {
 
 body section#intro div.flexbox div.compass svg circle, body section#intro div.flexbox div.compass svg polygon, body section#intro div.flexbox div.compass svg line {
   stroke: #f4b322;
+  stroke-width: 1.5;
   stroke-miterlimit: 10;
   fill-opacity: 0;
   -webkit-animation-duration: 4s;

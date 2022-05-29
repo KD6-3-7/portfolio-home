@@ -36,7 +36,7 @@
     
 
     @include responsive(pc-size) {
-        max-width: $break-pc;
-        padding: 0;
+        // max-width: $break-pc;
+        padding: 0 20px;
     }
 }
