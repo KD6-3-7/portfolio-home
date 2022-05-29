@@ -6,54 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.0.6/tsparticles.bundle.js" integrity="sha256-RA2LJkgIUk4sKgvaAKDE+bv8trIJrJLytKSx+wLFr48=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="./js/index.js"></script>
     <title>Welcome to my Universe</title>
 </head>
 <body>
+    <div class="dotted-border"></div> <!-- dotted-border -->
     <header>
         <div id="nav">
-            <h1>WELCOME TO MY UNIVERSE</h1>
-            <nav>
+            <!-- <h1>WELCOME TO MY UNIVERSE</h1> -->
+            <nav class="gnb-pc">
+                <!-- <div class="section-title"></div> -->
                 <ul class="gnb">
-                    <li><a href="#">01 ABOUT</a></li>
-                    <li><a href="#">02 SKILLS</a></li>
-                    <li><a href="#">03 PROJECTS</a></li>
-                    <li><a href="#">04 CONTACT</a></li>
+                    <li class="active"><a href="#about">01 ABOUT</a></li>
+                    <li><a href="#skills">02 SKILLS</a></li>
+                    <li><a href="#projects">03 PROJECTS</a></li>
+                    <li><a href="#contact">04 CONTACT</a></li>
                 </ul> <!-- gnb -->
-            </nav>
+            </nav> <!-- gnb-pc -->
         </div> <!-- nav -->
 
-        <div class="header-mobile">
-            <div class="header-flexbox">
-                <h1 class="logo">
-                    <img src="./images/logo.svg" alt="logo">
-                </h1> <!-- logo -->
-                <div class="hamburger">
-                    <input type="checkbox" id="menu">
-                    <label for="menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </label>
-                </div> <!-- hamburger -->
-            </div> <!-- header-flexbox -->
-
-            <div class="mobile-nav">
-                <nav>
-                    <ul class="mobile-gnb">
-                        <li><a href="#">01 ABOUT</a></li>
-                        <li><a href="#">02 SKILLS</a></li>
-                        <li><a href="#">03 PROJECTS</a></li>
-                        <li><a href="#">04 CONTACT</a></li>
-                    </ul>
-                </nav> <!-- mobile-gnb -->
-            </div> <!-- mobile-nav -->
-        </div> <!-- header-mobile -->
+        <div class="nav-mobile">
+            <nav class="gnb-mobile">
+                <button class="nav-btn active" onclick="location.href='#about'">
+                    <div class="nav-num">
+                        <span class="num">01</span>
+                    </div>
+                    <strong class="nav-title active">ABOUT</strong>
+                </button>
+        
+                <button class="nav-btn" onclick="location.href='#skills'">
+                    <div class="nav-num">
+                        <span class="num">02</span>
+                    </div>
+                    <strong class="nav-title">SKILLS</strong>
+                </button>
+        
+                <button class="nav-btn" onclick="location.href='#projects'">
+                    <div class="nav-num">
+                        <span class="num">03</span>
+                    </div>
+                    <strong class="nav-title">PROJECTS</strong>
+                </button>
+        
+                <button class="nav-btn" onclick="location.href='#contact'">
+                    <div class="nav-num">
+                        <span class="num">04</span>
+                    </div>
+                    <strong class="nav-title">CONTACT</strong>
+                </button>
+            </nav> <!-- gnb-mobile -->
+        </div> <!-- nav-mobile -->
     </header>
+    <script src="./js/main.js"></script>
     
     <main>
         <section id="about">
-            <h2>01 ABOUT</h2>
+            <div class="sticky-title">
+                <h2>01 ABOUT</h2>
+            </div> <!-- sticky-title -->
             <h3>프론트엔드 개발자를 꿈꾸며 저만의 우주를 넓혀가는 김희주입니다.</h3>
             <p>혼자만의 <span>공간</span> 안에서 생각의 나래를 펼치며 자유로이 유영해왔습니다.</p>
             <p>사람 간의 커뮤니케이션을 통해 <span>세계</span>로 뻗어나아가고자 합니다.</p>
@@ -61,7 +72,9 @@
         </section> <!-- about -->
 
         <section id="skills">
-            <h2>02 SKILLS</h2>
+            <div class="sticky-title">
+                <h2>02 SKILLS</h2>
+            </div> <!-- sticky-title -->
             <div class="skills-flexbox">
                 <div class="skill01">
                     <div class="skill-img01">
@@ -136,7 +149,9 @@
         </section> <!-- skills -->
 
         <section id="projects">
-            <h2>03 PROJECTS</h2>
+            <div class="sticky-title">
+                <h2>03 PROJECTS</h2>
+            </div> <!-- sticky-title -->
             <div id="project01" class="project">
                 <div class="preview">
                     <img src="./images/project01.png" alt="project01">
@@ -213,7 +228,9 @@
         </section> <!-- projects -->
 
         <section id="contact">
-            <h2>04 CONTACT</h2>
+            <div class="sticky-title">
+                <h2>04 CONTACT</h2>
+            </div> <!-- sticky-title -->
             <form action="#" method="post">
                 <div class="contents">
                     <div class="row">
@@ -231,9 +248,27 @@
     
     <footer>
         <div class="logo">
-            <img src="./images/logo.svg" alt="logo">
+            <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 80">
+                <g>
+                    <circle cx="39.749" cy="40" r="37"/>
+                    <line x1="71" y1="21" x2="8" y2="21"/>
+                    <line x1="71.505" y1="21.039" x2="39.717" y2="77.037"/>
+                </g>
+                <g>
+                    <circle cx="130" cy="40" r="37"/>
+                    <line x1="130" y1="3" x2="130" y2="41"/>
+                    <line x1="93" y1="40" x2="167" y2="40"/>
+                    <circle cx="130" cy="58.501" r="18.5"/>
+                </g>
+                <g>
+                    <circle cx="220.25" cy="40" r="37"/>
+                    <line x1="252" y1="21" x2="189" y2="21"/>
+                    <line x1="251.766" y1="21" x2="192.289" y2="64.217"/>
+                    <line x1="220.5" y1="42.608" x2="248.223" y2="64.217"/>
+                </g>
+            </svg>
         </div>
-        <p>Page created by H. Kim</p>
+        <p>Portfolio created by Kim Heejoo</p>
         <div class="icons-flexbox">
             <button type="button"><img src="./images/phone.svg" alt="phone"></button>
             <button type="button"><img src="./images/kakaotalk.svg" alt="kakaotalk"></button>
