@@ -38,7 +38,7 @@ let pos = 0;
 let wid = 0;
 
 if(active.length) {
-    pos = active.position().left - 8.5;
+    pos = active.position().left; // 1920 사이즈에서는 8.5를 빼야함 원인미상
     wid = active.width();
     line.css({
         left: pos,

@@ -22,17 +22,18 @@ a:hover {
 }
 
 h1 {
-  font-size: 3rem;
-  font-weight: 600;
+  font-size: 5rem;
+  font-weight: 900;
 }
 
 h2 {
-  font-size: 2rem;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 2.5rem;
   font-weight: 900;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 600;
 }
 
@@ -41,9 +42,9 @@ h4 {
 }
 
 p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 400;
-  line-height: 1rem;
+  line-height: 1.3rem;
 }
 
 img {
@@ -70,6 +71,26 @@ body {
   background-color: #f2ece4;
 }
 
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  height: 30%;
+  background: #f4b322;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 body div.dotted-border {
   position: fixed;
   top: 0;
@@ -94,9 +115,39 @@ body header {
 
 @media screen and (min-width: 768px) {
   body header {
-    height: 90px;
+    height: 80px;
     padding: 10px 30px;
-    z-index: 0;
+  }
+}
+
+@media screen and (min-width: 1320px) {
+  body header {
+    width: calc(100% - 250px);
+    height: 100px;
+    margin: 20px 125px;
+  }
+}
+
+body header h1 {
+  display: none;
+  position: fixed;
+  top: -10px;
+  left: 10px;
+  height: 60px;
+  letter-spacing: -0.2rem;
+  color: transparent;
+  -webkit-text-stroke: 1px #777777;
+}
+
+@media screen and (min-width: 768px) {
+  body header h1 {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1320px) {
+  body header h1 {
+    font-size: 6.3rem;
   }
 }
 
@@ -147,7 +198,7 @@ body header div#nav nav ul.gnb {
 
 @media screen and (min-width: 1320px) {
   body header div#nav nav ul.gnb {
-    width: 50%;
+    width: 40%;
   }
 }
 
@@ -174,7 +225,7 @@ body header div#nav nav ul.gnb li a {
 
 @media screen and (min-width: 1320px) {
   body header div#nav nav ul.gnb li a {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
 }
 
@@ -183,6 +234,12 @@ body header div#nav nav .line {
   position: absolute;
   bottom: 25px;
   background: #f4b322;
+}
+
+@media screen and (min-width: 1320px) {
+  body header div#nav nav .line {
+    bottom: 35px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -289,59 +346,277 @@ body header div.nav-mobile nav.gnb-mobile button.nav-btn strong.nav-title.active
   transition: transform calc(.65s / 1.5), -webkit-transform calc(.65s / 1.5);
 }
 
-body main {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 5%;
-}
-
-@media screen and (min-width: 1320px) {
-  body main {
-    padding: 0 20px;
-  }
-}
-
 body main section#about, body main section#skills, body main section#projects, body main section#contact {
-  height: 1200px;
   padding-top: 180px;
 }
 
 body main section#about div.sticky-title, body main section#skills div.sticky-title, body main section#projects div.sticky-title, body main section#contact div.sticky-title {
-  height: 90px;
+  height: 60px;
+  padding: 0 5%;
   position: -webkit-sticky;
   position: sticky;
-  top: 70px;
+  top: 100px;
+  z-index: 2;
 }
 
 @media screen and (min-width: 768px) {
   body main section#about div.sticky-title, body main section#skills div.sticky-title, body main section#projects div.sticky-title, body main section#contact div.sticky-title {
+    width: 435px;
+    height: 80px;
     top: 20px;
+    padding-left: 35px;
+    padding-right: 0;
   }
 }
 
 @media screen and (min-width: 1320px) {
   body main section#about div.sticky-title, body main section#skills div.sticky-title, body main section#projects div.sticky-title, body main section#contact div.sticky-title {
-    padding-left: 30px;
+    width: 765px;
+    height: 100px;
+    padding-left: 140px;
   }
 }
 
 body main section#about div.sticky-title h2, body main section#skills div.sticky-title h2, body main section#projects div.sticky-title h2, body main section#contact div.sticky-title h2 {
-  line-height: 60px;
+  letter-spacing: -0.1rem;
+  line-height: 50px;
+  text-align: left;
 }
 
 @media screen and (min-width: 768px) {
   body main section#about div.sticky-title h2, body main section#skills div.sticky-title h2, body main section#projects div.sticky-title h2, body main section#contact div.sticky-title h2 {
+    letter-spacing: -0.3rem;
+    line-height: 70px;
+    font-size: 4rem;
+  }
+}
+
+@media screen and (min-width: 1320px) {
+  body main section#about div.sticky-title h2, body main section#skills div.sticky-title h2, body main section#projects div.sticky-title h2, body main section#contact div.sticky-title h2 {
     line-height: 90px;
-    font-size: 4.5rem;
+    font-size: 6rem;
+  }
+}
+
+body main section#about div.sticky-title h2 span, body main section#skills div.sticky-title h2 span, body main section#projects div.sticky-title h2 span, body main section#contact div.sticky-title h2 span {
+  font-family: Pretendard;
+  color: transparent;
+  -webkit-text-stroke: 2px #2f2e2d;
+}
+
+@media screen and (min-width: 768px) {
+  body main section#about div.sticky-title h2 span, body main section#skills div.sticky-title h2 span, body main section#projects div.sticky-title h2 span, body main section#contact div.sticky-title h2 span {
+    font-size: 4.2rem;
+  }
+}
+
+@media screen and (min-width: 1320px) {
+  body main section#about div.sticky-title h2 span, body main section#skills div.sticky-title h2 span, body main section#projects div.sticky-title h2 span, body main section#contact div.sticky-title h2 span {
+    font-size: 6.3rem;
+  }
+}
+
+body main section#about div.contents, body main section#skills div.contents, body main section#projects div.contents, body main section#contact div.contents {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 5%;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+@media screen and (min-width: 768px) {
+  body main section#about div.contents, body main section#skills div.contents, body main section#projects div.contents, body main section#contact div.contents {
+    padding: 0 40px;
+  }
+}
+
+@media screen and (min-width: 1320px) {
+  body main section#about div.contents, body main section#skills div.contents, body main section#projects div.contents, body main section#contact div.contents {
+    max-width: 1640px;
+    padding: 0 140px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body main section#about div.contents, body main section#skills div.contents, body main section#projects div.contents, body main section#contact div.contents {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+}
+
+@media screen and (min-width: 1320px) {
+  body main section#about div.contents, body main section#skills div.contents, body main section#projects div.contents, body main section#contact div.contents {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body main section#about h3 {
+    font-size: 2.2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body main section#about p {
+    font-size: 1.3rem;
   }
 }
 
 body main section#skills div.skills-flexbox {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[5];
-      grid-template-columns: repeat(5, 1fr);
-  padding: 200px 0;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 5%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 200px;
+}
+
+@media screen and (min-width: 768px) {
+  body main section#skills div.skills-flexbox {
+    padding: 0 40px;
+  }
+}
+
+@media screen and (min-width: 1320px) {
+  body main section#skills div.skills-flexbox {
+    max-width: 1640px;
+    padding: 0 140px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body main section#skills div.skills-flexbox {
+    padding-top: 200px;
+  }
+}
+
+@media screen and (min-width: 1320px) {
+  body main section#skills div.skills-flexbox {
+    padding-top: 200px;
+  }
+}
+
+body main section#skills div.skills-flexbox div.skill {
+  width: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  body main section#skills div.skills-flexbox div.skill {
+    width: calc(100% / 3);
+  }
+}
+
+@media screen and (min-width: 1320px) {
+  body main section#skills div.skills-flexbox div.skill {
+    width: 20%;
+  }
+}
+
+body main section#skills div.skills-flexbox div.skill div.img-box {
+  position: relative;
+}
+
+body main section#skills div.skills-flexbox div.skill div.img-box div.skill-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+body main section#skills div.skills-flexbox div.skill div.img-box svg circle {
+  fill: none;
+  stroke: #fcfbfa;
+  stroke-miterlimit: 10;
+  stroke-width: 3px;
+}
+
+body main section#skills div.skills-flexbox div.skill h3 {
+  text-align: center;
+}
+
+body main section#projects div.projects-flexbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+body main section#projects div.projects-flexbox div.projects {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  body main section#projects div.projects-flexbox div.projects {
+    width: 70%;
+  }
+}
+
+body main section#projects div.projects-flexbox div.projects div.project {
+  padding-top: 100px;
+}
+
+body main section#projects div.projects-flexbox div.projects div.project:first-child {
+  padding-top: 0;
+}
+
+body main section#projects div.projects-flexbox div.projects div.project div.preview {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  body main section#projects div.projects-flexbox div.projects div.project h3 {
+    font-size: 2.2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body main section#projects div.projects-flexbox div.projects div.project p {
+    font-size: 1.3rem;
+  }
+}
+
+body main section#projects div.projects-flexbox aside {
+  display: none;
+  width: 25%;
+  height: 305px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 150px;
+}
+
+@media screen and (min-width: 768px) {
+  body main section#projects div.projects-flexbox aside {
+    display: block;
+  }
+}
+
+body main section#contact form {
+  margin: 0 auto;
 }
 
 body footer {
@@ -374,7 +649,7 @@ body footer {
   }
   body footer div.logo {
     width: 20vw;
-    margin: 10px;
+    padding: 10px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

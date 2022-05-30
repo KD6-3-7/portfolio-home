@@ -15,10 +15,32 @@ html {
 body {
     background-color: $color-main;
 
+    // 스크롤바 스타일
+    &::-webkit-scrollbar { // 스크롤바 전체 영역
+        width: 10px; // 스크롤바의 너비
+    }
+
+    &::-webkit-scrollbar-corner { // 상하+좌우 스크롤이 만나는 공간
+        background-color: transparent;
+    }
+    
+    &::-webkit-scrollbar-thumb { // 스크롤 영역
+        height: 30%; // 스크롤바의 길이
+        background: $color-yellow; // 스크롤바의 색상
+        background-clip: padding-box;
+        border: 2px solid transparent;
+        border-radius: 10px;
+    }
+    
+    &::-webkit-scrollbar-track { // 스크롤이 움직이는 바 영역
+        background: transparent; // 스크롤바 뒷배경 색상
+    }
+
     div.dotted-border {
         @include dotted-border();
     }
 
+    // header
     header {
         position: fixed;
         width: calc(100% - 40px);
@@ -34,9 +56,33 @@ body {
         z-index: 1;
         
         @include responsive(tablet-size) {
-            height: 90px;
+            height: 80px;
             padding: 10px 30px;
-            z-index: 0;
+        }
+        
+        @include responsive(pc-size) {
+            width: calc(100% - 250px);
+            height: 100px;
+            margin: 20px 125px;
+        }
+
+        h1 {
+            display: none;
+            position: fixed;
+            top: -10px;
+            left: 10px;
+            height: 60px;
+            letter-spacing: -0.2rem;
+            color: transparent;
+            -webkit-text-stroke: 1px $color-grey;
+
+            @include responsive(tablet-size) {
+                display: block;
+            }
+
+            @include responsive(pc-size) {
+                font-size: 6.3rem;
+            }
         }
 
         // header > nav
@@ -63,7 +109,7 @@ body {
                     align-items: center;
 
                     @include responsive(pc-size) {
-                        width: 50%;
+                        width: 40%;
                     }
 
                     li {
@@ -88,7 +134,7 @@ body {
                             color: $color-intro;
 
                             @include responsive(pc-size) {
-                                font-size: 1.3rem;
+                                font-size: 1rem;
                             }
                         }
                     }
@@ -99,6 +145,10 @@ body {
                     position: absolute;
                     bottom: 25px;
                     background: $color-yellow;
+
+                    @include responsive(pc-size) {
+                        bottom: 35px;
+                    }
                 }
             } // gnb-pc
         } // nav
@@ -182,43 +232,226 @@ body {
 
     // main
     main {
-        @include wrapper();
-
         section#about, section#skills, section#projects, section#contact {
-            height: 1200px;
+            // height: 1200px;
             padding-top: 180px;
 
             div.sticky-title {
-                height: 90px;
+                height: 60px;
+                padding: 0 5%;
                 position: sticky;
-                top: 70px;
+                top: 100px;
+                z-index: 2;
 
                 @include responsive(tablet-size) {
+                    width: 435px;
+                    height: 80px;
                     top: 20px;
+                    padding-left: 35px;
+                    padding-right: 0;
                 }
 
                 @include responsive(pc-size) {
-                    padding-left: 30px;
+                    width: 765px;
+                    height: 100px;
+                    padding-left: 140px;
                 }
 
                 h2 {
-                    line-height: 60px;
+                    letter-spacing: -0.1rem;
+                    line-height: 50px;
+                    text-align: left;
 
                     @include responsive(tablet-size) {
+                        letter-spacing: -0.3rem;
+                        line-height: 70px;
+                        font-size: 4rem;
+                    }
+
+                    @include responsive(pc-size) {
                         line-height: 90px;
-                        font-size: 4.5rem;
+                        font-size: 6rem;
+                    }
+
+                    span {
+                        font-family: $font-sans;
+                        color: transparent;
+                        -webkit-text-stroke: 2px $color-intro;
+
+                        @include responsive(tablet-size) {
+                            font-size: 4.2rem;
+                        }
+    
+                        @include responsive(pc-size) {
+                            font-size: 6.3rem;
+                        }
                     }
                 }
+            } // sticky-title
+
+            div.contents {
+                @include wrapper();
+
+                padding-top: 200px;
+                padding-bottom: 200px;
+
+                @include responsive(tablet-size) {
+                    padding-top: 200px;
+                    padding-bottom: 200px;
+                }
+
+                @include responsive(pc-size) {
+                    padding-top: 200px;
+                    padding-bottom: 200px;
+                }
             }
-        } // about
+        } // sections
+
+        section#about {
+            h3 {
+                @include responsive(tablet-size) {
+                    font-size: 2.2rem;
+                }
+            }
+
+            p {
+                @include responsive(tablet-size) {
+                    font-size: 1.3rem;
+                }
+            }
+        } // #about
 
         section#skills {
             div.skills-flexbox {
-                display: grid;
-                grid-template-columns: repeat(5, 1fr);
-                padding: 200px 0;
+                @include wrapper();
+
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+                padding-top: 200px;
+
+                @include responsive(tablet-size) {
+                    padding-top: 200px;
+                }
+
+                @include responsive(pc-size) {
+                    padding-top: 200px;
+                }
+
+                div.skill {
+                    width: 50%;
+                    
+                    @include responsive(tablet-size) {
+                        width: calc(100% / 3);
+                    }
+                    
+                    @include responsive(pc-size) {
+                        width: 20%;
+                    }
+                    div.img-box {
+                        position: relative;
+
+                        div.skill-img {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+    
+                            // &.html5, &.css3 {
+                            //     width: 85px;
+                            // }
+    
+                            // &.javascript, &.c, &.java, &.git {
+                            //     width: 90px;
+                            // }
+    
+                            // &.sass, &.react, &.mysql, &.php {
+                            //     width: 100px;
+                            // }
+                        } // skill-img
+
+                        svg {
+                            circle {
+                                fill: none;
+                                stroke: $color-white;
+                                stroke-miterlimit: 10;
+                                stroke-width: 3px;
+                            }
+                        }
+                    } // img-box
+
+                    h3 {
+                        text-align: center;
+                    }
+                } // skill
+            } // skills-flexbox
+        } // #skills
+        
+        section#projects {
+            div.projects-flexbox {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+                
+                div.projects {
+                    width: 100%;
+
+                    @include responsive(tablet-size) {
+                        width: 70%;
+                    }
+
+                    div.project {
+                        padding-top: 100px;
+        
+                        &:first-child {
+                            padding-top: 0;
+                        }
+        
+                        div.preview {
+                            width: 100%;
+        
+                            @include responsive(pc-size) {
+                                // width: 70%;
+                            }
+                        }
+
+                        h3 {
+                            @include responsive(tablet-size) {
+                                font-size: 2.2rem;
+                            }
+                        }
+
+                        p {
+                            @include responsive(tablet-size) {
+                                font-size: 1.3rem;
+                            }
+                        }
+                    } // project
+                } // projects
+
+                aside {
+                    display: none;
+                    width: 25%;
+                    height: 305px;
+                    position: sticky;
+                    top: 150px;
+
+                    @include responsive(tablet-size) {
+                        display: block;
+                    }
+                } // aside
+            } // projects-flexbox
+        } // #projects
+
+        section#contact {
+            form {
+                margin: 0 auto;
             }
-        } // about
+        } // #contact
     }
 
     // footer
@@ -238,7 +471,7 @@ body {
 
             div.logo {
                 width: 20vw;
-                margin: 10px;
+                padding: 10px;
                 display: flex;
                 align-items: center;
     
