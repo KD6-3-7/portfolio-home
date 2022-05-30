@@ -33,10 +33,14 @@
     width: 100%;
     margin: 0 auto;
     padding: 0 5%;
+
+    @include responsive(tablet-size) {
+        padding: 0 40px;
+    }
     
 
     @include responsive(pc-size) {
-        // max-width: $break-pc;
-        padding: 0 20px;
+        max-width: 1640px;
+        padding: 0 140px;
     }
 }

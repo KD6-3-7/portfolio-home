@@ -20,21 +20,22 @@ a {
 
 h1 {
     font: {
-        size: 3rem;
-        weight: 600;
+        size: 5rem;
+        weight: 900;
     }
 }
 
 h2 {
     font: {
-        size: 2rem;
+        family: $font-noto;
+        size: 2.5rem;
         weight: 900;
     }
 }
 
 h3 {
     font: {
-        size: 1.5rem;
+        size: 1.8rem;
         weight: 600;
     }
 }
@@ -53,10 +54,11 @@ h4 {
 
 p {
     font: {
-        size: 0.9rem;
+        size: 1rem;
         weight: 400;
     }
-    line-height: 1rem;
+
+    line-height: 1.3rem;
 }
 
 img {
