@@ -1,1 +1,90 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 951 951"><defs><style>.cls-1{fill:#f4b322;}.cls-2,.cls-3{fill-rule:evenodd;}.cls-2{fill:url(#linear-gradient);}.cls-3{fill:url(#linear-gradient-2);}.cls-4,.cls-6{fill:none;}.cls-4,.cls-5,.cls-6{stroke:#f4b322;}.cls-4,.cls-5{stroke-miterlimit:10;}.cls-5{fill:#2f2e2d;}.cls-6{stroke-linecap:round;stroke-linejoin:round;stroke-width:5px;stroke-dasharray:0 20.25;}</style><linearGradient id="linear-gradient" x1="513.28" y1="829.03" x2="841.07" y2="501.24" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#2f2e2d"/><stop offset="0.23" stop-color="#32302c"/><stop offset="0.38" stop-color="#3b3429"/><stop offset="0.51" stop-color="#4a3d24"/><stop offset="0.58" stop-color="#574420"/><stop offset="0.83" stop-color="#b28421"/><stop offset="1" stop-color="#f4b322"/></linearGradient><linearGradient id="linear-gradient-2" x1="513.28" y1="829.03" x2="841.07" y2="501.24" gradientTransform="translate(951 951) rotate(180)" xlink:href="#linear-gradient"/></defs><g id="Layer_2" data-name="Layer 2"><g id="all"><circle class="cls-1" cx="752.5" cy="187.5" r="35"/><circle class="cls-1" cx="818.5" cy="270.5" r="40"/><circle class="cls-1" cx="858.5" cy="357.5" r="25"/><circle class="cls-1" cx="873.41" cy="426.5" r="15"/><path class="cls-1" d="M624.9,123.1a40,40,0,0,1,80,0,40.41,40.41,0,0,1-.3,4.83,50,50,0,1,0-49.1,40.57A49.89,49.89,0,0,0,693,151.59,40,40,0,0,1,624.9,123.1Z"/><path class="cls-2" d="M800,455a20,20,0,0,0-20,20c0,168.18-136.82,305-305,305v40A344.72,344.72,0,0,0,820,475,20,20,0,0,0,800,455Z"/><circle class="cls-1" cx="198.5" cy="763.5" r="35"/><circle class="cls-1" cx="132.5" cy="680.5" r="40"/><circle class="cls-1" cx="92.5" cy="593.5" r="25"/><circle class="cls-1" cx="77.5" cy="524.5" r="15"/><path class="cls-1" d="M326.1,827.9a40,40,0,1,1-80,0,40.41,40.41,0,0,1,.3-4.83,50,50,0,1,0,49.1-40.57A49.89,49.89,0,0,0,258,799.41,40,40,0,0,1,326.1,827.9Z"/><path class="cls-3" d="M151,496a20,20,0,0,0,20-20c0-168.18,136.82-305,305-305V131A344.72,344.72,0,0,0,131,476,20,20,0,0,0,151,496Z"/></g><g id="line"><circle class="cls-4" cx="475.5" cy="475.5" r="475"/><circle class="cls-4" cx="475.5" cy="475.5" r="325"/><path class="cls-1" d="M475.5,226.5a248.26,248.26,0,1,1-96.92,19.57A247.32,247.32,0,0,1,475.5,226.5m0-1c-138.07,0-250,111.93-250,250s111.93,250,250,250,250-111.93,250-250-111.93-250-250-250Z"/><circle class="cls-4" cx="475.5" cy="475.5" r="400"/></g><g id="Layer_6" data-name="Layer 6"><line class="cls-4" x1="432.09" y1="721.7" x2="518.91" y2="229.3"/><line class="cls-4" x1="389.99" y1="710.42" x2="561.01" y2="240.58"/><line class="cls-4" x1="350.5" y1="692.01" x2="600.5" y2="258.99"/><line class="cls-4" x1="314.8" y1="667.01" x2="636.2" y2="283.99"/><line class="cls-4" x1="283.99" y1="636.2" x2="667.01" y2="314.8"/><line class="cls-4" x1="258.99" y1="600.5" x2="692.01" y2="350.5"/><line class="cls-4" x1="240.58" y1="561.01" x2="710.42" y2="389.99"/><line class="cls-4" x1="229.3" y1="518.91" x2="721.7" y2="432.09"/><line class="cls-4" x1="225.5" y1="475.5" x2="725.5" y2="475.5"/><line class="cls-4" x1="229.3" y1="432.09" x2="721.7" y2="518.91"/><line class="cls-4" x1="240.58" y1="389.99" x2="710.42" y2="561.01"/><line class="cls-4" x1="258.99" y1="350.5" x2="692.01" y2="600.5"/><line class="cls-4" x1="283.99" y1="314.8" x2="667.01" y2="636.2"/><line class="cls-4" x1="314.8" y1="283.99" x2="636.2" y2="667.01"/><line class="cls-4" x1="350.5" y1="258.99" x2="600.5" y2="692.01"/><line class="cls-4" x1="475.5" y1="225.5" x2="475.5" y2="725.5"/><line class="cls-4" x1="389.99" y1="240.58" x2="561.01" y2="710.42"/><line class="cls-4" x1="432.09" y1="229.3" x2="518.91" y2="721.7"/><line class="cls-4" x1="457.82" y1="273.36" x2="493.18" y2="677.64"/><line class="cls-4" x1="422.98" y1="279.5" x2="528.02" y2="671.5"/><line class="cls-4" x1="389.75" y1="291.6" x2="561.25" y2="659.4"/><line class="cls-4" x1="359.12" y1="309.29" x2="591.88" y2="641.71"/><line class="cls-4" x1="332.02" y1="332.02" x2="618.98" y2="618.98"/><line class="cls-4" x1="309.29" y1="359.12" x2="641.71" y2="591.88"/><line class="cls-4" x1="291.6" y1="389.75" x2="659.4" y2="561.25"/><line class="cls-4" x1="279.5" y1="422.98" x2="671.5" y2="528.02"/><line class="cls-4" x1="273.36" y1="457.82" x2="677.64" y2="493.18"/><line class="cls-4" x1="273.36" y1="493.18" x2="677.64" y2="457.82"/><line class="cls-4" x1="279.5" y1="528.02" x2="671.5" y2="422.98"/><line class="cls-4" x1="291.6" y1="561.25" x2="659.4" y2="389.75"/><line class="cls-4" x1="309.29" y1="591.88" x2="641.71" y2="359.12"/><line class="cls-4" x1="332.02" y1="618.98" x2="618.98" y2="332.02"/><line class="cls-4" x1="359.12" y1="641.71" x2="591.88" y2="309.29"/><line class="cls-4" x1="389.75" y1="659.4" x2="561.25" y2="291.6"/><line class="cls-4" x1="422.98" y1="671.5" x2="528.02" y2="279.5"/><line class="cls-4" x1="457.82" y1="677.64" x2="493.18" y2="273.36"/><polygon class="cls-4" points="436.73 381.89 475.5 272.86 514.27 381.89 618.79 332.21 569.11 436.73 678.14 475.5 569.11 514.27 618.79 618.79 514.27 569.11 475.5 678.14 436.73 569.11 332.21 618.79 381.89 514.27 272.86 475.5 381.89 436.73 332.21 332.21 436.73 381.89"/><circle class="cls-5" cx="475.5" cy="475.5" r="114.16"/><circle class="cls-6" cx="475.5" cy="475.5" r="99.89"/></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 951 951">
+    <defs>
+        <!-- <style>
+            .planet{fill:#f4b322;}
+            .comet{fill-rule:evenodd;}
+            .comet1{fill:url(#linear-gradient);}
+            .comet2{fill:url(#linear-gradient-2);}
+            .circle, .halo, .star, .dotted{fill:none;}
+            .circle, .halo, .star, .colored, .dotted{stroke:#f4b322;}
+            .circle, .halo, .star, .colored{stroke-miterlimit:10;}
+            .colored{fill:#2f2e2d;}
+            .dotted{stroke-linecap:round;stroke-linejoin:round;stroke-width:5px;stroke-dasharray:0 20.25;}
+        </style> -->
+        <linearGradient id="linear-gradient" x1="513.28" y1="829.03" x2="841.07" y2="501.24" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#2f2e2d"/>
+            <stop offset="0.23" stop-color="#32302c"/>
+            <stop offset="0.38" stop-color="#3b3429"/>
+            <stop offset="0.5" stop-color="#4a3d24"/>
+            <stop offset="0.58" stop-color="#574420"/>
+            <stop offset="0.83" stop-color="#b28421"/>
+            <stop offset="1" stop-color="#f4b322"/>
+        </linearGradient>
+        <linearGradient id="linear-gradient-2" x1="513.28" y1="829.03" x2="841.07" y2="501.24" gradientTransform="translate(951 951) rotate(180)" xlink:href="#linear-gradient"/>
+    </defs>
+    <g id="element">
+        <g id="planet">
+            <path class="planet" d="M624.9,123.1a40,40,0,0,1,80,0,40.41,40.41,0,0,1-.3,4.83,50,50,0,1,0-49.1,40.57A49.89,49.89,0,0,0,693,151.59,40,40,0,0,1,624.9,123.1Z"/>
+            <circle class="planet" cx="752.5" cy="187.5" r="35"/>
+            <circle class="planet" cx="818.5" cy="270.5" r="40"/>
+            <circle class="planet" cx="858.5" cy="357.5" r="25"/>
+            <circle class="planet" cx="873.41" cy="426.5" r="15"/>
+            <path class="planet" d="M326.1,827.9a40,40,0,1,1-80,0,40.41,40.41,0,0,1,.3-4.83,50,50,0,1,0,49.1-40.57A49.89,49.89,0,0,0,258,799.41,40,40,0,0,1,326.1,827.9Z"/>
+            <circle class="planet" cx="198.5" cy="763.5" r="35"/>
+            <circle class="planet" cx="132.5" cy="680.5" r="40"/>
+            <circle class="planet" cx="92.5" cy="593.5" r="25"/>
+            <circle class="planet" cx="77.5" cy="524.5" r="15"/>
+        </g>
+        <g id="comet">
+            <path class="comet1 comet" d="M800,455a20,20,0,0,0-20,20c0,168.18-136.82,305-305,305v40A344.72,344.72,0,0,0,820,475,20,20,0,0,0,800,455Z"/>
+            <path class="comet2 comet" d="M151,496a20,20,0,0,0,20-20c0-168.18,136.82-305,305-305V131A344.72,344.72,0,0,0,131,476,20,20,0,0,0,151,496Z"/>
+        </g>
+    </g>
+    <g id="circle">
+        <circle class="circle line" cx="475.5" cy="475.5" r="475"/>
+        <circle class="circle line" cx="475.5" cy="475.5" r="400"/>
+        <circle class="circle line" cx="475.5" cy="475.5" r="325"/>
+        <circle class="circle line" cx="475.5" cy="475.5" r="250"/>
+    </g>
+    <g id="center">
+        <line class="halo line" x1="432.09" y1="721.7" x2="518.91" y2="229.3"/>
+        <line class="halo line" x1="389.99" y1="710.42" x2="561.01" y2="240.58"/>
+        <line class="halo line" x1="350.5" y1="692.01" x2="600.5" y2="258.99"/>
+        <line class="halo line" x1="314.8" y1="667.01" x2="636.2" y2="283.99"/>
+        <line class="halo line" x1="283.99" y1="636.2" x2="667.01" y2="314.8"/>
+        <line class="halo line" x1="258.99" y1="600.5" x2="692.01" y2="350.5"/>
+        <line class="halo line" x1="240.58" y1="561.01" x2="710.42" y2="389.99"/>
+        <line class="halo line" x1="229.3" y1="518.91" x2="721.7" y2="432.09"/>
+        <line class="halo line" x1="225.5" y1="475.5" x2="725.5" y2="475.5"/>
+        <line class="halo line" x1="229.3" y1="432.09" x2="721.7" y2="518.91"/>
+        <line class="halo line" x1="240.58" y1="389.99" x2="710.42" y2="561.01"/>
+        <line class="halo line" x1="258.99" y1="350.5" x2="692.01" y2="600.5"/>
+        <line class="halo line" x1="283.99" y1="314.8" x2="667.01" y2="636.2"/>
+        <line class="halo line" x1="314.8" y1="283.99" x2="636.2" y2="667.01"/>
+        <line class="halo line" x1="350.5" y1="258.99" x2="600.5" y2="692.01"/>
+        <line class="halo line" x1="475.5" y1="225.5" x2="475.5" y2="725.5"/>
+        <line class="halo line" x1="389.99" y1="240.58" x2="561.01" y2="710.42"/>
+        <line class="halo line" x1="432.09" y1="229.3" x2="518.91" y2="721.7"/>
+        <line class="halo line" x1="457.82" y1="273.36" x2="493.18" y2="677.64"/>
+        <line class="halo line" x1="422.98" y1="279.5" x2="528.02" y2="671.5"/>
+        <line class="halo line" x1="389.75" y1="291.6" x2="561.25" y2="659.4"/>
+        <line class="halo line" x1="359.12" y1="309.29" x2="591.88" y2="641.71"/>
+        <line class="halo line" x1="332.02" y1="332.02" x2="618.98" y2="618.98"/>
+        <line class="halo line" x1="309.29" y1="359.12" x2="641.71" y2="591.88"/>
+        <line class="halo line" x1="291.6" y1="389.75" x2="659.4" y2="561.25"/>
+        <line class="halo line" x1="279.5" y1="422.98" x2="671.5" y2="528.02"/>
+        <line class="halo line" x1="273.36" y1="457.82" x2="677.64" y2="493.18"/>
+        <line class="halo line" x1="273.36" y1="493.18" x2="677.64" y2="457.82"/>
+        <line class="halo line" x1="279.5" y1="528.02" x2="671.5" y2="422.98"/>
+        <line class="halo line" x1="291.6" y1="561.25" x2="659.4" y2="389.75"/>
+        <line class="halo line" x1="309.29" y1="591.88" x2="641.71" y2="359.12"/>
+        <line class="halo line" x1="332.02" y1="618.98" x2="618.98" y2="332.02"/>
+        <line class="halo line" x1="359.12" y1="641.71" x2="591.88" y2="309.29"/>
+        <line class="halo line" x1="389.75" y1="659.4" x2="561.25" y2="291.6"/>
+        <line class="halo line" x1="422.98" y1="671.5" x2="528.02" y2="279.5"/>
+        <line class="halo line" x1="457.82" y1="677.64" x2="493.18" y2="273.36"/>
+        <polygon class="star line" points="436.73 381.89 475.5 272.86 514.27 381.89 618.79 332.21 569.11 436.73 678.14 475.5 569.11 514.27 618.79 618.79 514.27 569.11 475.5 678.14 436.73 569.11 332.21 618.79 381.89 514.27 272.86 475.5 381.89 436.73 332.21 332.21 436.73 381.89"/>
+        <circle class="colored" cx="475.5" cy="475.5" r="114.16"/>
+        <circle class="dotted line" cx="475.5" cy="475.5" r="99.89"/>
+    </g>
+</svg>
