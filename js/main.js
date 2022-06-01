@@ -38,7 +38,7 @@ let pos = 0;
 let wid = 0;
 
 if(active.length) {
-    pos = active.position().left; // 1920 사이즈에서는 8.5를 빼야함 원인미상
+    pos = active.position().left;
     wid = active.width();
     line.css({
         left: pos,
@@ -84,3 +84,72 @@ nav.find("ul li a").click(function(e) {
         wid = width;
     }
 });
+
+
+// 스크롤에 따른 색상 및 좌우 사진 요소 변경
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll",()=>{
+    // 현재 영역의 id 값
+    let current=""
+
+    sections.forEach(section=>{
+        // 각 section의 top 위치(절대적 위치)
+        const sectionTop = window.scrollY + section.getBoundingClientRect().top;
+    
+        // 누적된 스크롤이 section의 top위치에 도달했거나 section의 안에 위치할 경우
+        if(window.scrollY >= sectionTop) {
+        current = section.getAttribute("id");
+        }
+    })
+
+    const circleRight = document.getElementById("circleRight");
+    const circleLeft = document.getElementById("circleLeft");
+    const menus = document.getElementsByClassName("menu");
+    const titleNums = document.getElementsByClassName("title-num");
+    const titles = document.getElementsByClassName("title");
+
+    if(current == "projects" || current == "contact") {
+        document.body.style.backgroundColor = "#2f2e2d";
+        circleRight.style.opacity = "0";
+        circleLeft.style.opacity = "1";
+        for (const menu of menus) {
+            menu.style.color = '#f2ece4';
+        }
+        for (const titleNum of titleNums) {
+            titleNum.style.color = '#f2ece4';
+        }
+        for (const title of titles) {
+            title.style.webkitTextStrokeColor = "#f2ece4";
+        }
+    } else {
+        document.body.style.backgroundColor = "#f2ece4";
+        circleRight.style.opacity = "1";
+        circleLeft.style.opacity = "0";
+        for (const menu of menus) {
+            menu.style.color = '#2f2e2d';
+        }
+        for (const titleNum of titleNums) {
+            titleNum.style.color = '#2f2e2d';
+        }
+        for (const title of titles) {
+            title.style.webkitTextStrokeColor = "#2f2e2d";
+        }
+    }
+});
+
+
+// 프로젝트 nav 버튼 클릭시 active 클래스 추가
+const navBtn = document.getElementsByClassName("navBtn");
+
+for (let i = 0; i < navBtn.length; i++) {
+    navBtn[i].onclick = function() {
+        for (let j = 0 ; j < navBtn.length; j++) {
+            // 버튼에 입혀진 active 라는 클래스를 지운다.
+            navBtn[j].classList.remove("active");
+        }
+
+        navBtn[i].classList.add("active");
+        location.href = `#project0${i + 1}`;
+    }
+}

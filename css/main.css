@@ -28,23 +28,25 @@ h1 {
 
 h2 {
   font-family: "Noto Sans KR", sans-serif;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: 900;
 }
 
 h3 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 600;
 }
 
 h4 {
-  font-size: 1.1rem;
+  font-size: 1rem;
+  font-weight: 200;
 }
 
 p {
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.3rem;
+  margin-top: 10px;
+  line-height: 1.5rem;
 }
 
 img {
@@ -69,6 +71,8 @@ html {
 
 body {
   background-color: #f2ece4;
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s;
 }
 
 body::-webkit-scrollbar {
@@ -131,7 +135,7 @@ body header {
 body header h1 {
   display: none;
   position: fixed;
-  top: -10px;
+  top: -11px;
   left: 10px;
   height: 60px;
   letter-spacing: -0.2rem;
@@ -221,6 +225,8 @@ body header div#nav nav ul.gnb li a {
   font-weight: 600;
   text-transform: uppercase;
   color: #2f2e2d;
+  -webkit-transition: color 1s;
+  transition: color 1s;
 }
 
 @media screen and (min-width: 1320px) {
@@ -297,6 +303,8 @@ body header div.nav-mobile nav.gnb-mobile button.nav-btn.active {
       -ms-flex-positive: 2.5;
           flex-grow: 2.5;
   color: #2f2e2d;
+  -webkit-transition: color 1s;
+  transition: color 1s;
 }
 
 body header div.nav-mobile nav.gnb-mobile button.nav-btn.active div.nav-num span.num {
@@ -346,6 +354,245 @@ body header div.nav-mobile nav.gnb-mobile button.nav-btn strong.nav-title.active
   transition: transform calc(.65s / 1.5), -webkit-transform calc(.65s / 1.5);
 }
 
+body main div.bg-space {
+  z-index: -2;
+  position: fixed;
+  width: 90vh;
+  height: 90vh;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+body main div.bg-space#circleRight {
+  left: 100%;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+body main div.bg-space#circleRight svg .line, body main div.bg-space#circleRight svg .gradient {
+  fill: none;
+}
+
+body main div.bg-space#circleRight svg .line, body main div.bg-space#circleRight svg .colored {
+  stroke: #f4b322;
+}
+
+body main div.bg-space#circleRight svg .dot, body main div.bg-space#circleRight svg .dotted, body main div.bg-space#circleRight svg .triangle {
+  stroke-linecap: round;
+}
+
+body main div.bg-space#circleRight svg .dot, body main div.bg-space#circleRight svg .circle, body main div.bg-space#circleRight svg .halo, body main div.bg-space#circleRight svg .star, body main div.bg-space#circleRight svg .colored, body main div.bg-space#circleRight svg .gradient {
+  stroke-miterlimit: 10;
+}
+
+body main div.bg-space#circleRight svg .dot, body main div.bg-space#circleRight svg .dotted {
+  stroke-width: 5px;
+}
+
+body main div.bg-space#circleRight svg .dot {
+  stroke-dasharray: 0 29.97;
+}
+
+body main div.bg-space#circleRight svg .dotted, body main div.bg-space#circleRight svg .triangle {
+  stroke-linejoin: round;
+}
+
+body main div.bg-space#circleRight svg .path1 {
+  fill: url(#linear-gradient-right1);
+}
+
+body main div.bg-space#circleRight svg .circle1 {
+  stroke-width: 0.2px;
+  stroke: url(#linear-gradient-right2);
+}
+
+body main div.bg-space#circleRight svg .path2 {
+  fill: url(#linear-gradient-right2);
+}
+
+body main div.bg-space#circleRight svg .circle2 {
+  stroke-width: 0.4px;
+  stroke: url(#linear-gradient-right3);
+}
+
+body main div.bg-space#circleRight svg .path3 {
+  fill: url(#linear-gradient-right3);
+}
+
+body main div.bg-space#circleRight svg .circle3 {
+  stroke-width: 0.6px;
+  stroke: url(#linear-gradient-right4);
+}
+
+body main div.bg-space#circleRight svg .path4 {
+  fill: url(#linear-gradient-right4);
+}
+
+body main div.bg-space#circleRight svg .circle4 {
+  stroke-width: 0.8px;
+  stroke: url(#linear-gradient-right5);
+}
+
+body main div.bg-space#circleRight svg .path5 {
+  fill: url(#linear-gradient-right5);
+}
+
+body main div.bg-space#circleRight svg .circle5 {
+  stroke: url(#linear-gradient-right6);
+}
+
+body main div.bg-space#circleRight svg .colored {
+  fill: #f2ece4;
+}
+
+body main div.bg-space#circleRight svg .dotted {
+  stroke-dasharray: 0 20.25;
+}
+
+body main div.bg-space#circleRight svg g {
+  -webkit-animation-duration: 60s;
+          animation-duration: 60s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
+body main div.bg-space#circleRight svg g#element {
+  -webkit-animation-name: rotate-circleRight2;
+          animation-name: rotate-circleRight2;
+}
+
+@-webkit-keyframes rotate-circleRight2 {
+  to {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@keyframes rotate-circleRight2 {
+  to {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+body main div.bg-space#circleRight svg g#center {
+  -webkit-animation-name: rotate-circleRight1;
+          animation-name: rotate-circleRight1;
+}
+
+@-webkit-keyframes rotate-circleRight1 {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-circleRight1 {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+body main div.bg-space#circleLeft {
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+body main div.bg-space#circleLeft svg .line {
+  fill: none;
+}
+
+body main div.bg-space#circleLeft svg .line, body main div.bg-space#circleLeft svg .colored {
+  stroke: #f4b322;
+}
+
+body main div.bg-space#circleLeft svg .circle, body main div.bg-space#circleLeft svg .halo, body main div.bg-space#circleLeft svg .star, body main div.bg-space#circleLeft svg .colored {
+  stroke-miterlimit: 10;
+}
+
+body main div.bg-space#circleLeft svg .planet {
+  fill: #f4b322;
+}
+
+body main div.bg-space#circleLeft svg .comet {
+  fill-rule: evenodd;
+}
+
+body main div.bg-space#circleLeft svg .comet1 {
+  fill: url(#linear-gradient-left1);
+}
+
+body main div.bg-space#circleLeft svg .comet2 {
+  fill: url(#linear-gradient-left2);
+}
+
+body main div.bg-space#circleLeft svg .colored {
+  fill: #2f2e2d;
+}
+
+body main div.bg-space#circleLeft svg .dotted {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 5px;
+  stroke-dasharray: 0 20.25;
+}
+
+body main div.bg-space#circleLeft svg g {
+  -webkit-animation-duration: 60s;
+          animation-duration: 60s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
+body main div.bg-space#circleLeft svg g#element {
+  -webkit-animation-name: rotate-circleLeft2;
+          animation-name: rotate-circleLeft2;
+}
+
+@-webkit-keyframes rotate-circleLeft2 {
+  to {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@keyframes rotate-circleLeft2 {
+  to {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+body main div.bg-space#circleLeft svg g#center {
+  -webkit-animation-name: rotate-circleLeft1;
+          animation-name: rotate-circleLeft1;
+}
+
+@-webkit-keyframes rotate-circleLeft1 {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-circleLeft1 {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 body main section#about, body main section#skills, body main section#projects, body main section#contact {
   padding-top: 180px;
 }
@@ -377,14 +624,17 @@ body main section#about div.sticky-title, body main section#skills div.sticky-ti
   }
 }
 
-body main section#about div.sticky-title h2, body main section#skills div.sticky-title h2, body main section#projects div.sticky-title h2, body main section#contact div.sticky-title h2 {
+body main section#about div.sticky-title h2.title-num, body main section#skills div.sticky-title h2.title-num, body main section#projects div.sticky-title h2.title-num, body main section#contact div.sticky-title h2.title-num {
   letter-spacing: -0.1rem;
   line-height: 50px;
   text-align: left;
+  color: #2f2e2d;
+  -webkit-transition: color 1s;
+  transition: color 1s;
 }
 
 @media screen and (min-width: 768px) {
-  body main section#about div.sticky-title h2, body main section#skills div.sticky-title h2, body main section#projects div.sticky-title h2, body main section#contact div.sticky-title h2 {
+  body main section#about div.sticky-title h2.title-num, body main section#skills div.sticky-title h2.title-num, body main section#projects div.sticky-title h2.title-num, body main section#contact div.sticky-title h2.title-num {
     letter-spacing: -0.3rem;
     line-height: 70px;
     font-size: 4rem;
@@ -392,26 +642,28 @@ body main section#about div.sticky-title h2, body main section#skills div.sticky
 }
 
 @media screen and (min-width: 1320px) {
-  body main section#about div.sticky-title h2, body main section#skills div.sticky-title h2, body main section#projects div.sticky-title h2, body main section#contact div.sticky-title h2 {
+  body main section#about div.sticky-title h2.title-num, body main section#skills div.sticky-title h2.title-num, body main section#projects div.sticky-title h2.title-num, body main section#contact div.sticky-title h2.title-num {
     line-height: 90px;
     font-size: 6rem;
   }
 }
 
-body main section#about div.sticky-title h2 span, body main section#skills div.sticky-title h2 span, body main section#projects div.sticky-title h2 span, body main section#contact div.sticky-title h2 span {
+body main section#about div.sticky-title h2.title-num span.title, body main section#skills div.sticky-title h2.title-num span.title, body main section#projects div.sticky-title h2.title-num span.title, body main section#contact div.sticky-title h2.title-num span.title {
   font-family: Pretendard;
+  font-size: 2.9rem;
   color: transparent;
   -webkit-text-stroke: 2px #2f2e2d;
+  transition: -webkit-text-stroke-color 1s;
 }
 
 @media screen and (min-width: 768px) {
-  body main section#about div.sticky-title h2 span, body main section#skills div.sticky-title h2 span, body main section#projects div.sticky-title h2 span, body main section#contact div.sticky-title h2 span {
+  body main section#about div.sticky-title h2.title-num span.title, body main section#skills div.sticky-title h2.title-num span.title, body main section#projects div.sticky-title h2.title-num span.title, body main section#contact div.sticky-title h2.title-num span.title {
     font-size: 4.2rem;
   }
 }
 
 @media screen and (min-width: 1320px) {
-  body main section#about div.sticky-title h2 span, body main section#skills div.sticky-title h2 span, body main section#projects div.sticky-title h2 span, body main section#contact div.sticky-title h2 span {
+  body main section#about div.sticky-title h2.title-num span.title, body main section#skills div.sticky-title h2.title-num span.title, body main section#projects div.sticky-title h2.title-num span.title, body main section#contact div.sticky-title h2.title-num span.title {
     font-size: 6.3rem;
   }
 }
@@ -451,15 +703,27 @@ body main section#about div.contents, body main section#skills div.contents, bod
   }
 }
 
+body main section#about h3 {
+  word-break: keep-all;
+  color: #2f2e2d;
+}
+
 @media screen and (min-width: 768px) {
   body main section#about h3 {
     font-size: 2.2rem;
   }
 }
 
+body main section#about p {
+  word-break: keep-all;
+  color: #2f2e2d;
+}
+
 @media screen and (min-width: 768px) {
   body main section#about p {
+    margin-top: 0;
     font-size: 1.3rem;
+    line-height: 2rem;
   }
 }
 
@@ -547,7 +811,16 @@ body main section#skills div.skills-flexbox div.skill div.img-box svg circle {
 }
 
 body main section#skills div.skills-flexbox div.skill h3 {
+  margin-bottom: 50px;
   text-align: center;
+  font-weight: 300;
+  color: #2f2e2d;
+}
+
+@media screen and (min-width: 768px) {
+  body main section#skills div.skills-flexbox div.skill h3 {
+    font-size: 2rem;
+  }
 }
 
 body main section#projects div.projects-flexbox {
@@ -577,21 +850,27 @@ body main section#projects div.projects-flexbox div.projects {
 }
 
 body main section#projects div.projects-flexbox div.projects div.project {
-  padding-top: 100px;
-}
-
-body main section#projects div.projects-flexbox div.projects div.project:first-child {
-  padding-top: 0;
+  padding-top: 150px;
 }
 
 body main section#projects div.projects-flexbox div.projects div.project div.preview {
   width: 100%;
 }
 
+body main section#projects div.projects-flexbox div.projects div.project h3 {
+  margin: 20px 0;
+  color: #f2ece4;
+}
+
 @media screen and (min-width: 768px) {
   body main section#projects div.projects-flexbox div.projects div.project h3 {
     font-size: 2.2rem;
   }
+}
+
+body main section#projects div.projects-flexbox div.projects div.project p {
+  font-weight: 300;
+  color: #f2ece4;
 }
 
 @media screen and (min-width: 768px) {
@@ -603,10 +882,82 @@ body main section#projects div.projects-flexbox div.projects div.project div.pre
 body main section#projects div.projects-flexbox aside {
   display: none;
   width: 25%;
-  height: 305px;
+  height: 485px;
   position: -webkit-sticky;
   position: sticky;
-  top: 150px;
+  top: 0;
+}
+
+body main section#projects div.projects-flexbox aside ul.projects-nav {
+  padding-top: 150px;
+}
+
+body main section#projects div.projects-flexbox aside ul.projects-nav li.nav-flexbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 20px 0;
+}
+
+body main section#projects div.projects-flexbox aside ul.projects-nav li.nav-flexbox button {
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #f2ece4;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+body main section#projects div.projects-flexbox aside ul.projects-nav li.nav-flexbox button::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  margin: auto;
+  border: none;
+  border-radius: 50%;
+  background-color: #f2ece4;
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+  opacity: 0;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+body main section#projects div.projects-flexbox aside ul.projects-nav li.nav-flexbox button.active::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  margin: auto;
+  border: none;
+  border-radius: 50%;
+  background-color: #f2ece4;
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+  opacity: 1;
+}
+
+body main section#projects div.projects-flexbox aside ul.projects-nav li.nav-flexbox button:hover::before {
+  opacity: 1;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+body main section#projects div.projects-flexbox aside ul.projects-nav li.nav-flexbox h4 {
+  color: #f2ece4;
 }
 
 @media screen and (min-width: 768px) {
