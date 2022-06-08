@@ -2,6 +2,23 @@
 @import "./_common.scss";
 @import "./_mixin.scss";
 
+$percent-html5: 95;
+$percent-css3: 95;
+$percent-javascript: 90;
+$percent-sass: 90;
+$percent-react: 85;
+$percent-mysql: 75;
+$percent-git: 70;
+$percent-c: 70;
+$percent-java: 65;
+$percent-php: 60;
+
+$circle-length: 471;
+
+@function strokeDashoffset($num) {
+	@return $circle-length - ($circle-length * $num) / 100;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -432,7 +449,6 @@ body {
         } // bg-space
 
         section#about, section#skills, section#projects, section#contact {
-            // height: 1200px;
             padding-top: 180px;
 
             div.sticky-title {
@@ -577,13 +593,122 @@ body {
                         } // skill-img
 
                         svg {
+                            transform: rotate(-90deg);
+                            
                             circle {
                                 fill: none;
                                 stroke: $color-white;
                                 stroke-miterlimit: 10;
                                 stroke-width: 3px;
-                            }
-                        }
+                                stroke-dasharray: $circle-length;
+                                stroke-dashoffset: $circle-length;
+                                stroke-linecap: round;
+                                filter: drop-shadow(3px 3px 5px rgba(47, 46, 45, .1));
+                                animation-timing-function: linear;
+                                animation-duration: 1.5s;
+                                animation-fill-mode: forwards;
+                                
+                                &.html5 {
+                                    animation-name: circle-html5;
+
+                                    @keyframes circle-html5 {
+                                        to {
+                                            stroke-dashoffset: strokeDashoffset($percent-html5);
+                                        }
+                                    }
+                                } // html5
+
+                                &.css3 {
+                                    animation-name: circle-css3;
+
+                                    @keyframes circle-css3 {
+                                        to {
+                                            stroke-dashoffset: strokeDashoffset($percent-css3);
+                                        }
+                                    }
+                                } // css3
+
+                                &.javascript {
+                                    animation-name: circle-javascript;
+
+                                    @keyframes circle-javascript {
+                                        to {
+                                            stroke-dashoffset: strokeDashoffset($percent-javascript);
+                                        }
+                                    }
+                                } // javascript
+
+                                &.sass {
+                                    animation-name: circle-sass;
+
+                                    @keyframes circle-sass {
+                                        to {
+                                            stroke-dashoffset: strokeDashoffset($percent-sass);
+                                        }
+                                    }
+                                } // sass
+
+                                &.react {
+                                    animation-name: circle-react;
+
+                                    @keyframes circle-react {
+                                        to {
+                                            stroke-dashoffset: strokeDashoffset($percent-react);
+                                        }
+                                    }
+                                } // react
+
+                                &.mysql {
+                                    animation-name: circle-mysql;
+
+                                    @keyframes circle-mysql {
+                                        to {
+                                            stroke-dashoffset: strokeDashoffset($percent-mysql);
+                                        }
+                                    }
+                                } // mysql
+
+                                &.git {
+                                    animation-name: circle-git;
+
+                                    @keyframes circle-git {
+                                        to {
+                                            stroke-dashoffset: strokeDashoffset($percent-git);
+                                        }
+                                    }
+                                } // git
+
+                                &.c {
+                                    animation-name: circle-c;
+
+                                    @keyframes circle-c {
+                                        to {
+                                            stroke-dashoffset: strokeDashoffset($percent-c);
+                                        }
+                                    }
+                                } // c
+
+                                &.java {
+                                    animation-name: circle-java;
+
+                                    @keyframes circle-java {
+                                        to {
+                                            stroke-dashoffset: strokeDashoffset($percent-java);
+                                        }
+                                    }
+                                } // java
+
+                                &.php {
+                                    animation-name: circle-php;
+
+                                    @keyframes circle-php {
+                                        to {
+                                            stroke-dashoffset: strokeDashoffset($percent-php);
+                                        }
+                                    }
+                                } // php
+                            } // circle
+                        } // svg
                     } // img-box
 
                     h3 {
@@ -606,12 +731,13 @@ body {
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: flex-start;
+                padding-top: 50px;
                 
                 div.projects {
-                    width: 100%;
+                    width: 70%;
 
-                    @include responsive(tablet-size) {
-                        width: 70%;
+                    @include responsive(pc-size) {
+                        width: 75%;
                     }
 
                     div.project {
@@ -648,6 +774,14 @@ body {
                     position: sticky;
                     top: 0;
 
+                    @include responsive(tablet-size) {
+                        display: block;
+                    }
+
+                    @include responsive(pc-size) {
+                        width: 20%;
+                    }
+
                     ul.projects-nav {
                         padding-top: 150px;
 
@@ -658,15 +792,19 @@ body {
                             align-items: flex-start;
                             padding: 20px 0;
     
-                            button {
+                            button.navBtn {
                                 width: 30px;
                                 height: 30px;
-                                margin-right: 20px;
+                                margin-right: 15px;
                                 display: flex;
                                 border: 1px solid $color-main;
                                 border-radius: 50%;
                                 background-color: transparent;
                                 cursor: pointer;
+
+                                @include responsive(pc-size) {
+                                    margin-right: 20px;
+                                }
                                 
                                 &::before {
                                     content: "";
@@ -696,24 +834,97 @@ body {
                                     opacity: 1;
                                     transition: opacity 0.5s;
                                 }
-                            }
+                            } // navBtn
     
                             h4 {
                                 color: $color-main;
                             }
                         } // nav-flexbox
                     } // projects-nav
-
-                    @include responsive(tablet-size) {
-                        display: block;
-                    }
                 } // aside
             } // projects-flexbox
         } // #projects
 
         section#contact {
             form {
+                width: 100%;
                 margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                @include responsive(tablet-size) {
+                    width: 688px;
+                }
+
+                @include responsive(pc-size) {
+                    width: 700px;
+                }
+
+
+                div.info {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    input {
+                        width: 47%;
+                        margin-bottom: 20px;
+                        padding: 10px 20px;
+                        background-color: transparent;
+                        border: none;
+                        border-bottom: 1px solid $color-main;
+                        color: $color-main;
+
+                        font: {
+                            family: $font-sans;
+                            size: 1rem;
+                        }
+
+                        @include responsive(tablet-size) {
+                            width: 330px;
+                        }
+                    }
+                } // info
+
+                div.message {
+                    width: 100%;
+
+                    textarea {
+                        width: 100%;
+                        height: 300px;
+                        margin-bottom: 20px;
+                        padding: 10px 20px;
+                        background-color: transparent;
+                        backdrop-filter: blur(3px);
+                        border: 1px solid $color-main;
+                        color: $color-main;
+                        resize: none;
+
+                        font: {
+                            family: $font-sans;
+                            size: 1rem;
+                        }
+                    }
+                } // message
+
+                button {
+                    padding: 10px 25px;
+                    background-color: $color-main;
+                    border: none;
+                    color: $color-intro;
+                    text-align: center;
+                    align-self: flex-end;
+                    cursor: pointer;
+
+                    font: {
+                        family: $font-sans;
+                        size: 1rem;
+                    }
+                }
             }
         } // #contact
     }

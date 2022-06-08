@@ -803,11 +803,197 @@ body main section#skills div.skills-flexbox div.skill div.img-box div.skill-img 
           transform: translate(-50%, -50%);
 }
 
+body main section#skills div.skills-flexbox div.skill div.img-box svg {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
 body main section#skills div.skills-flexbox div.skill div.img-box svg circle {
   fill: none;
   stroke: #fcfbfa;
   stroke-miterlimit: 10;
   stroke-width: 3px;
+  stroke-dasharray: 471;
+  stroke-dashoffset: 471;
+  stroke-linecap: round;
+  -webkit-filter: drop-shadow(3px 3px 5px rgba(47, 46, 45, 0.1));
+          filter: drop-shadow(3px 3px 5px rgba(47, 46, 45, 0.1));
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+body main section#skills div.skills-flexbox div.skill div.img-box svg circle.html5 {
+  -webkit-animation-name: circle-html5;
+          animation-name: circle-html5;
+}
+
+@-webkit-keyframes circle-html5 {
+  to {
+    stroke-dashoffset: 23.55;
+  }
+}
+
+@keyframes circle-html5 {
+  to {
+    stroke-dashoffset: 23.55;
+  }
+}
+
+body main section#skills div.skills-flexbox div.skill div.img-box svg circle.css3 {
+  -webkit-animation-name: circle-css3;
+          animation-name: circle-css3;
+}
+
+@-webkit-keyframes circle-css3 {
+  to {
+    stroke-dashoffset: 23.55;
+  }
+}
+
+@keyframes circle-css3 {
+  to {
+    stroke-dashoffset: 23.55;
+  }
+}
+
+body main section#skills div.skills-flexbox div.skill div.img-box svg circle.javascript {
+  -webkit-animation-name: circle-javascript;
+          animation-name: circle-javascript;
+}
+
+@-webkit-keyframes circle-javascript {
+  to {
+    stroke-dashoffset: 47.1;
+  }
+}
+
+@keyframes circle-javascript {
+  to {
+    stroke-dashoffset: 47.1;
+  }
+}
+
+body main section#skills div.skills-flexbox div.skill div.img-box svg circle.sass {
+  -webkit-animation-name: circle-sass;
+          animation-name: circle-sass;
+}
+
+@-webkit-keyframes circle-sass {
+  to {
+    stroke-dashoffset: 47.1;
+  }
+}
+
+@keyframes circle-sass {
+  to {
+    stroke-dashoffset: 47.1;
+  }
+}
+
+body main section#skills div.skills-flexbox div.skill div.img-box svg circle.react {
+  -webkit-animation-name: circle-react;
+          animation-name: circle-react;
+}
+
+@-webkit-keyframes circle-react {
+  to {
+    stroke-dashoffset: 70.65;
+  }
+}
+
+@keyframes circle-react {
+  to {
+    stroke-dashoffset: 70.65;
+  }
+}
+
+body main section#skills div.skills-flexbox div.skill div.img-box svg circle.mysql {
+  -webkit-animation-name: circle-mysql;
+          animation-name: circle-mysql;
+}
+
+@-webkit-keyframes circle-mysql {
+  to {
+    stroke-dashoffset: 117.75;
+  }
+}
+
+@keyframes circle-mysql {
+  to {
+    stroke-dashoffset: 117.75;
+  }
+}
+
+body main section#skills div.skills-flexbox div.skill div.img-box svg circle.git {
+  -webkit-animation-name: circle-git;
+          animation-name: circle-git;
+}
+
+@-webkit-keyframes circle-git {
+  to {
+    stroke-dashoffset: 141.3;
+  }
+}
+
+@keyframes circle-git {
+  to {
+    stroke-dashoffset: 141.3;
+  }
+}
+
+body main section#skills div.skills-flexbox div.skill div.img-box svg circle.c {
+  -webkit-animation-name: circle-c;
+          animation-name: circle-c;
+}
+
+@-webkit-keyframes circle-c {
+  to {
+    stroke-dashoffset: 141.3;
+  }
+}
+
+@keyframes circle-c {
+  to {
+    stroke-dashoffset: 141.3;
+  }
+}
+
+body main section#skills div.skills-flexbox div.skill div.img-box svg circle.java {
+  -webkit-animation-name: circle-java;
+          animation-name: circle-java;
+}
+
+@-webkit-keyframes circle-java {
+  to {
+    stroke-dashoffset: 164.85;
+  }
+}
+
+@keyframes circle-java {
+  to {
+    stroke-dashoffset: 164.85;
+  }
+}
+
+body main section#skills div.skills-flexbox div.skill div.img-box svg circle.php {
+  -webkit-animation-name: circle-php;
+          animation-name: circle-php;
+}
+
+@-webkit-keyframes circle-php {
+  to {
+    stroke-dashoffset: 188.4;
+  }
+}
+
+@keyframes circle-php {
+  to {
+    stroke-dashoffset: 188.4;
+  }
 }
 
 body main section#skills div.skills-flexbox div.skill h3 {
@@ -837,15 +1023,16 @@ body main section#projects div.projects-flexbox {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  padding-top: 50px;
 }
 
 body main section#projects div.projects-flexbox div.projects {
-  width: 100%;
+  width: 70%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1320px) {
   body main section#projects div.projects-flexbox div.projects {
-    width: 70%;
+    width: 75%;
   }
 }
 
@@ -888,6 +1075,18 @@ body main section#projects div.projects-flexbox aside {
   top: 0;
 }
 
+@media screen and (min-width: 768px) {
+  body main section#projects div.projects-flexbox aside {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1320px) {
+  body main section#projects div.projects-flexbox aside {
+    width: 20%;
+  }
+}
+
 body main section#projects div.projects-flexbox aside ul.projects-nav {
   padding-top: 150px;
 }
@@ -909,10 +1108,10 @@ body main section#projects div.projects-flexbox aside ul.projects-nav li.nav-fle
   padding: 20px 0;
 }
 
-body main section#projects div.projects-flexbox aside ul.projects-nav li.nav-flexbox button {
+body main section#projects div.projects-flexbox aside ul.projects-nav li.nav-flexbox button.navBtn {
   width: 30px;
   height: 30px;
-  margin-right: 20px;
+  margin-right: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -922,7 +1121,13 @@ body main section#projects div.projects-flexbox aside ul.projects-nav li.nav-fle
   cursor: pointer;
 }
 
-body main section#projects div.projects-flexbox aside ul.projects-nav li.nav-flexbox button::before {
+@media screen and (min-width: 1320px) {
+  body main section#projects div.projects-flexbox aside ul.projects-nav li.nav-flexbox button.navBtn {
+    margin-right: 20px;
+  }
+}
+
+body main section#projects div.projects-flexbox aside ul.projects-nav li.nav-flexbox button.navBtn::before {
   content: "";
   width: 15px;
   height: 15px;
@@ -937,7 +1142,7 @@ body main section#projects div.projects-flexbox aside ul.projects-nav li.nav-fle
   transition: opacity 0.5s;
 }
 
-body main section#projects div.projects-flexbox aside ul.projects-nav li.nav-flexbox button.active::before {
+body main section#projects div.projects-flexbox aside ul.projects-nav li.nav-flexbox button.navBtn.active::before {
   content: "";
   width: 15px;
   height: 15px;
@@ -950,7 +1155,7 @@ body main section#projects div.projects-flexbox aside ul.projects-nav li.nav-fle
   opacity: 1;
 }
 
-body main section#projects div.projects-flexbox aside ul.projects-nav li.nav-flexbox button:hover::before {
+body main section#projects div.projects-flexbox aside ul.projects-nav li.nav-flexbox button.navBtn:hover::before {
   opacity: 1;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
@@ -960,14 +1165,101 @@ body main section#projects div.projects-flexbox aside ul.projects-nav li.nav-fle
   color: #f2ece4;
 }
 
+body main section#contact form {
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 @media screen and (min-width: 768px) {
-  body main section#projects div.projects-flexbox aside {
-    display: block;
+  body main section#contact form {
+    width: 688px;
   }
 }
 
-body main section#contact form {
-  margin: 0 auto;
+@media screen and (min-width: 1320px) {
+  body main section#contact form {
+    width: 700px;
+  }
+}
+
+body main section#contact form div.info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main section#contact form div.info input {
+  width: 47%;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #f2ece4;
+  color: #f2ece4;
+  font-family: Pretendard;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  body main section#contact form div.info input {
+    width: 330px;
+  }
+}
+
+body main section#contact form div.message {
+  width: 100%;
+}
+
+body main section#contact form div.message textarea {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background-color: transparent;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  border: 1px solid #f2ece4;
+  color: #f2ece4;
+  resize: none;
+  font-family: Pretendard;
+  font-size: 1rem;
+}
+
+body main section#contact form button {
+  padding: 10px 25px;
+  background-color: #f2ece4;
+  border: none;
+  color: #2f2e2d;
+  text-align: center;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  cursor: pointer;
+  font-family: Pretendard;
+  font-size: 1rem;
 }
 
 body footer {
