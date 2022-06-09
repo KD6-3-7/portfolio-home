@@ -449,16 +449,20 @@ body {
         } // bg-space
 
         section#about, section#skills, section#projects, section#contact {
-            padding-top: 180px;
+            padding-top: 100px;
+
+            @include responsive(tablet-size) {
+                padding-top: 180px;
+            }
 
             div.sticky-title {
                 height: 60px;
                 padding: 0 5%;
-                position: sticky;
                 top: 100px;
                 z-index: 2;
 
                 @include responsive(tablet-size) {
+                    position: sticky;
                     width: 435px;
                     height: 80px;
                     top: 20px;
@@ -514,12 +518,11 @@ body {
             div.contents {
                 @include wrapper();
 
-                padding-top: 200px;
-                padding-bottom: 200px;
+                padding-top: 50px;
 
                 @include responsive(tablet-size) {
-                    padding-top: 200px;
-                    padding-bottom: 200px;
+                    padding-top: 100px;
+                    padding-bottom: 50px;
                 }
 
                 @include responsive(pc-size) {
@@ -561,10 +564,10 @@ body {
                 flex-wrap: wrap;
                 justify-content: space-between;
                 align-items: center;
-                padding-top: 200px;
+                padding-top: 50px;
 
                 @include responsive(tablet-size) {
-                    padding-top: 200px;
+                    padding-top: 100px;
                 }
 
                 @include responsive(pc-size) {
@@ -726,22 +729,44 @@ body {
         } // #skills
         
         section#projects {
+            padding-top: 100px;
+
+            @include responsive(tablet-size) {
+                padding-top: 180px;
+            }
+
             div.projects-flexbox {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: flex-start;
-                padding-top: 50px;
+                padding-top: 0px;
+
+                @include responsive(pc-size) {
+                    padding-top: 50px;
+                }
                 
                 div.projects {
-                    width: 70%;
+                    width: 100%;
+
+                    @include responsive(tablet-size) {
+                        width: 70%;
+                    }
 
                     @include responsive(pc-size) {
                         width: 75%;
                     }
 
                     div.project {
-                        padding-top: 150px;
+                        padding-top: 50px;
+
+                        @include responsive(tablet-size) {
+                            padding-top: 100px;
+                        }
+
+                        @include responsive(pc-size) {
+                            padding-top: 150px;
+                        }
 
                         div.preview {
                             width: 100%;
@@ -770,7 +795,7 @@ body {
                 aside {
                     display: none;
                     width: 25%;
-                    height: 485px;
+                    height: 565px;
                     position: sticky;
                     top: 0;
 
@@ -780,10 +805,15 @@ body {
 
                     @include responsive(pc-size) {
                         width: 20%;
+                        height: 615px;
                     }
 
                     ul.projects-nav {
-                        padding-top: 150px;
+                        padding-top: 100px;
+
+                        @include responsive(pc-size) {
+                            padding-top: 150px;
+                        }
 
                         li.nav-flexbox {
                             display: flex;
@@ -791,6 +821,10 @@ body {
                             justify-content: flex-start;
                             align-items: flex-start;
                             padding: 20px 0;
+
+                            &:last-child {
+                                padding-bottom: 0;
+                            }
     
                             button.navBtn {
                                 width: 30px;
@@ -846,85 +880,93 @@ body {
         } // #projects
 
         section#contact {
-            form {
-                width: 100%;
-                margin: 0 auto;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+            div.contents {
+                padding-bottom: 50px;
 
                 @include responsive(tablet-size) {
-                    width: 688px;
+                    padding-bottom: 200px;
                 }
 
-                @include responsive(pc-size) {
-                    width: 700px;
-                }
-
-
-                div.info {
+                form {
                     width: 100%;
+                    margin: 0 auto;
                     display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
+                    flex-direction: column;
+                    justify-content: center;
                     align-items: center;
-
-                    input {
-                        width: 47%;
-                        margin-bottom: 20px;
-                        padding: 10px 20px;
-                        background-color: transparent;
-                        border: none;
-                        border-bottom: 1px solid $color-main;
-                        color: $color-main;
-
-                        font: {
-                            family: $font-sans;
-                            size: 1rem;
-                        }
-
-                        @include responsive(tablet-size) {
-                            width: 330px;
-                        }
+    
+                    @include responsive(tablet-size) {
+                        width: 688px;
                     }
-                } // info
-
-                div.message {
-                    width: 100%;
-
-                    textarea {
+    
+                    @include responsive(pc-size) {
+                        width: 700px;
+                    }
+    
+    
+                    div.info {
                         width: 100%;
-                        height: 300px;
-                        margin-bottom: 20px;
-                        padding: 10px 20px;
-                        background-color: transparent;
-                        backdrop-filter: blur(3px);
-                        border: 1px solid $color-main;
-                        color: $color-main;
-                        resize: none;
-
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+    
+                        input {
+                            width: 47%;
+                            margin-bottom: 20px;
+                            padding: 10px 20px;
+                            background-color: transparent;
+                            border: none;
+                            border-bottom: 1px solid $color-main;
+                            color: $color-main;
+    
+                            font: {
+                                family: $font-sans;
+                                size: 1rem;
+                            }
+    
+                            @include responsive(tablet-size) {
+                                width: 330px;
+                            }
+                        }
+                    } // info
+    
+                    div.message {
+                        width: 100%;
+    
+                        textarea {
+                            width: 100%;
+                            height: 300px;
+                            margin-bottom: 20px;
+                            padding: 10px 20px;
+                            background-color: transparent;
+                            backdrop-filter: blur(3px);
+                            border: 1px solid $color-main;
+                            color: $color-main;
+                            resize: none;
+    
+                            font: {
+                                family: $font-sans;
+                                size: 1rem;
+                            }
+                        }
+                    } // message
+    
+                    button {
+                        padding: 10px 25px;
+                        background-color: $color-main;
+                        border: none;
+                        color: $color-intro;
+                        text-align: center;
+                        align-self: flex-end;
+                        cursor: pointer;
+    
                         font: {
                             family: $font-sans;
                             size: 1rem;
                         }
                     }
-                } // message
-
-                button {
-                    padding: 10px 25px;
-                    background-color: $color-main;
-                    border: none;
-                    color: $color-intro;
-                    text-align: center;
-                    align-self: flex-end;
-                    cursor: pointer;
-
-                    font: {
-                        family: $font-sans;
-                        size: 1rem;
-                    }
-                }
+                } // form
             }
         } // #contact
     }

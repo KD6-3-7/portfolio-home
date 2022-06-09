@@ -1,6 +1,33 @@
 // 모바일 nav
 const buttons = document.querySelectorAll(".nav-btn");
 let activeButton = document.querySelector(".nav-btn.active");
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => { // 스크롤 시 자동으로 변경되는 메뉴
+    // 현재 영역의 id값
+    let current = "";
+    sections.forEach(section => {
+        // 각 section의 top 위치(absolute)
+        const sectionTop = window.scrollY + section.getBoundingClientRect().top - 1;
+
+        // 누적된 스크롤이 section의 top 위치에 도달했거나 section의 안에 위치할 경우
+        if(window.scrollY >= sectionTop) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    buttons.forEach(item => {
+        const text = item.querySelector(".nav-title");
+        item.classList.remove("active");
+        item.querySelector(".nav-title").classList.remove("active");
+        const href = item.getAttribute("name").substring(0);
+        if(href === current) {
+            // 현재 있는 영역의 id와 메뉴의 링크 주소가 일치할 때
+            item.classList.add("active");
+            text.classList.add("active");
+        }
+    });
+});
 
 buttons.forEach(item => {
     const text = item.querySelector(".nav-title");
@@ -33,7 +60,7 @@ const line = $("<div />").addClass("line");
 
 line.appendTo(nav);
 
-var active = nav.find(".active");
+const active = nav.find(".active");
 let pos = 0;
 let wid = 0;
 
@@ -87,7 +114,7 @@ nav.find("ul li a").click(function(e) {
 
 
 // 스크롤에 따른 색상 및 좌우 사진 요소 변경
-const sections = document.querySelectorAll("section");
+// const sections = document.querySelectorAll("section");
 
 window.addEventListener("scroll",()=>{
     // 현재 영역의 id 값
@@ -95,7 +122,7 @@ window.addEventListener("scroll",()=>{
 
     sections.forEach(section=>{
         // 각 section의 top 위치(절대적 위치)
-        const sectionTop = window.scrollY + section.getBoundingClientRect().top;
+        const sectionTop = window.scrollY + section.getBoundingClientRect().top - 1;
     
         // 누적된 스크롤이 section의 top위치에 도달했거나 section의 안에 위치할 경우
         if(window.scrollY >= sectionTop) {
