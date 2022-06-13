@@ -116,13 +116,7 @@ body section#intro div.flexbox div.compass {
 
 @media screen and (min-width: 768px) {
   body section#intro div.flexbox div.compass {
-    width: 65%;
-  }
-}
-
-@media screen and (min-width: 1320px) {
-  body section#intro div.flexbox div.compass {
-    width: 40%;
+    width: 60vmin;
   }
 }
 

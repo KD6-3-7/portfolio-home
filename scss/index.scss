@@ -27,11 +27,7 @@ body {
                 width: 100%;
 
                 @include responsive(tablet-size) {
-                    width: 65%;
-                }
-
-                @include responsive(pc-size) {
-                    width: 40%;
+                    width: 60vmin;
                 }
 
                 svg {

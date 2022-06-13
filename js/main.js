@@ -114,21 +114,19 @@ nav.find("ul li a").click(function(e) {
 
 
 // 스크롤에 따른 색상 및 좌우 사진 요소 변경
-// const sections = document.querySelectorAll("section");
-
-window.addEventListener("scroll",()=>{
+window.addEventListener("scroll", () => {
     // 현재 영역의 id 값
-    let current=""
+    let current = ""
 
-    sections.forEach(section=>{
+    sections.forEach(section => {
         // 각 section의 top 위치(절대적 위치)
         const sectionTop = window.scrollY + section.getBoundingClientRect().top - 1;
     
         // 누적된 스크롤이 section의 top위치에 도달했거나 section의 안에 위치할 경우
         if(window.scrollY >= sectionTop) {
-        current = section.getAttribute("id");
+            current = section.getAttribute("id");
         }
-    })
+    });
 
     const circleRight = document.getElementById("circleRight");
     const circleLeft = document.getElementById("circleLeft");
@@ -161,6 +159,38 @@ window.addEventListener("scroll",()=>{
         }
         for (const title of titles) {
             title.style.webkitTextStrokeColor = "#2f2e2d";
+        }
+    }
+});
+
+
+// skills progress bar animation restart
+window.addEventListener("scroll", () => {
+    // 현재 영역의 id 값
+    let current = ""
+
+    sections.forEach(section => {
+        // 각 section의 top 위치(절대적 위치)
+        const sectionTop = window.scrollY + section.getBoundingClientRect().top - 1;
+    
+        // 누적된 스크롤이 section의 top위치에 도달했거나 section의 안에 위치할 경우
+        if(window.scrollY >= sectionTop) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    const progress = document.getElementsByClassName("progress");
+    let name = "";
+
+    if(current == "skills") {
+        for (let i = 0; i < progress.length; i++) {
+            name = progress[i].getAttribute("id");
+            progress[i].classList.add(name);
+        }
+    } else {
+        for (let i = 0; i < progress.length; i++) {
+            name = progress[i].getAttribute("id");
+            progress[i].classList.remove(name);
         }
     }
 });
