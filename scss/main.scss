@@ -96,6 +96,29 @@ body {
 
             @include responsive(tablet-size) {
                 display: block;
+                animation-name: none;
+                animation-duration: 1.5s;
+                animation-fill-mode: forwards;
+
+                @keyframes fade-out {
+                    from {
+                        opacity: 1;
+                    }
+
+                    to {
+                        opacity: 0;
+                    }
+                }
+
+                @keyframes fade-in {
+                    from {
+                        opacity: 0;
+                    }
+
+                    to {
+                        opacity: 1;
+                    }
+                }
             }
 
             @include responsive(pc-size) {
@@ -607,7 +630,7 @@ body {
                                 stroke-dashoffset: $circle-length;
                                 stroke-linecap: round;
                                 filter: drop-shadow(3px 3px 5px rgba(47, 46, 45, .1));
-                                animation-timing-function: linear;
+                                animation-timing-function: ease-in-out;
                                 animation-duration: 1.5s;
                                 animation-fill-mode: forwards;
                                 
@@ -854,16 +877,9 @@ body {
                                 }
                                 
                                 &.active::before {
-                                    content: "";
-                                    width: 15px;
-                                    height: 15px;
-                                    margin: auto;
-                                    border: none;
-                                    border-radius: 50%;
-                                    background-color: $color-main;
-                                    filter: blur(3px);
                                     opacity: 1;
                                 }
+
                                 &:hover::before {
                                     opacity: 1;
                                     transition: opacity 0.5s;

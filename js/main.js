@@ -3,6 +3,7 @@ const buttons = document.querySelectorAll(".nav-btn");
 let activeButton = document.querySelector(".nav-btn.active");
 const sections = document.querySelectorAll("section");
 
+
 window.addEventListener("scroll", () => { // 스크롤 시 자동으로 변경되는 메뉴
     // 현재 영역의 id값
     let current = "";
@@ -19,10 +20,11 @@ window.addEventListener("scroll", () => { // 스크롤 시 자동으로 변경�
     buttons.forEach(item => {
         const text = item.querySelector(".nav-title");
         item.classList.remove("active");
-        item.querySelector(".nav-title").classList.remove("active");
-        const href = item.getAttribute("name").substring(0);
-        if(href === current) {
-            // 현재 있는 영역의 id와 메뉴의 링크 주소가 일치할 때
+        text.classList.remove("active");
+        
+        const name = item.getAttribute("name");
+        if(name === current) {
+            // 현재 있는 영역의 id와 메뉴의 이름이 일치할 때
             item.classList.add("active");
             text.classList.add("active");
         }
@@ -113,6 +115,18 @@ nav.find("ul li a").click(function(e) {
 });
 
 
+// WAYPOINT fade-out
+window.addEventListener("scroll", () => {
+    const pointTop = document.getElementById("point").getBoundingClientRect().top;
+    const waypoint = document.getElementById("waypoint");
+    if(pointTop <= 100) {
+        waypoint.style.animationName = "fade-out";
+    } else {
+        waypoint.style.animationName = "fade-in";
+    }
+});
+
+
 // 스크롤에 따른 색상 및 좌우 사진 요소 변경
 window.addEventListener("scroll", () => {
     // 현재 영역의 id 값
@@ -198,6 +212,8 @@ window.addEventListener("scroll", () => {
 
 // 프로젝트 nav 버튼 클릭시 active 클래스 추가
 const navBtn = document.getElementsByClassName("navBtn");
+const projects = document.querySelectorAll(".project");
+const projectBtns = document.querySelectorAll(".navBtn");
 
 for (let i = 0; i < navBtn.length; i++) {
     navBtn[i].onclick = function() {
@@ -210,3 +226,26 @@ for (let i = 0; i < navBtn.length; i++) {
         location.href = `#project0${i + 1}`;
     }
 }
+
+window.addEventListener("scroll", () => { // 스크롤 시 자동으로 변경되는 메뉴
+    // 현재 영역의 id값
+    let current = "";
+    projects.forEach(project => {
+        // 각 section의 top 위치(absolute)
+        const projectTop = window.scrollY + project.getBoundingClientRect().top - 180;
+
+        // 누적된 스크롤이 section의 top 위치에 도달했거나 section의 안에 위치할 경우
+        if(window.scrollY >= projectTop) {
+            current = project.getAttribute("id");
+        }
+    });
+
+    projectBtns.forEach(item => {
+        item.classList.remove("active");
+        const name = item.getAttribute("name");
+        if(name === current) {
+            // 현재 있는 영역의 id와 메뉴의 이름이 일치할 때
+            item.classList.add("active");
+        }
+    });
+});

@@ -146,6 +146,44 @@ body header h1 {
 @media screen and (min-width: 768px) {
   body header h1 {
     display: block;
+    -webkit-animation-name: none;
+            animation-name: none;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  @-webkit-keyframes fade-out {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 }
 
@@ -823,8 +861,8 @@ body main section#skills div.skills-flexbox div.skill div.img-box svg circle {
   stroke-linecap: round;
   -webkit-filter: drop-shadow(3px 3px 5px rgba(47, 46, 45, 0.1));
           filter: drop-shadow(3px 3px 5px rgba(47, 46, 45, 0.1));
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
   -webkit-animation-duration: 1.5s;
           animation-duration: 1.5s;
   -webkit-animation-fill-mode: forwards;
@@ -1193,15 +1231,6 @@ body main section#projects div.projects-flexbox aside ul.projects-nav li.nav-fle
 }
 
 body main section#projects div.projects-flexbox aside ul.projects-nav li.nav-flexbox button.navBtn.active::before {
-  content: "";
-  width: 15px;
-  height: 15px;
-  margin: auto;
-  border: none;
-  border-radius: 50%;
-  background-color: #f2ece4;
-  -webkit-filter: blur(3px);
-          filter: blur(3px);
   opacity: 1;
 }
 
