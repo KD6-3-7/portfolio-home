@@ -882,7 +882,6 @@ body {
 
                                 &:hover::before {
                                     opacity: 1;
-                                    transition: opacity 0.5s;
                                 }
                             } // navBtn
     
@@ -970,16 +969,22 @@ body {
     
                     button {
                         padding: 10px 25px;
-                        background-color: $color-main;
-                        border: none;
-                        color: $color-intro;
+                        background-color: transparent;
+                        border: 1px solid $color-main;
+                        color: $color-main;
                         text-align: center;
                         align-self: flex-end;
                         cursor: pointer;
+                        transition: all .5s ease-in-out;
     
                         font: {
                             family: $font-sans;
                             size: 1rem;
+                        }
+
+                        &:hover {
+                            background-color: $color-main;
+                            color: $color-intro;
                         }
                     }
                 } // form
@@ -1056,9 +1061,23 @@ body {
                     margin: 10px;
                 }
 
-                img {
+                svg {
                     width: 100%;
-                    text-align: center;
+                    
+                    path.footer-btn {
+                        fill: transparent;
+                        stroke: $color-main;
+                        stroke-width: 15;
+                        stroke-miterlimit: 10;
+                        transition: all 0.5s ease-in-out;
+                    }
+                }
+
+                &:hover {
+                    path.footer-btn {
+                        fill: $color-main;
+                        stroke: transparent;
+                    }
                 }
             } // button
         } // icons-flexbox

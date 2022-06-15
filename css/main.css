@@ -1236,8 +1236,6 @@ body main section#projects div.projects-flexbox aside ul.projects-nav li.nav-fle
 
 body main section#projects div.projects-flexbox aside ul.projects-nav li.nav-flexbox button.navBtn:hover::before {
   opacity: 1;
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
 }
 
 body main section#projects div.projects-flexbox aside ul.projects-nav li.nav-flexbox h4 {
@@ -1340,15 +1338,22 @@ body main section#contact div.contents form div.message textarea {
 
 body main section#contact div.contents form button {
   padding: 10px 25px;
-  background-color: #f2ece4;
-  border: none;
-  color: #2f2e2d;
+  background-color: transparent;
+  border: 1px solid #f2ece4;
+  color: #f2ece4;
   text-align: center;
   -ms-flex-item-align: end;
       align-self: flex-end;
   cursor: pointer;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
   font-family: Pretendard;
   font-size: 1rem;
+}
+
+body main section#contact div.contents form button:hover {
+  background-color: #f2ece4;
+  color: #2f2e2d;
 }
 
 body footer {
@@ -1454,8 +1459,21 @@ body footer div.icons-flexbox button {
   }
 }
 
-body footer div.icons-flexbox button img {
+body footer div.icons-flexbox button svg {
   width: 100%;
-  text-align: center;
+}
+
+body footer div.icons-flexbox button svg path.footer-btn {
+  fill: transparent;
+  stroke: #f2ece4;
+  stroke-width: 15;
+  stroke-miterlimit: 10;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+body footer div.icons-flexbox button:hover path.footer-btn {
+  fill: #f2ece4;
+  stroke: transparent;
 }
 /*# sourceMappingURL=main.css.map */
