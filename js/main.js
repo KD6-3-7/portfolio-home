@@ -1,6 +1,5 @@
 // 모바일 nav
 const buttons = document.querySelectorAll(".nav-btn");
-let activeButton = document.querySelector(".nav-btn.active");
 const sections = document.querySelectorAll("section");
 
 
@@ -30,30 +29,6 @@ window.addEventListener("scroll", () => { // 스크롤 시 자동으로 변경�
         }
     });
 });
-
-buttons.forEach(item => {
-    const text = item.querySelector(".nav-title");
-
-    item.addEventListener("click", function() {
-        if (this.classList.contains("active"))
-            return;
-        this.classList.add("active");
-        if (activeButton) {
-            activeButton.classList.remove("active");
-            activeButton.querySelector(".nav-title").classList.remove("active");
-        }
-        handleTransition(this, text);
-        activeButton = this;
-    });
-});
-
-function handleTransition(item, text) {
-    item.addEventListener("transitionend", (e) => {
-        if (e.propertyName != "flex-grow" || !item.classList.contains("active"))
-            return;
-        text.classList.add("active"); 
-    });
-}
 
 
 // pc nav
