@@ -875,6 +875,33 @@ body main section#projects div.projects-flexbox div.projects div.project {
 }
 body main section#projects div.projects-flexbox div.projects div.project div.preview {
   width: 100%;
+  position: relative;
+}
+body main section#projects div.projects-flexbox div.projects div.project div.preview div.view-project {
+  width: 25%;
+  max-width: 170px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+body main section#projects div.projects-flexbox div.projects div.project div.preview div.view-project button {
+  width: calc((100% - 10px) / 2);
+  max-width: 80px;
+  border: none;
+  background-color: #f2ece4;
+  box-shadow: -2px -2px 5px rgb(255, 255, 255), 3px 3px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 25%;
+  cursor: pointer;
+}
+body main section#projects div.projects-flexbox div.projects div.project div.preview div.view-project button img {
+  transform: scale(0.7);
+}
+body main section#projects div.projects-flexbox div.projects div.project div.preview div.view-project button:active {
+  box-shadow: inset -2px -2px 5px rgb(255, 255, 255), inset 3px 3px 5px rgba(0, 0, 0, 0.1);
 }
 body main section#projects div.projects-flexbox div.projects div.project h3 {
   margin: 20px 0;
