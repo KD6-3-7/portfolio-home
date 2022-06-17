@@ -3,8 +3,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -16,7 +15,6 @@ a {
   text-decoration: none;
   color: #777777;
 }
-
 a:hover {
   color: #231f20;
 }
@@ -68,33 +66,26 @@ html {
     scroll-behavior: auto;
   }
 }
-
 body {
   background-color: #f2ece4;
-  -webkit-transition: background-color 1s;
   transition: background-color 1s;
 }
-
 body::-webkit-scrollbar {
-  width: 10px;
+  width: 17px;
 }
-
 body::-webkit-scrollbar-corner {
   background-color: transparent;
 }
-
 body::-webkit-scrollbar-thumb {
   height: 30%;
   background: #f4b322;
   background-clip: padding-box;
-  border: 2px solid transparent;
+  border: 3px solid transparent;
   border-radius: 10px;
 }
-
 body::-webkit-scrollbar-track {
   background: transparent;
 }
-
 body div.dotted-border {
   position: fixed;
   top: 0;
@@ -105,7 +96,6 @@ body div.dotted-border {
   background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23777777FF' stroke-width='1' stroke-dasharray='100%2c 2%2c 30%2c 2%2c 1%2c 2' stroke-dashoffset='70' stroke-linecap='butt'/%3e%3c/svg%3e");
   z-index: -1;
 }
-
 body header {
   position: fixed;
   width: calc(100% - 40px);
@@ -116,14 +106,12 @@ body header {
           backdrop-filter: blur(3px);
   z-index: 1;
 }
-
 @media screen and (min-width: 768px) {
   body header {
     height: 80px;
     padding: 10px 30px;
   }
 }
-
 @media screen and (min-width: 1320px) {
   body header {
     width: calc(100% - 250px);
@@ -131,7 +119,6 @@ body header {
     margin: 20px 125px;
   }
 }
-
 body header h1 {
   display: none;
   position: fixed;
@@ -142,7 +129,6 @@ body header h1 {
   color: transparent;
   -webkit-text-stroke: 1px #777777;
 }
-
 @media screen and (min-width: 768px) {
   body header h1 {
     display: block;
@@ -186,308 +172,210 @@ body header h1 {
     }
   }
 }
-
 @media screen and (min-width: 1320px) {
   body header h1 {
     font-size: 6.3rem;
   }
 }
-
 body header div#nav {
   display: none;
   height: 100%;
 }
-
 @media screen and (min-width: 768px) {
   body header div#nav {
     display: block;
   }
 }
-
 body header div#nav nav {
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
 }
-
 body header div#nav nav ul.gnb {
   width: 55%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
-
 @media screen and (min-width: 1320px) {
   body header div#nav nav ul.gnb {
     width: 40%;
   }
 }
-
 body header div#nav nav ul.gnb li {
-  opacity: .4;
-  -webkit-transition: all 0.4s ease;
+  opacity: 0.4;
   transition: all 0.4s ease;
 }
-
 body header div#nav nav ul.gnb li:hover {
-  opacity: .7;
+  opacity: 0.7;
 }
-
 body header div#nav nav ul.gnb li.active {
   opacity: 1;
 }
-
 body header div#nav nav ul.gnb li a {
   font-size: 0.9rem;
   font-weight: 600;
   text-transform: uppercase;
   color: #2f2e2d;
-  -webkit-transition: color 1s;
   transition: color 1s;
 }
-
 @media screen and (min-width: 1320px) {
   body header div#nav nav ul.gnb li a {
     font-size: 1rem;
   }
 }
-
 body header div#nav nav .line {
   height: 2px;
   position: absolute;
   bottom: 25px;
   background: #f4b322;
 }
-
 @media screen and (min-width: 1320px) {
   body header div#nav nav .line {
     bottom: 35px;
   }
 }
-
 @media screen and (min-width: 768px) {
   body header div.nav-mobile {
     display: none;
   }
 }
-
 body header div.nav-mobile nav.gnb-mobile {
   width: 100%;
   height: 60px;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   -webkit-tap-highlight-color: transparent;
 }
-
 body header div.nav-mobile nav.gnb-mobile button.nav-btn {
   height: 20px;
   position: relative;
   overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   background-color: transparent;
   border: none;
-  -webkit-transition: flex-grow 0.45s cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-flex 0.45s cubic-bezier(0.4, 0, 0.2, 1);
-  transition: flex-grow 0.45s cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-flex 0.45s cubic-bezier(0.4, 0, 0.2, 1);
   transition: flex-grow 0.45s cubic-bezier(0.4, 0, 0.2, 1);
-  transition: flex-grow 0.45s cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-flex 0.45s cubic-bezier(0.4, 0, 0.2, 1), -ms-flex-positive 0.45s cubic-bezier(0.4, 0, 0.2, 1);
   color: #777777;
   font-family: Pretendard;
   font-size: 0.8rem;
 }
-
 body header div.nav-mobile nav.gnb-mobile button.nav-btn.active {
-  -webkit-box-flex: 2.5;
-      -ms-flex-positive: 2.5;
-          flex-grow: 2.5;
+  flex-grow: 2.5;
   color: #2f2e2d;
-  -webkit-transition: color 1s;
   transition: color 1s;
 }
-
 body header div.nav-mobile nav.gnb-mobile button.nav-btn.active div.nav-num span.num {
   -webkit-animation: blank 1s forwards;
           animation: blank 1s forwards;
   -webkit-animation-duration: 0.45s;
           animation-duration: 0.45s;
 }
-
 @-webkit-keyframes blank {
   to {
     opacity: 0;
   }
 }
-
 @keyframes blank {
   to {
     opacity: 0;
   }
 }
-
 body header div.nav-mobile nav.gnb-mobile button.nav-btn div.nav-num {
-  -webkit-transition: -webkit-transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
   font-size: 1rem;
 }
-
 body header div.nav-mobile nav.gnb-mobile button.nav-btn strong.nav-title {
   position: absolute;
   font-size: 1rem;
-  -webkit-transform: translate3d(0, 110%, 0);
-          transform: translate3d(0, 110%, 0);
-  -webkit-transition: -webkit-transform calc(.65s / 3.7);
-  transition: -webkit-transform calc(.65s / 3.7);
-  transition: transform calc(.65s / 3.7);
-  transition: transform calc(.65s / 3.7), -webkit-transform calc(.65s / 3.7);
+  transform: translate3d(0, 110%, 0);
+  transition: transform 0.1756756757s;
 }
-
 body header div.nav-mobile nav.gnb-mobile button.nav-btn strong.nav-title.active {
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-  -webkit-transition: -webkit-transform calc(.65s / 1.5);
-  transition: -webkit-transform calc(.65s / 1.5);
-  transition: transform calc(.65s / 1.5);
-  transition: transform calc(.65s / 1.5), -webkit-transform calc(.65s / 1.5);
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.4333333333s;
 }
-
 body main div.bg-space {
   z-index: -2;
   position: fixed;
   width: 90vh;
   height: 90vh;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
-
 body main div.bg-space#circleRight {
   left: 100%;
-  -webkit-transition: opacity 1s;
   transition: opacity 1s;
 }
-
 body main div.bg-space#circleRight svg .line, body main div.bg-space#circleRight svg .gradient {
   fill: none;
 }
-
 body main div.bg-space#circleRight svg .line, body main div.bg-space#circleRight svg .colored {
   stroke: #f4b322;
 }
-
 body main div.bg-space#circleRight svg .dot, body main div.bg-space#circleRight svg .dotted, body main div.bg-space#circleRight svg .triangle {
   stroke-linecap: round;
 }
-
 body main div.bg-space#circleRight svg .dot, body main div.bg-space#circleRight svg .circle, body main div.bg-space#circleRight svg .halo, body main div.bg-space#circleRight svg .star, body main div.bg-space#circleRight svg .colored, body main div.bg-space#circleRight svg .gradient {
   stroke-miterlimit: 10;
 }
-
 body main div.bg-space#circleRight svg .dot, body main div.bg-space#circleRight svg .dotted {
   stroke-width: 5px;
 }
-
 body main div.bg-space#circleRight svg .dot {
   stroke-dasharray: 0 29.97;
 }
-
 body main div.bg-space#circleRight svg .dotted, body main div.bg-space#circleRight svg .triangle {
   stroke-linejoin: round;
 }
-
 body main div.bg-space#circleRight svg .path1 {
   fill: url(#linear-gradient-right1);
 }
-
 body main div.bg-space#circleRight svg .circle1 {
   stroke-width: 0.2px;
   stroke: url(#linear-gradient-right2);
 }
-
 body main div.bg-space#circleRight svg .path2 {
   fill: url(#linear-gradient-right2);
 }
-
 body main div.bg-space#circleRight svg .circle2 {
   stroke-width: 0.4px;
   stroke: url(#linear-gradient-right3);
 }
-
 body main div.bg-space#circleRight svg .path3 {
   fill: url(#linear-gradient-right3);
 }
-
 body main div.bg-space#circleRight svg .circle3 {
   stroke-width: 0.6px;
   stroke: url(#linear-gradient-right4);
 }
-
 body main div.bg-space#circleRight svg .path4 {
   fill: url(#linear-gradient-right4);
 }
-
 body main div.bg-space#circleRight svg .circle4 {
   stroke-width: 0.8px;
   stroke: url(#linear-gradient-right5);
 }
-
 body main div.bg-space#circleRight svg .path5 {
   fill: url(#linear-gradient-right5);
 }
-
 body main div.bg-space#circleRight svg .circle5 {
   stroke: url(#linear-gradient-right6);
 }
-
 body main div.bg-space#circleRight svg .colored {
   fill: #f2ece4;
 }
-
 body main div.bg-space#circleRight svg .dotted {
   stroke-dasharray: 0 20.25;
 }
-
 body main div.bg-space#circleRight svg g {
   -webkit-animation-duration: 60s;
           animation-duration: 60s;
@@ -495,93 +383,70 @@ body main div.bg-space#circleRight svg g {
           animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
 }
-
 body main div.bg-space#circleRight svg g#element {
   -webkit-animation-name: rotate-circleRight2;
           animation-name: rotate-circleRight2;
 }
-
 @-webkit-keyframes rotate-circleRight2 {
   to {
-    -webkit-transform: rotate(-360deg);
-            transform: rotate(-360deg);
+    transform: rotate(-360deg);
   }
 }
-
 @keyframes rotate-circleRight2 {
   to {
-    -webkit-transform: rotate(-360deg);
-            transform: rotate(-360deg);
+    transform: rotate(-360deg);
   }
 }
-
 body main div.bg-space#circleRight svg g#center {
   -webkit-animation-name: rotate-circleRight1;
           animation-name: rotate-circleRight1;
 }
-
 @-webkit-keyframes rotate-circleRight1 {
   to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
-
 @keyframes rotate-circleRight1 {
   to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
-
 body main div.bg-space#circleLeft {
   opacity: 0;
-  -webkit-transition: opacity 1s;
   transition: opacity 1s;
 }
-
 body main div.bg-space#circleLeft svg .line {
   fill: none;
 }
-
 body main div.bg-space#circleLeft svg .line, body main div.bg-space#circleLeft svg .colored {
   stroke: #f4b322;
 }
-
 body main div.bg-space#circleLeft svg .circle, body main div.bg-space#circleLeft svg .halo, body main div.bg-space#circleLeft svg .star, body main div.bg-space#circleLeft svg .colored {
   stroke-miterlimit: 10;
 }
-
 body main div.bg-space#circleLeft svg .planet {
   fill: #f4b322;
 }
-
 body main div.bg-space#circleLeft svg .comet {
   fill-rule: evenodd;
 }
-
 body main div.bg-space#circleLeft svg .comet1 {
   fill: url(#linear-gradient-left1);
 }
-
 body main div.bg-space#circleLeft svg .comet2 {
   fill: url(#linear-gradient-left2);
 }
-
 body main div.bg-space#circleLeft svg .colored {
   fill: #2f2e2d;
 }
-
 body main div.bg-space#circleLeft svg .dotted {
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 5px;
   stroke-dasharray: 0 20.25;
 }
-
 body main div.bg-space#circleLeft svg g {
   -webkit-animation-duration: 60s;
           animation-duration: 60s;
@@ -589,65 +454,50 @@ body main div.bg-space#circleLeft svg g {
           animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
 }
-
 body main div.bg-space#circleLeft svg g#element {
   -webkit-animation-name: rotate-circleLeft2;
           animation-name: rotate-circleLeft2;
 }
-
 @-webkit-keyframes rotate-circleLeft2 {
   to {
-    -webkit-transform: rotate(-360deg);
-            transform: rotate(-360deg);
+    transform: rotate(-360deg);
   }
 }
-
 @keyframes rotate-circleLeft2 {
   to {
-    -webkit-transform: rotate(-360deg);
-            transform: rotate(-360deg);
+    transform: rotate(-360deg);
   }
 }
-
 body main div.bg-space#circleLeft svg g#center {
   -webkit-animation-name: rotate-circleLeft1;
           animation-name: rotate-circleLeft1;
 }
-
 @-webkit-keyframes rotate-circleLeft1 {
   to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
-
 @keyframes rotate-circleLeft1 {
   to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
-
 body main section#about, body main section#skills, body main section#projects, body main section#contact {
   padding-top: 100px;
 }
-
 @media screen and (min-width: 768px) {
   body main section#about, body main section#skills, body main section#projects, body main section#contact {
     padding-top: 180px;
   }
 }
-
 body main section#about div.sticky-title, body main section#skills div.sticky-title, body main section#projects div.sticky-title, body main section#contact div.sticky-title {
   height: 60px;
   padding: 0 5%;
   top: 100px;
   z-index: 2;
 }
-
 @media screen and (min-width: 768px) {
   body main section#about div.sticky-title, body main section#skills div.sticky-title, body main section#projects div.sticky-title, body main section#contact div.sticky-title {
     position: -webkit-sticky;
@@ -659,7 +509,6 @@ body main section#about div.sticky-title, body main section#skills div.sticky-ti
     padding-right: 0;
   }
 }
-
 @media screen and (min-width: 1320px) {
   body main section#about div.sticky-title, body main section#skills div.sticky-title, body main section#projects div.sticky-title, body main section#contact div.sticky-title {
     width: 765px;
@@ -667,16 +516,13 @@ body main section#about div.sticky-title, body main section#skills div.sticky-ti
     padding-left: 140px;
   }
 }
-
 body main section#about div.sticky-title h2.title-num, body main section#skills div.sticky-title h2.title-num, body main section#projects div.sticky-title h2.title-num, body main section#contact div.sticky-title h2.title-num {
   letter-spacing: -0.1rem;
   line-height: 50px;
   text-align: left;
   color: #2f2e2d;
-  -webkit-transition: color 1s;
   transition: color 1s;
 }
-
 @media screen and (min-width: 768px) {
   body main section#about div.sticky-title h2.title-num, body main section#skills div.sticky-title h2.title-num, body main section#projects div.sticky-title h2.title-num, body main section#contact div.sticky-title h2.title-num {
     letter-spacing: -0.3rem;
@@ -684,14 +530,12 @@ body main section#about div.sticky-title h2.title-num, body main section#skills 
     font-size: 4rem;
   }
 }
-
 @media screen and (min-width: 1320px) {
   body main section#about div.sticky-title h2.title-num, body main section#skills div.sticky-title h2.title-num, body main section#projects div.sticky-title h2.title-num, body main section#contact div.sticky-title h2.title-num {
     line-height: 90px;
     font-size: 6rem;
   }
 }
-
 body main section#about div.sticky-title h2.title-num span.title, body main section#skills div.sticky-title h2.title-num span.title, body main section#projects div.sticky-title h2.title-num span.title, body main section#contact div.sticky-title h2.title-num span.title {
   font-family: Pretendard;
   font-size: 2.9rem;
@@ -699,69 +543,58 @@ body main section#about div.sticky-title h2.title-num span.title, body main sect
   -webkit-text-stroke: 2px #2f2e2d;
   transition: -webkit-text-stroke-color 1s;
 }
-
 @media screen and (min-width: 768px) {
   body main section#about div.sticky-title h2.title-num span.title, body main section#skills div.sticky-title h2.title-num span.title, body main section#projects div.sticky-title h2.title-num span.title, body main section#contact div.sticky-title h2.title-num span.title {
     font-size: 4.2rem;
   }
 }
-
 @media screen and (min-width: 1320px) {
   body main section#about div.sticky-title h2.title-num span.title, body main section#skills div.sticky-title h2.title-num span.title, body main section#projects div.sticky-title h2.title-num span.title, body main section#contact div.sticky-title h2.title-num span.title {
     font-size: 6.3rem;
   }
 }
-
 body main section#about div.contents, body main section#skills div.contents, body main section#projects div.contents, body main section#contact div.contents {
   width: 100%;
   margin: 0 auto;
   padding: 0 5%;
   padding-top: 50px;
 }
-
 @media screen and (min-width: 768px) {
   body main section#about div.contents, body main section#skills div.contents, body main section#projects div.contents, body main section#contact div.contents {
     padding: 0 40px;
   }
 }
-
 @media screen and (min-width: 1320px) {
   body main section#about div.contents, body main section#skills div.contents, body main section#projects div.contents, body main section#contact div.contents {
     max-width: 1640px;
     padding: 0 140px;
   }
 }
-
 @media screen and (min-width: 768px) {
   body main section#about div.contents, body main section#skills div.contents, body main section#projects div.contents, body main section#contact div.contents {
     padding-top: 100px;
     padding-bottom: 50px;
   }
 }
-
 @media screen and (min-width: 1320px) {
   body main section#about div.contents, body main section#skills div.contents, body main section#projects div.contents, body main section#contact div.contents {
     padding-top: 200px;
     padding-bottom: 200px;
   }
 }
-
 body main section#about h3 {
   word-break: keep-all;
   color: #2f2e2d;
 }
-
 @media screen and (min-width: 768px) {
   body main section#about h3 {
     font-size: 2.2rem;
   }
 }
-
 body main section#about p {
   word-break: keep-all;
   color: #2f2e2d;
 }
-
 @media screen and (min-width: 768px) {
   body main section#about p {
     margin-top: 0;
@@ -769,88 +602,64 @@ body main section#about p {
     line-height: 2rem;
   }
 }
-
 body main section#skills div.skills-flexbox {
   width: 100%;
   margin: 0 auto;
   padding: 0 5%;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   padding-top: 50px;
 }
-
 @media screen and (min-width: 768px) {
   body main section#skills div.skills-flexbox {
     padding: 0 40px;
   }
 }
-
 @media screen and (min-width: 1320px) {
   body main section#skills div.skills-flexbox {
     max-width: 1640px;
     padding: 0 140px;
   }
 }
-
 @media screen and (min-width: 768px) {
   body main section#skills div.skills-flexbox {
     padding-top: 100px;
   }
 }
-
 @media screen and (min-width: 1320px) {
   body main section#skills div.skills-flexbox {
     padding-top: 200px;
   }
 }
-
 body main section#skills div.skills-flexbox div.skill {
   width: 50%;
 }
-
 @media screen and (min-width: 768px) {
   body main section#skills div.skills-flexbox div.skill {
-    width: calc(100% / 3);
+    width: 33.3333333333%;
   }
 }
-
 @media screen and (min-width: 1320px) {
   body main section#skills div.skills-flexbox div.skill {
     width: 20%;
   }
 }
-
 body main section#skills div.skills-flexbox div.skill div.img-box {
   position: relative;
 }
-
 body main section#skills div.skills-flexbox div.skill div.img-box div.skill-img {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
-
 body main section#skills div.skills-flexbox div.skill div.img-box svg {
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
-
 body main section#skills div.skills-flexbox div.skill div.img-box svg circle {
   fill: none;
   stroke: #fcfbfa;
@@ -859,8 +668,7 @@ body main section#skills div.skills-flexbox div.skill div.img-box svg circle {
   stroke-dasharray: 471;
   stroke-dashoffset: 471;
   stroke-linecap: round;
-  -webkit-filter: drop-shadow(3px 3px 5px rgba(47, 46, 45, 0.1));
-          filter: drop-shadow(3px 3px 5px rgba(47, 46, 45, 0.1));
+  filter: drop-shadow(3px 3px 5px rgba(47, 46, 45, 0.1));
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
   -webkit-animation-duration: 1.5s;
@@ -868,281 +676,224 @@ body main section#skills div.skills-flexbox div.skill div.img-box svg circle {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
-
 body main section#skills div.skills-flexbox div.skill div.img-box svg circle.html5 {
   -webkit-animation-name: circle-html5;
           animation-name: circle-html5;
 }
-
 @-webkit-keyframes circle-html5 {
   to {
     stroke-dashoffset: 23.55;
   }
 }
-
 @keyframes circle-html5 {
   to {
     stroke-dashoffset: 23.55;
   }
 }
-
 body main section#skills div.skills-flexbox div.skill div.img-box svg circle.css3 {
   -webkit-animation-name: circle-css3;
           animation-name: circle-css3;
 }
-
 @-webkit-keyframes circle-css3 {
   to {
     stroke-dashoffset: 23.55;
   }
 }
-
 @keyframes circle-css3 {
   to {
     stroke-dashoffset: 23.55;
   }
 }
-
 body main section#skills div.skills-flexbox div.skill div.img-box svg circle.javascript {
   -webkit-animation-name: circle-javascript;
           animation-name: circle-javascript;
 }
-
 @-webkit-keyframes circle-javascript {
   to {
     stroke-dashoffset: 47.1;
   }
 }
-
 @keyframes circle-javascript {
   to {
     stroke-dashoffset: 47.1;
   }
 }
-
 body main section#skills div.skills-flexbox div.skill div.img-box svg circle.sass {
   -webkit-animation-name: circle-sass;
           animation-name: circle-sass;
 }
-
 @-webkit-keyframes circle-sass {
   to {
     stroke-dashoffset: 47.1;
   }
 }
-
 @keyframes circle-sass {
   to {
     stroke-dashoffset: 47.1;
   }
 }
-
 body main section#skills div.skills-flexbox div.skill div.img-box svg circle.react {
   -webkit-animation-name: circle-react;
           animation-name: circle-react;
 }
-
 @-webkit-keyframes circle-react {
   to {
     stroke-dashoffset: 70.65;
   }
 }
-
 @keyframes circle-react {
   to {
     stroke-dashoffset: 70.65;
   }
 }
-
 body main section#skills div.skills-flexbox div.skill div.img-box svg circle.mysql {
   -webkit-animation-name: circle-mysql;
           animation-name: circle-mysql;
 }
-
 @-webkit-keyframes circle-mysql {
   to {
     stroke-dashoffset: 117.75;
   }
 }
-
 @keyframes circle-mysql {
   to {
     stroke-dashoffset: 117.75;
   }
 }
-
 body main section#skills div.skills-flexbox div.skill div.img-box svg circle.git {
   -webkit-animation-name: circle-git;
           animation-name: circle-git;
 }
-
 @-webkit-keyframes circle-git {
   to {
     stroke-dashoffset: 141.3;
   }
 }
-
 @keyframes circle-git {
   to {
     stroke-dashoffset: 141.3;
   }
 }
-
 body main section#skills div.skills-flexbox div.skill div.img-box svg circle.c {
   -webkit-animation-name: circle-c;
           animation-name: circle-c;
 }
-
 @-webkit-keyframes circle-c {
   to {
     stroke-dashoffset: 141.3;
   }
 }
-
 @keyframes circle-c {
   to {
     stroke-dashoffset: 141.3;
   }
 }
-
 body main section#skills div.skills-flexbox div.skill div.img-box svg circle.java {
   -webkit-animation-name: circle-java;
           animation-name: circle-java;
 }
-
 @-webkit-keyframes circle-java {
   to {
     stroke-dashoffset: 164.85;
   }
 }
-
 @keyframes circle-java {
   to {
     stroke-dashoffset: 164.85;
   }
 }
-
 body main section#skills div.skills-flexbox div.skill div.img-box svg circle.php {
   -webkit-animation-name: circle-php;
           animation-name: circle-php;
 }
-
 @-webkit-keyframes circle-php {
   to {
     stroke-dashoffset: 188.4;
   }
 }
-
 @keyframes circle-php {
   to {
     stroke-dashoffset: 188.4;
   }
 }
-
 body main section#skills div.skills-flexbox div.skill h3 {
   margin-bottom: 50px;
   text-align: center;
   font-weight: 300;
   color: #2f2e2d;
 }
-
 @media screen and (min-width: 768px) {
   body main section#skills div.skills-flexbox div.skill h3 {
     font-size: 2rem;
   }
 }
-
 body main section#projects {
   padding-top: 100px;
 }
-
 @media screen and (min-width: 768px) {
   body main section#projects {
     padding-top: 180px;
   }
 }
-
 body main section#projects div.projects-flexbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
   padding-top: 0px;
 }
-
 @media screen and (min-width: 1320px) {
   body main section#projects div.projects-flexbox {
     padding-top: 50px;
   }
 }
-
 body main section#projects div.projects-flexbox div.projects {
   width: 100%;
 }
-
 @media screen and (min-width: 768px) {
   body main section#projects div.projects-flexbox div.projects {
     width: 70%;
   }
 }
-
 @media screen and (min-width: 1320px) {
   body main section#projects div.projects-flexbox div.projects {
     width: 75%;
   }
 }
-
 body main section#projects div.projects-flexbox div.projects div.project {
   padding-top: 50px;
 }
-
 @media screen and (min-width: 768px) {
   body main section#projects div.projects-flexbox div.projects div.project {
     padding-top: 100px;
   }
 }
-
 @media screen and (min-width: 1320px) {
   body main section#projects div.projects-flexbox div.projects div.project {
     padding-top: 150px;
   }
 }
-
 body main section#projects div.projects-flexbox div.projects div.project div.preview {
   width: 100%;
 }
-
 body main section#projects div.projects-flexbox div.projects div.project h3 {
   margin: 20px 0;
   color: #f2ece4;
 }
-
 @media screen and (min-width: 768px) {
   body main section#projects div.projects-flexbox div.projects div.project h3 {
     font-size: 2.2rem;
   }
 }
-
 body main section#projects div.projects-flexbox div.projects div.project p {
   font-weight: 300;
   color: #f2ece4;
 }
-
 @media screen and (min-width: 768px) {
   body main section#projects div.projects-flexbox div.projects div.project p {
     font-size: 1.3rem;
   }
 }
-
 body main section#projects div.projects-flexbox aside {
   display: none;
   width: 25%;
@@ -1151,70 +902,50 @@ body main section#projects div.projects-flexbox aside {
   position: sticky;
   top: 0;
 }
-
 @media screen and (min-width: 768px) {
   body main section#projects div.projects-flexbox aside {
     display: block;
   }
 }
-
 @media screen and (min-width: 1320px) {
   body main section#projects div.projects-flexbox aside {
     width: 20%;
     height: 615px;
   }
 }
-
 body main section#projects div.projects-flexbox aside ul.projects-nav {
   padding-top: 100px;
 }
-
 @media screen and (min-width: 1320px) {
   body main section#projects div.projects-flexbox aside ul.projects-nav {
     padding-top: 150px;
   }
 }
-
 body main section#projects div.projects-flexbox aside ul.projects-nav li.nav-flexbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
   padding: 20px 0;
 }
-
 body main section#projects div.projects-flexbox aside ul.projects-nav li.nav-flexbox:last-child {
   padding-bottom: 0;
 }
-
 body main section#projects div.projects-flexbox aside ul.projects-nav li.nav-flexbox button.navBtn {
   width: 30px;
   height: 30px;
   margin-right: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   border: 1px solid #f2ece4;
   border-radius: 50%;
   background-color: transparent;
   cursor: pointer;
 }
-
 @media screen and (min-width: 1320px) {
   body main section#projects div.projects-flexbox aside ul.projects-nav li.nav-flexbox button.navBtn {
     margin-right: 20px;
   }
 }
-
 body main section#projects div.projects-flexbox aside ul.projects-nav li.nav-flexbox button.navBtn::before {
   content: "";
   width: 15px;
@@ -1223,82 +954,52 @@ body main section#projects div.projects-flexbox aside ul.projects-nav li.nav-fle
   border: none;
   border-radius: 50%;
   background-color: #f2ece4;
-  -webkit-filter: blur(3px);
-          filter: blur(3px);
+  filter: blur(3px);
   opacity: 0;
-  -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
-
 body main section#projects div.projects-flexbox aside ul.projects-nav li.nav-flexbox button.navBtn.active::before {
   opacity: 1;
 }
-
 body main section#projects div.projects-flexbox aside ul.projects-nav li.nav-flexbox button.navBtn:hover::before {
   opacity: 1;
 }
-
 body main section#projects div.projects-flexbox aside ul.projects-nav li.nav-flexbox h4 {
   color: #f2ece4;
 }
-
 body main section#contact div.contents {
   padding-bottom: 50px;
 }
-
 @media screen and (min-width: 768px) {
   body main section#contact div.contents {
     padding-bottom: 200px;
   }
 }
-
 body main section#contact div.contents form {
   width: 100%;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
 @media screen and (min-width: 768px) {
   body main section#contact div.contents form {
     width: 688px;
   }
 }
-
 @media screen and (min-width: 1320px) {
   body main section#contact div.contents form {
     width: 700px;
   }
 }
-
 body main section#contact div.contents form div.info {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
-
 body main section#contact div.contents form div.info input {
   width: 47%;
   margin-bottom: 20px;
@@ -1310,17 +1011,14 @@ body main section#contact div.contents form div.info input {
   font-family: Pretendard;
   font-size: 1rem;
 }
-
 @media screen and (min-width: 768px) {
   body main section#contact div.contents form div.info input {
     width: 330px;
   }
 }
-
 body main section#contact div.contents form div.message {
   width: 100%;
 }
-
 body main section#contact div.contents form div.message textarea {
   width: 100%;
   height: 300px;
@@ -1335,64 +1033,77 @@ body main section#contact div.contents form div.message textarea {
   font-family: Pretendard;
   font-size: 1rem;
 }
-
 body main section#contact div.contents form button {
+  position: relative;
   padding: 10px 25px;
   background-color: transparent;
   border: 1px solid #f2ece4;
   color: #f2ece4;
   text-align: center;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  align-self: flex-end;
   cursor: pointer;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   font-family: Pretendard;
   font-size: 1rem;
 }
-
 body main section#contact div.contents form button:hover {
   background-color: #f2ece4;
   color: #2f2e2d;
 }
-
+body main section#contact div.contents form button:disabled {
+  cursor: not-allowed;
+}
+body main section#contact div.contents form button:disabled:hover {
+  background-color: transparent;
+  color: #f2ece4;
+}
+body main section#contact div.contents form button:disabled:hover span.tooltip {
+  display: block;
+}
+body main section#contact div.contents form button span.tooltip {
+  display: none;
+  width: 180px;
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  margin-left: -90px;
+  padding: 5px 0;
+  border-radius: 5px;
+  background-color: #f2ece4;
+  color: #2f2e2d;
+  text-align: center;
+  font-weight: 600;
+}
+body main section#contact div.contents form button span.tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-color: transparent transparent #f2ece4 transparent;
+  border-style: solid;
+  border-width: 5px;
+}
 body footer {
   width: 100%;
   margin: 0 auto;
   padding: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   background-color: #231f20;
 }
-
 @media screen and (min-width: 768px) {
   body footer {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
     padding: 10px 30px;
   }
   body footer div.logo {
     width: 20vw;
     padding: 10px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
   }
   body footer div.logo svg {
     width: 130px;
@@ -1405,43 +1116,27 @@ body footer {
     fill: none;
   }
 }
-
 body footer p {
   color: #f2ece4;
 }
-
 @media screen and (min-width: 768px) {
   body footer p {
     font-size: 1.1rem;
   }
 }
-
 body footer div.icons-flexbox {
   width: 205px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
-
 @media screen and (min-width: 768px) {
   body footer div.icons-flexbox {
     width: 20vw;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    justify-content: flex-end;
   }
 }
-
 body footer div.icons-flexbox button {
   width: 25px;
   height: 25px;
@@ -1450,7 +1145,6 @@ body footer div.icons-flexbox button {
   border: none;
   cursor: pointer;
 }
-
 @media screen and (min-width: 768px) {
   body footer div.icons-flexbox button {
     width: 35px;
@@ -1458,22 +1152,17 @@ body footer div.icons-flexbox button {
     margin: 10px;
   }
 }
-
 body footer div.icons-flexbox button svg {
   width: 100%;
 }
-
 body footer div.icons-flexbox button svg path.footer-btn {
   fill: transparent;
   stroke: #f2ece4;
   stroke-width: 15;
   stroke-miterlimit: 10;
-  -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-
 body footer div.icons-flexbox button:hover path.footer-btn {
   fill: #f2ece4;
   stroke: transparent;
-}
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

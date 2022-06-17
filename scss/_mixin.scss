@@ -37,7 +37,6 @@
     @include responsive(tablet-size) {
         padding: 0 40px;
     }
-    
 
     @include responsive(pc-size) {
         max-width: 1640px;

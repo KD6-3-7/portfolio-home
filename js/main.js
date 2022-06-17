@@ -249,3 +249,82 @@ window.addEventListener("scroll", () => { // 스크롤 시 자동으로 변경�
         }
     });
 });
+
+
+// EmailJS
+const inputText = document.getElementsByClassName("input-text");
+let sendBtn = document.getElementById("send-btn");
+
+for (let i = 0; i < inputText.length; i++) {
+    inputText[i].addEventListener("keyup", checkForm);
+}
+
+function checkForm() {
+    let canSubmit = true;
+
+    for (let i = 0; i < inputText.length; i++) {
+        if (inputText[i].value.length == 0) {
+            canSubmit = false;
+        }
+    }
+
+    if (canSubmit) {
+        sendBtn.disabled = false;
+    } else if(!canSubmit) {
+        sendBtn.disabled = true;
+    }
+
+    console.log(canSubmit);
+    console.log(sendBtn.disabled);
+}
+
+function setStatus(status) {
+    let icon;
+    let title;
+    let text;
+
+    if (status == "success") {
+        icon = "success";
+        title = "전송 완료";
+        text = "메일 전송 감사합니다. 빠른 시일 내에 확인 후 답장드리겠습니다.";
+    } else {
+        icon = "error";
+        title = "전송 실패";
+        text = "오류가 발생했습니다. 재시도해주시기 바랍니다.";
+    }
+
+    Swal.fire({
+        icon: icon,
+        title: title,
+        text: text,
+        confirmButtonText: "확인",
+        showClass: {
+            popup: "animate__animated animate__fadeInDown"
+        },
+        hideClass: {
+            popup: "animate__animated animate__fadeOutUp"
+        }
+    });
+}
+
+const sendEmail = () => {
+    if(sendBtn.disabled == false) {
+        emailjs.init("HcdT_GGrzWUpKScSF");
+        let templateParams = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            message: document.getElementById("message").value
+        };
+    
+        emailjs.send("service_t22s76f", "template_1aj9w8r", templateParams).then(function(response) {
+            console.log('Success!', response.status, response.text);
+            setStatus("success");
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("message").value = "";
+        }, function(error) {
+            console.log('Failed...', error);
+            setStatus("fail");
+        });
+    }
+}

@@ -11,8 +11,11 @@
     <meta name="type" property="og:type" content="article">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.0.6/tsparticles.bundle.js" integrity="sha256-RA2LJkgIUk4sKgvaAKDE+bv8trIJrJLytKSx+wLFr48=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.0.6/tsparticles.bundle.js" integrity="sha256-RA2LJkgIUk4sKgvaAKDE+bv8trIJrJLytKSx+wLFr48=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.17/dist/sweetalert2.all.min.js"></script>
     <script src="./js/index.js"></script>
     <title>Welcome to my Universe</title>
 </head>
@@ -465,15 +468,15 @@
                 <h2 class="title-num">04 <span class="title">CONTACT</span></h2>
             </div> <!-- sticky-title -->
             <div class="contents">
-                <form action="#" method="post">
+                <form action="#" method="post" id="myForm">
                     <div class="info">
-                        <input type="text" name="name" id="name" placeholder="NAME">
-                        <input type="email" name="email" id="email" placeholder="E-MAIL">
+                        <input type="text" name="name" id="name" class="input-text" placeholder="NAME">
+                        <input type="email" name="email" id="email" class="input-text" placeholder="E-MAIL">
                     </div> <!-- row -->
                     <div class="message">
-                        <textarea name="message" id="message" cols="30" rows="10" placeholder="MESSAGE"></textarea>
+                        <textarea name="message" id="message" class="input-text" cols="30" rows="10" placeholder="MESSAGE"></textarea>
                     </div>
-                    <button type="submit">SEND</button>
+                    <button id="send-btn" type="button" onclick="sendEmail()" disabled>SEND<span class="tooltip">폼을 모두 채워주세요!</span></button>
                 </form>
             </div> <!-- contents -->
         </section> <!-- contact -->
