@@ -821,6 +821,132 @@ body {
                             } // view-project
                         } // preview
 
+                        div.modal {
+                            width: 100%;
+                            height: 100%;
+                            margin: 0;
+                            padding: 0;
+                            position: fixed;
+                            top: 100%;
+                            left: 0;
+                            background-color: rgba($color-white, 0.8);
+                            text-align: left;
+                            overflow: auto;
+                            z-index: 2;
+                            transition: all 0.6s ease-in-out;
+
+                            @include responsive(pc-size) {
+                                &::-webkit-scrollbar { // 스크롤바 전체 영역
+                                    width: 17px; // 스크롤바의 너비
+                                }
+                            
+                                &::-webkit-scrollbar-corner { // 상하+좌우 스크롤이 만나는 공간
+                                    background-color: transparent;
+                                }
+                                
+                                &::-webkit-scrollbar-thumb { // 스크롤 영역
+                                    height: 30%; // 스크롤바의 길이
+                                    background: $color-yellow; // 스크롤바의 색상
+                                    background-clip: padding-box;
+                                    border: 3px solid transparent;
+                                    border-radius: 10px;
+                                }
+                                
+                                &::-webkit-scrollbar-track { // 스크롤이 움직이는 바 영역
+                                    background: $color-intro; // 스크롤바 뒷배경 색상
+                                }
+                            }
+
+                            &.show {
+                                top: 0;
+                            }
+
+                            div.modal-header {
+                                position: relative;
+
+                                button.close-btn {
+                                    position: absolute;
+                                    top: 10px;
+                                    right: 10px;
+                                    color: $color-main;
+                                    font-size: 1.2rem;
+                                    font-weight: 600;
+                                    background-color: transparent;
+                                    border: none;
+                                    border-radius: 50%;
+                                    cursor: pointer;
+                                    transition: color 0.3s ease-in-out;
+                                    
+                                    i.fa-circle {
+                                        filter: drop-shadow(3px 3px 5px rgba($color-black, 0.1));
+                                    }
+
+                                    i.fa-xmark {
+                                        color: $color-intro;
+                                    }
+
+                                    @include responsive(tablet-size) {
+                                        top: 30px;
+                                        right: 30px;
+                                        font-size: 1.4rem;
+                                    }
+    
+                                    &:hover {
+                                        color: $color-intro;
+
+                                        i.fa-xmark {
+                                            color: $color-main;
+                                        }
+                                    }
+                                } // close-btn
+                            } // modal-header
+
+                            div.design-guide {
+                                max-width: $break-pc;
+                                margin: 0 auto;
+                            } // design-guide
+
+                            div.modal-footer {
+                                position: relative;
+                                
+                                button.top-btn {
+                                    position: absolute;
+                                    bottom: 10px;
+                                    right: 10px;
+                                    color: $color-main;
+                                    font-size: 1.2rem;
+                                    font-weight: 600;
+                                    background-color: transparent;
+                                    border: none;
+                                    border-radius: 50%;
+                                    cursor: pointer;
+                                    transition: color 0.3s ease-in-out;
+                                    
+                                    i.fa-circle {
+                                        filter: drop-shadow(3px 3px 5px rgba($color-black, 0.1));
+                                    }
+
+                                    i.fa-angle-double-up {
+                                        color: $color-intro;
+                                    }
+
+                                    @include responsive(tablet-size) {
+                                        bottom: 30px;
+                                        right: 30px;
+                                        font-size: 1.4rem;
+                                    }
+
+                                    &:hover {
+                                        color: $color-intro;
+
+                                        i.fa-angle-double-up {
+                                            color: $color-main;
+                                        }
+                                    }
+                                } // top-btn
+                            } // modal-footer
+                        } // modal
+
                         h3 {
                             margin: 20px 0;
                             color: $color-main;

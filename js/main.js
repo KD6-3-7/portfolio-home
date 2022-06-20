@@ -185,7 +185,7 @@ window.addEventListener("scroll", () => {
 });
 
 
-// 프로젝트 nav 버튼 클릭시 active 클래스 추가
+// projects nav 버튼 클릭시 active 클래스 추가
 const navBtn = document.getElementsByClassName("navBtn");
 const projects = document.querySelectorAll(".project");
 const projectBtns = document.querySelectorAll(".navBtn");
@@ -224,6 +224,69 @@ window.addEventListener("scroll", () => { // 스크롤 시 자동으로 변경�
         }
     });
 });
+
+
+// projects full screen modal
+const body = document.querySelector("body");
+const modal = document.getElementsByClassName("modal");
+const modalOpen = document.getElementsByClassName("open-btn");
+const modalClose = document.getElementsByClassName("close-btn");
+const topBtn = document.getElementsByClassName("top-btn");
+const on = [];
+const off = [];
+
+function Modal(num) {
+    return function() {
+        modalOpen[num].addEventListener("click", () => {
+            modal[num].classList.toggle("show");
+
+            if (modal[num].classList.contains("show")) {
+                body.style.overflow = "hidden"; // hidden 값을 주면 스크롤 잠금
+            }
+        });
+    }
+}
+
+function Exit(num) {
+    return function() {
+        modal[num].addEventListener("click", (event) => {
+            if (event.target === modal[num]) {
+                modal[num].classList.toggle("show");
+
+                if (!modal[num].classList.contains("show")) {
+                    body.style.overflow = "auto";
+                }
+            }
+        });
+
+        modalClose[num].addEventListener("click", () => {
+            modal[num].classList.toggle("show");
+
+            if (!modal[num].classList.contains("show")) {
+                body.style.overflow = "auto";
+            }
+        })
+    }
+}
+
+for (var i = 0; i < modalOpen.length; i++) {
+    on[i] = Modal(i);
+    off[i] = Exit(i);
+};
+
+for (var j = 0; j < modalOpen.length; j++) {
+    on[j]();
+    off[j]();
+};
+
+for (let i = 0; i < topBtn.length; i++) {
+    topBtn[i].onclick = function() {
+        modal[i].scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
+}
 
 
 // EmailJS
