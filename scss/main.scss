@@ -16,7 +16,7 @@ $percent-php: 60;
 $circle-length: 471;
 
 @function strokeDashoffset($num) {
-	@return $circle-length - ($circle-length * $num) / 100;
+	@return calc($circle-length - ($circle-length * $num) / 100);
 }
 
 html {
@@ -802,6 +802,7 @@ body {
                                 align-items: center;
 
                                 button {
+                                    position: relative;
                                     width: calc((100% - 10px) / 2);
                                     max-width: 80px;
                                     border: none;
@@ -810,13 +811,51 @@ body {
                                     border-radius: 25%;
                                     cursor: pointer;
 
-                                    img {
-                                        transform: scale(0.7);
+                                    &:hover {
+                                        @include responsive(tablet-size) {
+                                            span.tooltip {
+                                                display: block;
+                                            }
+                                        }
                                     }
 
                                     &:active {
                                         box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 1), inset 3px 3px 5px rgba(0, 0, 0, 0.1);
                                     }
+
+                                    img {
+                                        transform: scale(0.7);
+                                    }
+
+                                    span.tooltip {
+                                        display: none;
+                                        width: 110px;
+                                        position: absolute;
+                                        top: 130%;
+                                        left: 50%;
+                                        margin-left: calc(110px / 2 * -1);
+                                        padding: 5px 0;
+                                        border-radius: 5px;
+                                        background-color: $color-main;
+                                        color: $color-intro;
+                                        text-align: center;
+                                        font: {
+                                            family: $font-sans;
+                                            size: 1rem;
+                                            weight: 600;
+                                        }
+            
+                                        &::after {
+                                            content:"";
+                                            position: absolute;
+                                            bottom: 100%;
+                                            left: 50%;
+                                            margin-left: -5px;
+                                            border-color: transparent transparent $color-main transparent;
+                                            border-style: solid;
+                                            border-width: 5px;
+                                        }
+                                    } // tooltip
                                 } // button
                             } // view-project
                         } // preview
@@ -1143,7 +1182,7 @@ body {
                         &:disabled {
                             cursor: not-allowed;
 
-                            &:hover {
+                            &:hover, &:active, &:focus {
                                 background-color: transparent;
                                 color: $color-main;
                                 
@@ -1155,11 +1194,11 @@ body {
 
                         span.tooltip {
                             display: none;
-                            width: 180px;
+                            width: 160px;
                             position: absolute;
-                            top: 150%;
-                            left: 50%;
-                            margin-left: calc(180px / 2 * -1);
+                            top: 12%;
+                            right: 120%;
+                            margin-left: calc(160px / 2 * -1);
                             padding: 5px 0;
                             border-radius: 5px;
                             background-color: $color-main;
@@ -1167,22 +1206,35 @@ body {
                             text-align: center;
                             font-weight: 600;
 
+                            @include responsive(tablet-size) {
+                                top: 150%;
+                                left: 50%;
+                            }
+
                             &::after {
                                 content:"";
                                 position: absolute;
-                                bottom: 100%;
-                                left: 50%;
-                                margin-left: -5px;
-                                border-color: transparent transparent $color-main transparent;
+                                top: 50%;
+                                left: 100%;
+                                margin-top: -5px;
+                                border-color: transparent transparent transparent $color-main;
                                 border-style: solid;
                                 border-width: 5px;
+
+                                @include responsive(tablet-size) {
+                                    bottom: 100%;
+                                    left: 50%;
+                                    margin-top: -20%;
+                                    margin-left: -5px;
+                                    border-color: transparent transparent $color-main transparent;
+                                }
                             }
-                        }
+                        } // tooltip
                     } // button
                 } // form
             } // contents
         } // #contact
-    }
+    } // main
 
     // footer
     footer {

@@ -889,6 +889,7 @@ body main section#projects div.projects-flexbox div.projects div.project div.pre
   align-items: center;
 }
 body main section#projects div.projects-flexbox div.projects div.project div.preview div.view-project button {
+  position: relative;
   width: calc((100% - 10px) / 2);
   max-width: 80px;
   border: none;
@@ -897,11 +898,42 @@ body main section#projects div.projects-flexbox div.projects div.project div.pre
   border-radius: 25%;
   cursor: pointer;
 }
-body main section#projects div.projects-flexbox div.projects div.project div.preview div.view-project button img {
-  transform: scale(0.7);
+@media screen and (min-width: 768px) {
+  body main section#projects div.projects-flexbox div.projects div.project div.preview div.view-project button:hover span.tooltip {
+    display: block;
+  }
 }
 body main section#projects div.projects-flexbox div.projects div.project div.preview div.view-project button:active {
   box-shadow: inset -2px -2px 5px rgb(255, 255, 255), inset 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+body main section#projects div.projects-flexbox div.projects div.project div.preview div.view-project button img {
+  transform: scale(0.7);
+}
+body main section#projects div.projects-flexbox div.projects div.project div.preview div.view-project button span.tooltip {
+  display: none;
+  width: 110px;
+  position: absolute;
+  top: 130%;
+  left: 50%;
+  margin-left: -55px;
+  padding: 5px 0;
+  border-radius: 5px;
+  background-color: #f2ece4;
+  color: #2f2e2d;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 1rem;
+  font-weight: 600;
+}
+body main section#projects div.projects-flexbox div.projects div.project div.preview div.view-project button span.tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-color: transparent transparent #f2ece4 transparent;
+  border-style: solid;
+  border-width: 5px;
 }
 body main section#projects div.projects-flexbox div.projects div.project div.modal {
   width: 100%;
@@ -1189,20 +1221,20 @@ body main section#contact div.contents form button:hover {
 body main section#contact div.contents form button:disabled {
   cursor: not-allowed;
 }
-body main section#contact div.contents form button:disabled:hover {
+body main section#contact div.contents form button:disabled:hover, body main section#contact div.contents form button:disabled:active, body main section#contact div.contents form button:disabled:focus {
   background-color: transparent;
   color: #f2ece4;
 }
-body main section#contact div.contents form button:disabled:hover span.tooltip {
+body main section#contact div.contents form button:disabled:hover span.tooltip, body main section#contact div.contents form button:disabled:active span.tooltip, body main section#contact div.contents form button:disabled:focus span.tooltip {
   display: block;
 }
 body main section#contact div.contents form button span.tooltip {
   display: none;
-  width: 180px;
+  width: 160px;
   position: absolute;
-  top: 150%;
-  left: 50%;
-  margin-left: -90px;
+  top: 12%;
+  right: 120%;
+  margin-left: -80px;
   padding: 5px 0;
   border-radius: 5px;
   background-color: #f2ece4;
@@ -1210,15 +1242,30 @@ body main section#contact div.contents form button span.tooltip {
   text-align: center;
   font-weight: 600;
 }
+@media screen and (min-width: 768px) {
+  body main section#contact div.contents form button span.tooltip {
+    top: 150%;
+    left: 50%;
+  }
+}
 body main section#contact div.contents form button span.tooltip::after {
   content: "";
   position: absolute;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-color: transparent transparent #f2ece4 transparent;
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+  border-color: transparent transparent transparent #f2ece4;
   border-style: solid;
   border-width: 5px;
+}
+@media screen and (min-width: 768px) {
+  body main section#contact div.contents form button span.tooltip::after {
+    bottom: 100%;
+    left: 50%;
+    margin-top: -20%;
+    margin-left: -5px;
+    border-color: transparent transparent #f2ece4 transparent;
+  }
 }
 body footer {
   width: 100%;
