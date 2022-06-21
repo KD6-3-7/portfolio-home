@@ -31,6 +31,14 @@ body {
                 }
 
                 svg {
+                    cursor: pointer;
+                    filter: none;
+                    transition: filter .5s ease-in-out;
+
+                    &:hover {
+                        filter: drop-shadow(0px 0px 10px rgba($color-white, .2));
+                    }
+
                     circle, polygon, line {
                         stroke: $color-yellow;
                         stroke-width: 1.5;

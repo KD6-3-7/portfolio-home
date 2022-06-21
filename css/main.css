@@ -861,11 +861,11 @@ body main section#projects div.projects-flexbox div.projects {
   }
 }
 body main section#projects div.projects-flexbox div.projects div.project {
-  padding-top: 50px;
+  padding-top: 80px;
 }
 @media screen and (min-width: 768px) {
   body main section#projects div.projects-flexbox div.projects div.project {
-    padding-top: 100px;
+    padding-top: 120px;
   }
 }
 @media screen and (min-width: 1320px) {
@@ -975,8 +975,8 @@ body main section#projects div.projects-flexbox div.projects div.project div.mod
 }
 body main section#projects div.projects-flexbox div.projects div.project div.modal div.modal-header button.close-btn {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 20px;
+  right: 20px;
   color: #f2ece4;
   font-size: 1.2rem;
   font-weight: 600;
@@ -1014,8 +1014,8 @@ body main section#projects div.projects-flexbox div.projects div.project div.mod
 }
 body main section#projects div.projects-flexbox div.projects div.project div.modal div.modal-footer button.top-btn {
   position: absolute;
-  bottom: 10px;
-  right: 10px;
+  bottom: 20px;
+  right: 20px;
   color: #f2ece4;
   font-size: 1.2rem;
   font-weight: 600;

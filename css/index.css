@@ -102,6 +102,14 @@ body section#intro div.flexbox div.compass {
     width: 60vmin;
   }
 }
+body section#intro div.flexbox div.compass svg {
+  cursor: pointer;
+  filter: none;
+  transition: filter 0.5s ease-in-out;
+}
+body section#intro div.flexbox div.compass svg:hover {
+  filter: drop-shadow(0px 0px 10px rgba(252, 251, 250, 0.2));
+}
 body section#intro div.flexbox div.compass svg circle, body section#intro div.flexbox div.compass svg polygon, body section#intro div.flexbox div.compass svg line {
   stroke: #f4b322;
   stroke-width: 1.5;
