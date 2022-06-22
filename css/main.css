@@ -602,6 +602,9 @@ body main section#about p {
     line-height: 2rem;
   }
 }
+body main section#about span {
+  color: #f4b322;
+}
 body main section#skills div.skills-flexbox {
   width: 100%;
   margin: 0 auto;
@@ -894,7 +897,7 @@ body main section#projects div.projects-flexbox div.projects div.project div.pre
   max-width: 80px;
   border: none;
   background-color: #f2ece4;
-  box-shadow: -2px -2px 5px rgb(255, 255, 255), 3px 3px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.3), 3px 3px 5px rgba(0, 0, 0, 0.1);
   border-radius: 25%;
   cursor: pointer;
 }
@@ -1055,7 +1058,18 @@ body main section#projects div.projects-flexbox div.projects div.project h3 {
 }
 body main section#projects div.projects-flexbox div.projects div.project p {
   font-weight: 300;
+  font-size: 1.1rem;
   color: #f2ece4;
+  word-break: keep-all;
+}
+body main section#projects div.projects-flexbox div.projects div.project p.subtext {
+  font-weight: 100;
+}
+@media screen and (min-width: 768px) {
+  body main section#projects div.projects-flexbox div.projects div.project p.subtext {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+  }
 }
 @media screen and (min-width: 768px) {
   body main section#projects div.projects-flexbox div.projects div.project p {
@@ -1300,6 +1314,7 @@ body footer {
   }
 }
 body footer p {
+  margin: 0;
   color: #f2ece4;
 }
 @media screen and (min-width: 768px) {
@@ -1321,17 +1336,15 @@ body footer div.icons-flexbox {
   }
 }
 body footer div.icons-flexbox button {
-  width: 25px;
-  height: 25px;
-  margin: 20px;
+  width: 35px;
+  height: 35px;
+  margin: 20px 10px;
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   body footer div.icons-flexbox button {
-    width: 35px;
-    height: 35px;
     margin: 10px;
   }
 }

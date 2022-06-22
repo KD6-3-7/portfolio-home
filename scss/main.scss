@@ -570,6 +570,10 @@ body {
                     line-height: 2rem;
                 }
             }
+
+            span {
+                color: $color-yellow;
+            }
         } // #about
 
         section#skills {
@@ -807,7 +811,7 @@ body {
                                     max-width: 80px;
                                     border: none;
                                     background-color: $color-main;
-                                    box-shadow: -2px -2px 5px rgba(255, 255, 255, 1), 3px 3px 5px rgba(0, 0, 0, 0.1);
+                                    box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.3), 3px 3px 5px rgba(0, 0, 0, 0.1);
                                     border-radius: 25%;
                                     cursor: pointer;
 
@@ -997,7 +1001,18 @@ body {
 
                         p {
                             font-weight: 300;
+                            font-size: 1.1rem;
                             color: $color-main;
+                            word-break: keep-all;
+
+                            &.subtext {
+                                font-weight: 100;
+                                
+                                @include responsive(tablet-size) {
+                                    font-size: 1.2rem;
+                                    line-height: 1.7rem;
+                                }
+                            }
 
                             @include responsive(tablet-size) {
                                 font-size: 1.3rem;
@@ -1272,6 +1287,7 @@ body {
         } // responsive(tablet-size)
 
         p {
+            margin: 0;
             color: $color-main;
 
             @include responsive(tablet-size) {
@@ -1292,16 +1308,14 @@ body {
             }
 
             button {
-                width: 25px;
-                height: 25px;
-                margin: 20px;
+                width: 35px;
+                height: 35px;
+                margin: 20px 10px;
                 background-color: transparent;
                 border: none;
                 cursor: pointer;
 
                 @include responsive(tablet-size) {
-                    width: 35px;
-                    height: 35px;
                     margin: 10px;
                 }
 
