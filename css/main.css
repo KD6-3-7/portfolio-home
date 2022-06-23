@@ -263,7 +263,7 @@ body header div.nav-mobile nav.gnb-mobile button.nav-btn {
   cursor: pointer;
   background-color: transparent;
   border: none;
-  transition: flex-grow 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: flex-grow 1s ease;
   color: #777777;
   font-family: Pretendard;
   font-size: 0.8rem;
@@ -273,11 +273,9 @@ body header div.nav-mobile nav.gnb-mobile button.nav-btn.active {
   color: #2f2e2d;
   transition: color 1s;
 }
-body header div.nav-mobile nav.gnb-mobile button.nav-btn.active div.nav-num span.num {
-  -webkit-animation: blank 1s forwards;
-          animation: blank 1s forwards;
-  -webkit-animation-duration: 0.45s;
-          animation-duration: 0.45s;
+body header div.nav-mobile nav.gnb-mobile button.nav-btn.active span.nav-num {
+  -webkit-animation: blank 0.3s forwards;
+          animation: blank 0.3s forwards;
 }
 @-webkit-keyframes blank {
   to {
@@ -289,15 +287,17 @@ body header div.nav-mobile nav.gnb-mobile button.nav-btn.active div.nav-num span
     opacity: 0;
   }
 }
-body header div.nav-mobile nav.gnb-mobile button.nav-btn div.nav-num {
-  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+body header div.nav-mobile nav.gnb-mobile button.nav-btn span.nav-num {
+  transition: transform 1s ease;
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 1rem;
+  font-weight: 600;
 }
 body header div.nav-mobile nav.gnb-mobile button.nav-btn strong.nav-title {
   position: absolute;
   font-size: 1rem;
   transform: translate3d(0, 110%, 0);
-  transition: transform 0.1756756757s;
+  transition: transform 0.2166666667s;
 }
 body header div.nav-mobile nav.gnb-mobile button.nav-btn strong.nav-title.active {
   transform: translate3d(0, 0, 0);
@@ -377,15 +377,15 @@ body main div.bg-space#circleRight svg .dotted {
   stroke-dasharray: 0 20.25;
 }
 body main div.bg-space#circleRight svg g {
-  -webkit-animation-duration: 60s;
-          animation-duration: 60s;
+  -webkit-animation-duration: 180s;
+          animation-duration: 180s;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   transform-origin: 50% 50%;
 }
-body main div.bg-space#circleRight svg g#element {
+body main div.bg-space#circleRight svg g#element-right {
   -webkit-animation-name: rotate-circleRight2;
           animation-name: rotate-circleRight2;
 }
@@ -399,7 +399,7 @@ body main div.bg-space#circleRight svg g#element {
     transform: rotate(-360deg);
   }
 }
-body main div.bg-space#circleRight svg g#center {
+body main div.bg-space#circleRight svg g#center-right {
   -webkit-animation-name: rotate-circleRight1;
           animation-name: rotate-circleRight1;
 }
@@ -448,15 +448,15 @@ body main div.bg-space#circleLeft svg .dotted {
   stroke-dasharray: 0 20.25;
 }
 body main div.bg-space#circleLeft svg g {
-  -webkit-animation-duration: 60s;
-          animation-duration: 60s;
+  -webkit-animation-duration: 180s;
+          animation-duration: 180s;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   transform-origin: 50% 50%;
 }
-body main div.bg-space#circleLeft svg g#element {
+body main div.bg-space#circleLeft svg g#element-left {
   -webkit-animation-name: rotate-circleLeft2;
           animation-name: rotate-circleLeft2;
 }
@@ -470,7 +470,7 @@ body main div.bg-space#circleLeft svg g#element {
     transform: rotate(-360deg);
   }
 }
-body main div.bg-space#circleLeft svg g#center {
+body main div.bg-space#circleLeft svg g#center-left {
   -webkit-animation-name: rotate-circleLeft1;
           animation-name: rotate-circleLeft1;
 }
@@ -1150,7 +1150,7 @@ body main section#projects div.projects-flexbox aside ul.projects-nav li.nav-fle
   color: #f2ece4;
 }
 body main section#contact div.contents {
-  padding-bottom: 50px;
+  padding-bottom: 100px;
 }
 @media screen and (min-width: 768px) {
   body main section#contact div.contents {

@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.0.6/tsparticles.bundle.js" integrity="sha256-RA2LJkgIUk4sKgvaAKDE+bv8trIJrJLytKSx+wLFr48=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.17/dist/sweetalert2.all.min.js"></script>
     <script src="./js/index.js"></script>
     <title>Welcome to my Universe</title>
@@ -38,30 +38,22 @@
         <div class="nav-mobile">
             <nav class="gnb-mobile">
                 <button class="nav-btn menu active" onclick="location.href='#about'" name="about">
-                    <div class="nav-num">
-                        <span class="num">01</span>
-                    </div>
+                    <span class="nav-num">01</span>
                     <strong class="nav-title active">ABOUT</strong>
                 </button>
         
                 <button class="nav-btn menu" onclick="location.href='#skills'" name="skills">
-                    <div class="nav-num">
-                        <span class="num">02</span>
-                    </div>
+                    <span class="nav-num">02</span>
                     <strong class="nav-title">SKILLS</strong>
                 </button>
         
                 <button class="nav-btn menu" onclick="location.href='#projects'" name="projects">
-                    <div class="nav-num">
-                        <span class="num">03</span>
-                    </div>
+                    <span class="nav-num">03</span>
                     <strong class="nav-title">PROJECTS</strong>
                 </button>
         
                 <button class="nav-btn menu" onclick="location.href='#contact'" name="contact">
-                    <div class="nav-num">
-                        <span class="num">04</span>
-                    </div>
+                    <span class="nav-num">04</span>
                     <strong class="nav-title">CONTACT</strong>
                 </button>
             </nav> <!-- gnb-mobile -->
@@ -83,7 +75,7 @@
                     <linearGradient id="linear-gradient-right5" x1="165.5" y1="475.5" x2="785.5" y2="475.5" xlink:href="#linear-gradient-right1"/>
                     <linearGradient id="linear-gradient-right6" x1="150" y1="475.5" x2="801" y2="475.5" xlink:href="#linear-gradient-right1"/>
                 </defs>
-                <g id="element">
+                <g id="element-right">
                     <circle class="dot line" cx="475.5" cy="475.5" r="362.5"/>
                     <polygon class="triangle line" points="886.43 238.25 851.93 338.54 942.91 393.08 876.07 475.46 942.8 557.91 851.85 612.5 886.5 712.76 782.39 733.02 780.52 839.07 675.75 822.34 637.85 921.44 545.07 870.03 475.47 950.07 405.98 869.93 313.22 921.4 275.18 822.38 170.42 839.08 168.68 733.02 64.57 712.75 99.07 612.46 8.09 557.91 74.93 475.54 8.2 393.09 99.15 338.5 64.5 238.24 168.61 217.98 170.48 111.93 275.25 128.66 313.15 29.56 405.93 80.97 475.53 0.93 545.02 81.07 637.78 29.6 675.82 128.62 780.58 111.92 782.33 217.98 886.43 238.25"/>
                     <path class="path1" d="M475.5,226.5a248.26,248.26,0,1,1-96.92,19.57A247.32,247.32,0,0,1,475.5,226.5m0-1c-138.07,0-250,111.93-250,250s111.93,250,250,250,250-111.93,250-250-111.93-250-250-250Z"/>
@@ -97,13 +89,13 @@
                     <path class="path5" d="M475.5,165.7a308.85,308.85,0,1,1-120.59,24.35A307.81,307.81,0,0,1,475.5,165.7m0-.2c-171.21,0-310,138.79-310,310s138.79,310,310,310,310-138.79,310-310-138.79-310-310-310Z"/>
                     <circle class="circle5 gradient" cx="475.5" cy="475.5" r="325"/>
                 </g>
-                <g id="circle">
+                <g id="circle-right">
                     <circle class="circle line" cx="475.5" cy="475.5" r="475"/>
                     <circle class="circle line" cx="475.5" cy="475.5" r="400"/>
                     <circle class="circle line" cx="475.5" cy="475.5" r="325"/>
                     <circle class="circle line" cx="475.5" cy="475.5" r="250"/>
                 </g>
-                <g id="center">
+                <g id="center-right">
                     <line class="halo line" x1="432.09" y1="721.7" x2="518.91" y2="229.3"/>
                     <line class="halo line" x1="389.99" y1="710.42" x2="561.01" y2="240.58"/>
                     <line class="halo line" x1="350.5" y1="692.01" x2="600.5" y2="258.99"/>
@@ -161,7 +153,7 @@
                     </linearGradient>
                     <linearGradient id="linear-gradient-left2" x1="513.28" y1="829.03" x2="841.07" y2="501.24" gradientTransform="translate(951 951) rotate(180)" xlink:href="#linear-gradient"/>
                 </defs>
-                <g id="element">
+                <g id="element-left">
                     <g id="planet">
                         <path class="planet" d="M624.9,123.1a40,40,0,0,1,80,0,40.41,40.41,0,0,1-.3,4.83,50,50,0,1,0-49.1,40.57A49.89,49.89,0,0,0,693,151.59,40,40,0,0,1,624.9,123.1Z"/>
                         <circle class="planet" cx="752.5" cy="187.5" r="35"/>
@@ -179,13 +171,13 @@
                         <path class="comet2 comet" d="M151,496a20,20,0,0,0,20-20c0-168.18,136.82-305,305-305V131A344.72,344.72,0,0,0,131,476,20,20,0,0,0,151,496Z"/>
                     </g>
                 </g>
-                <g id="circle">
+                <g id="circle-left">
                     <circle class="circle line" cx="475.5" cy="475.5" r="475"/>
                     <circle class="circle line" cx="475.5" cy="475.5" r="400"/>
                     <circle class="circle line" cx="475.5" cy="475.5" r="325"/>
                     <circle class="circle line" cx="475.5" cy="475.5" r="250"/>
                 </g>
-                <g id="center">
+                <g id="center-left">
                     <line class="halo line" x1="432.09" y1="721.7" x2="518.91" y2="229.3"/>
                     <line class="halo line" x1="389.99" y1="710.42" x2="561.01" y2="240.58"/>
                     <line class="halo line" x1="350.5" y1="692.01" x2="600.5" y2="258.99"/>

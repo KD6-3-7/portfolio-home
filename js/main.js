@@ -1,9 +1,9 @@
-// 모바일 nav
-const buttons = document.querySelectorAll(".nav-btn");
 const sections = document.querySelectorAll("section");
 
-
+// 모바일 nav
 window.addEventListener("scroll", () => { // 스크롤 시 자동으로 변경되는 메뉴
+    const buttons = document.querySelectorAll(".nav-btn");
+
     // 현재 영역의 id값
     let current = "";
     sections.forEach(section => {
@@ -29,6 +29,7 @@ window.addEventListener("scroll", () => { // 스크롤 시 자동으로 변경�
         }
     });
 });
+
 
 
 // pc nav
@@ -90,6 +91,7 @@ nav.find("ul li a").click(function(e) {
 });
 
 
+
 // WAYPOINT fade-out
 window.addEventListener("scroll", () => {
     const pointTop = document.getElementById("point").getBoundingClientRect().top;
@@ -100,6 +102,7 @@ window.addEventListener("scroll", () => {
         waypoint.style.animationName = "fade-in";
     }
 });
+
 
 
 // 스크롤에 따른 색상 및 좌우 사진 요소 변경
@@ -153,6 +156,7 @@ window.addEventListener("scroll", () => {
 });
 
 
+
 // skills progress bar animation restart
 window.addEventListener("scroll", () => {
     // 현재 영역의 id 값
@@ -183,6 +187,7 @@ window.addEventListener("scroll", () => {
         }
     }
 });
+
 
 
 // projects nav 버튼 클릭시 active 클래스 추가
@@ -224,6 +229,7 @@ window.addEventListener("scroll", () => { // 스크롤 시 자동으로 변경�
         }
     });
 });
+
 
 
 // projects full screen modal
@@ -287,6 +293,7 @@ for (let i = 0; i < topBtn.length; i++) {
         });
     }
 }
+
 
 
 // EmailJS

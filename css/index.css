@@ -269,7 +269,7 @@ body section#intro div.flexbox a:hover {
     background-size: calc(100% - 8px) 100%;
   }
 }
-body section#intro div.flexbox h1.text-flexbox {
+body section#intro div.flexbox div.text-flexbox {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -282,28 +282,28 @@ body section#intro div.flexbox h1.text-flexbox {
   font-weight: 100;
 }
 @media screen and (min-width: 768px) {
-  body section#intro div.flexbox h1.text-flexbox {
+  body section#intro div.flexbox div.text-flexbox {
     font-size: 1.3rem;
   }
 }
-body section#intro div.flexbox h1.text-flexbox div.text {
+body section#intro div.flexbox div.text-flexbox div.text {
   word-break: keep-all;
 }
-body section#intro div.flexbox h1.text-flexbox div.text:last-child {
+body section#intro div.flexbox div.text-flexbox div.text:last-child {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-body section#intro div.flexbox h1.text-flexbox div.lettering {
+body section#intro div.flexbox div.text-flexbox div.lettering {
   position: relative;
   width: 30px;
 }
 @media screen and (min-width: 768px) {
-  body section#intro div.flexbox h1.text-flexbox div.lettering {
+  body section#intro div.flexbox div.text-flexbox div.lettering {
     width: 40px;
   }
 }
-body section#intro div.flexbox h1.text-flexbox div.lettering span {
+body section#intro div.flexbox div.text-flexbox div.lettering span {
   -webkit-animation: clock 15s linear infinite;
           animation: clock 15s linear infinite;
   position: absolute;
@@ -314,11 +314,11 @@ body section#intro div.flexbox h1.text-flexbox div.lettering span {
   font-weight: 400;
   color: #f4b322;
 }
-body section#intro div.flexbox h1.text-flexbox div.lettering span:nth-child(2) {
+body section#intro div.flexbox div.text-flexbox div.lettering span:nth-child(2) {
   -webkit-animation-delay: 5s;
           animation-delay: 5s;
 }
-body section#intro div.flexbox h1.text-flexbox div.lettering span:last-child {
+body section#intro div.flexbox div.text-flexbox div.lettering span:last-child {
   -webkit-animation-delay: 10s;
           animation-delay: 10s;
 }

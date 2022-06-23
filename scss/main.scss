@@ -196,10 +196,6 @@ body {
                 display: none;
             }
 
-            $duration: .45s;
-            $duration-icon: 1s;
-            $cubic: cubic-bezier(0.4, 0, 0.2, 1);
-
             nav.gnb-mobile {
                 width: 100%;
                 height: 60px;
@@ -220,7 +216,7 @@ body {
                     cursor: pointer;
                     background-color: transparent;
                     border: none;
-                    transition: flex-grow $duration $cubic;
+                    transition: flex-grow 1s ease;
                     color: $color-grey;
                 
                     font: {
@@ -232,31 +228,33 @@ body {
                         flex-grow: 2.5;
                         color: $color-intro;
                         transition: color 1s;
-                    
-                        & div.nav-num {                    
-                            & span.num {
-                                animation: blank $duration-icon forwards;
-                                animation-duration: $duration;
+                                      
+                        & span.nav-num {
+                            animation: blank 0.3s forwards;
 
-                                @keyframes blank {
-                                    to {
-                                        opacity: 0;
-                                    }
+                            @keyframes blank {
+                                to {
+                                    opacity: 0;
                                 }
                             }
                         }
                     } // nav-btn active
                 
-                    div.nav-num {
-                        transition: transform $duration $cubic;
-                        font-size: 1rem;
+                    span.nav-num {
+                        transition: transform 1s ease;
+
+                        font: {
+                            family: $font-noto;
+                            size: 1rem;
+                            weight: 600;
+                        }
                     } // nav-num
                 
                     strong.nav-title {
                         position: absolute;
                         font-size: 1rem;
                         transform: translate3d(0, 110%, 0);
-                        transition: transform calc(.65s / 3.7);
+                        transition: transform calc(.65s / 3);
                     
                         &.active {
                             transform: translate3d(0, 0, 0);
@@ -270,7 +268,6 @@ body {
     
     // main
     main {
-        // main > bg-circle1
         div.bg-space {
             z-index: -2;
             position: fixed;
@@ -364,12 +361,12 @@ body {
                     }
 
                     g {
-                        animation-duration: 60s;
+                        animation-duration: 180s;
                         animation-timing-function: linear;
                         animation-iteration-count: infinite;
                         transform-origin: 50% 50%;
                         
-                        &#element {
+                        &#element-right {
                             animation-name: rotate-circleRight2;
                             
                             @keyframes rotate-circleRight2 {
@@ -379,7 +376,7 @@ body {
                             }
                         }
 
-                        &#center {
+                        &#center-right {
                             animation-name: rotate-circleRight1;
             
                             @keyframes rotate-circleRight1 {
@@ -437,12 +434,12 @@ body {
                     }
 
                     g {
-                        animation-duration: 60s;
+                        animation-duration: 180s;
                         animation-timing-function: linear;
                         animation-iteration-count: infinite;
                         transform-origin: 50% 50%;
                         
-                        &#element {
+                        &#element-left {
                             animation-name: rotate-circleLeft2;
                             
                             @keyframes rotate-circleLeft2 {
@@ -452,7 +449,7 @@ body {
                             }
                         }
 
-                        &#center {
+                        &#center-left {
                             animation-name: rotate-circleLeft1;
             
                             @keyframes rotate-circleLeft1 {
@@ -1102,7 +1099,7 @@ body {
 
         section#contact {
             div.contents {
-                padding-bottom: 50px;
+                padding-bottom: 100px;
 
                 @include responsive(tablet-size) {
                     padding-bottom: 200px;
