@@ -602,8 +602,11 @@ body main section#about p {
     line-height: 2rem;
   }
 }
-body main section#about span {
-  color: #f4b322;
+body main section#about span.highlight {
+  font-weight: 600;
+  -webkit-text-decoration: underline #f4b322 5px;
+          text-decoration: underline #f4b322 5px;
+  text-underline-offset: -3px;
 }
 body main section#skills div.skills-flexbox {
   width: 100%;
@@ -903,7 +906,9 @@ body main section#projects div.projects-flexbox div.projects div.project div.pre
 }
 @media screen and (min-width: 768px) {
   body main section#projects div.projects-flexbox div.projects div.project div.preview div.view-project button:hover span.tooltip {
-    display: block;
+    visibility: visible;
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }
 body main section#projects div.projects-flexbox div.projects div.project div.preview div.view-project button:active {
@@ -913,7 +918,6 @@ body main section#projects div.projects-flexbox div.projects div.project div.pre
   transform: scale(0.7);
 }
 body main section#projects div.projects-flexbox div.projects div.project div.preview div.view-project button span.tooltip {
-  display: none;
   width: 110px;
   position: absolute;
   top: 130%;
@@ -924,6 +928,10 @@ body main section#projects div.projects-flexbox div.projects div.project div.pre
   background-color: #f2ece4;
   color: #2f2e2d;
   text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  transform: translate3d(0, -10px, 0);
+  transition: all 0.15s ease-in-out;
   font-family: Pretendard;
   font-size: 1rem;
   font-weight: 600;

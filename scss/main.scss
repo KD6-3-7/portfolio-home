@@ -568,8 +568,10 @@ body {
                 }
             }
 
-            span {
-                color: $color-yellow;
+            span.highlight {
+                font-weight: 600;
+                text-decoration: underline $color-yellow 5px;
+                text-underline-offset: -3px;
             }
         } // #about
 
@@ -815,7 +817,9 @@ body {
                                     &:hover {
                                         @include responsive(tablet-size) {
                                             span.tooltip {
-                                                display: block;
+                                                visibility: visible;
+                                                opacity: 1;
+                                                transform: translate3d(0, 0, 0);
                                             }
                                         }
                                     }
@@ -829,7 +833,6 @@ body {
                                     }
 
                                     span.tooltip {
-                                        display: none;
                                         width: 110px;
                                         position: absolute;
                                         top: 130%;
@@ -840,6 +843,11 @@ body {
                                         background-color: $color-main;
                                         color: $color-intro;
                                         text-align: center;
+                                        visibility: hidden;
+                                        opacity: 0;
+                                        transform: translate3d(0, -10px, 0);
+                                        transition: all .15s ease-in-out;
+
                                         font: {
                                             family: $font-sans;
                                             size: 1rem;
