@@ -205,22 +205,20 @@ body header div#nav nav ul.gnb {
     width: 40%;
   }
 }
-body header div#nav nav ul.gnb li {
+body header div#nav nav ul.gnb li a {
   opacity: 0.4;
   transition: all 0.4s ease;
-}
-body header div#nav nav ul.gnb li:hover {
-  opacity: 0.7;
-}
-body header div#nav nav ul.gnb li.active {
-  opacity: 1;
-}
-body header div#nav nav ul.gnb li a {
   font-size: 0.9rem;
   font-weight: 600;
   text-transform: uppercase;
   color: #2f2e2d;
   transition: color 1s;
+}
+body header div#nav nav ul.gnb li a:hover {
+  opacity: 0.7;
+}
+body header div#nav nav ul.gnb li a.active {
+  opacity: 1;
 }
 @media screen and (min-width: 1320px) {
   body header div#nav nav ul.gnb li a {
@@ -228,10 +226,11 @@ body header div#nav nav ul.gnb li a {
   }
 }
 body header div#nav nav .line {
-  height: 2px;
   position: absolute;
   bottom: 25px;
+  height: 2px;
   background: #f4b322;
+  transition: 0.5s;
 }
 @media screen and (min-width: 1320px) {
   body header div#nav nav .line {

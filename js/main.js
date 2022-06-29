@@ -1,16 +1,13 @@
 const sections = document.querySelectorAll("section");
 
 // 모바일 nav
-window.addEventListener("scroll", () => { // 스크롤 시 자동으로 변경되는 메뉴
+window.addEventListener("scroll", () => {
     const buttons = document.querySelectorAll(".nav-btn");
-
-    // 현재 영역의 id값
     let current = "";
+    
     sections.forEach(section => {
-        // 각 section의 top 위치(absolute)
         const sectionTop = window.scrollY + section.getBoundingClientRect().top - 1;
 
-        // 누적된 스크롤이 section의 top 위치에 도달했거나 section의 안에 위치할 경우
         if(window.scrollY >= sectionTop) {
             current = section.getAttribute("id");
         }
@@ -23,7 +20,6 @@ window.addEventListener("scroll", () => { // 스크롤 시 자동으로 변경�
         
         const name = item.getAttribute("name");
         if(name === current) {
-            // 현재 있는 영역의 id와 메뉴의 이름이 일치할 때
             item.classList.add("active");
             text.classList.add("active");
         }
@@ -33,88 +29,61 @@ window.addEventListener("scroll", () => { // 스크롤 시 자동으로 변경�
 
 
 // pc nav
-const nav = $(".gnb-pc");
-const line = $("<div />").addClass("line");
+const nav = document.querySelector(".gnb-pc");
+const line = document.createElement("div");
+const anchors = document.querySelectorAll(".gnb > li > a");
+line.classList.add("line");
+nav.appendChild(line);
 
-line.appendTo(nav);
-
-const active = nav.find(".active");
-let pos = 0;
-let wid = 0;
-
-if(active.length) {
-    pos = active.position().left;
-    wid = active.width();
-    line.css({
-        left: pos,
-        width: wid
-    });
+function setLine(e) { // line의 길이와 위치 설정
+    line.style.left = e.offsetLeft + "px";
+    line.style.width = e.offsetWidth + "px";
 }
 
-nav.find("ul li a").click(function(e) {
-    if(!$(this).parent().hasClass("active") && !nav.hasClass("animate")) {
-        nav.addClass("animate");
-        const _this = $(this);
-        nav.find("ul li").removeClass("active");
-        let position = _this.parent().position();
-        let width = _this.parent().width();
+const init = document.querySelector(".gnb > li > a");
+setLine(init);
 
-        if(position.left >= pos) {
-            line.animate({
-                width: ((position.left - pos) + width)
-            }, 300, function() {
-                line.animate({
-                    width: width,
-                    left: position.left
-                }, 150, function() {
-                    nav.removeClass("animate");
-                });
-                _this.parent().addClass("active");
-            });
-        } else {
-            line.animate({
-                left: position.left,
-                width: ((pos - position.left) + width)
-            }, 300, function() {
-                line.animate({
-                    width: width
-                }, 150, function() {
-                    nav.removeClass("animate");
-                });
-                _this.parent().addClass("active");
-            });
-        }
-    
-        pos = position.left;
-        wid = width;
-    }
-});
-
-
-
-// WAYPOINT fade-out
 window.addEventListener("scroll", () => {
+    // WAYPOINT fade-out
     const pointTop = document.getElementById("point").getBoundingClientRect().top;
     const waypoint = document.getElementById("waypoint");
-    if(pointTop <= 100) {
+
+    if(pointTop <= 179) {
         waypoint.style.animationName = "fade-out";
     } else {
         waypoint.style.animationName = "fade-in";
     }
+
+    // 스크롤 위치에 따라 line 이동
+    let current = "";
+
+    sections.forEach(section => {
+        const sectionTop = window.scrollY + section.getBoundingClientRect().top -1;
+
+        if(window.scrollY >= sectionTop) {
+            current = section.getAttribute("id");
+        }
+        
+        anchors.forEach(anchor => {
+            anchor.classList.remove("active");
+            const href = anchor.getAttribute("href").substring(1);
+            if(href === current) {
+                anchor.classList.add("active");
+                setLine(anchor);
+            }
+        })
+    });
 });
 
 
 
 // 스크롤에 따른 색상 및 좌우 사진 요소 변경
 window.addEventListener("scroll", () => {
-    // 현재 영역의 id 값
-    let current = ""
+    let current = "";
 
     sections.forEach(section => {
-        // 각 section의 top 위치(절대적 위치)
         const sectionTop = window.scrollY + section.getBoundingClientRect().top - 1;
     
-        // 누적된 스크롤이 section의 top위치에 도달했거나 section의 안에 위치할 경우
         if(window.scrollY >= sectionTop) {
             current = section.getAttribute("id");
         }
@@ -159,14 +128,11 @@ window.addEventListener("scroll", () => {
 
 // skills progress bar animation restart
 window.addEventListener("scroll", () => {
-    // 현재 영역의 id 값
     let current = ""
 
     sections.forEach(section => {
-        // 각 section의 top 위치(절대적 위치)
         const sectionTop = window.scrollY + section.getBoundingClientRect().top - 1;
     
-        // 누적된 스크롤이 section의 top위치에 도달했거나 section의 안에 위치할 경우
         if(window.scrollY >= sectionTop) {
             current = section.getAttribute("id");
         }
@@ -198,7 +164,6 @@ const projectBtns = document.querySelectorAll(".navBtn");
 for (let i = 0; i < navBtn.length; i++) {
     navBtn[i].onclick = function() {
         for (let j = 0 ; j < navBtn.length; j++) {
-            // 버튼에 입혀진 active 라는 클래스를 지운다.
             navBtn[j].classList.remove("active");
         }
 
@@ -207,14 +172,12 @@ for (let i = 0; i < navBtn.length; i++) {
     }
 }
 
-window.addEventListener("scroll", () => { // 스크롤 시 자동으로 변경되는 메뉴
-    // 현재 영역의 id값
+window.addEventListener("scroll", () => {
     let current = "";
+
     projects.forEach(project => {
-        // 각 section의 top 위치(absolute)
         const projectTop = window.scrollY + project.getBoundingClientRect().top - 180;
 
-        // 누적된 스크롤이 section의 top 위치에 도달했거나 section의 안에 위치할 경우
         if(window.scrollY >= projectTop) {
             current = project.getAttribute("id");
         }
@@ -223,8 +186,8 @@ window.addEventListener("scroll", () => { // 스크롤 시 자동으로 변경�
     projectBtns.forEach(item => {
         item.classList.remove("active");
         const name = item.getAttribute("name");
+
         if(name === current) {
-            // 현재 있는 영역의 id와 메뉴의 이름이 일치할 때
             item.classList.add("active");
         }
     });
@@ -247,7 +210,7 @@ function Modal(num) {
             modal[num].classList.toggle("show");
 
             if (modal[num].classList.contains("show")) {
-                body.style.overflow = "hidden"; // hidden 값을 주면 스크롤 잠금
+                body.style.overflow = "hidden";
             }
         });
     }
@@ -318,9 +281,6 @@ function checkForm() {
     } else if(!canSubmit) {
         sendBtn.disabled = true;
     }
-
-    console.log(canSubmit);
-    console.log(sendBtn.disabled);
 }
 
 function setStatus(status) {
