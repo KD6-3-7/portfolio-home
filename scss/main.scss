@@ -35,7 +35,7 @@ body {
 
     // scrollbar style
     &::-webkit-scrollbar { // 스크롤바 전체 영역
-        width: 17px; // 스크롤바의 너비
+        width: 13px; // 스크롤바의 너비
     }
 
     &::-webkit-scrollbar-corner { // 상하+좌우 스크롤이 만나는 공간
@@ -46,7 +46,7 @@ body {
         height: 30%; // 스크롤바의 길이
         background: $color-yellow; // 스크롤바의 색상
         background-clip: padding-box;
-        border: 3px solid transparent;
+        border: 2px solid transparent;
         border-radius: 10px;
     }
     
@@ -885,7 +885,7 @@ body {
 
                             @include responsive(pc-size) {
                                 &::-webkit-scrollbar { // 스크롤바 전체 영역
-                                    width: 17px; // 스크롤바의 너비
+                                    width: 13px; // 스크롤바의 너비
                                 }
                             
                                 &::-webkit-scrollbar-corner { // 상하+좌우 스크롤이 만나는 공간
@@ -896,7 +896,7 @@ body {
                                     height: 30%; // 스크롤바의 길이
                                     background: $color-yellow; // 스크롤바의 색상
                                     background-clip: padding-box;
-                                    border: 3px solid transparent;
+                                    border: 2px solid transparent;
                                     border-radius: 10px;
                                 }
                                 
@@ -1260,6 +1260,7 @@ body {
                         display: none;
                         text-align: center;
                         background-color: $color-white;
+                        border: none;
                         border-radius: 4px; 
                         box-shadow: 0 3px 15px -1px rgba($color-black, 0.4);
                         z-index: 3;

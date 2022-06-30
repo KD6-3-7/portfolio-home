@@ -71,7 +71,7 @@ body {
   transition: background-color 1s;
 }
 body::-webkit-scrollbar {
-  width: 17px;
+  width: 13px;
 }
 body::-webkit-scrollbar-corner {
   background-color: transparent;
@@ -80,7 +80,7 @@ body::-webkit-scrollbar-thumb {
   height: 30%;
   background: #f4b322;
   background-clip: padding-box;
-  border: 3px solid transparent;
+  border: 2px solid transparent;
   border-radius: 10px;
 }
 body::-webkit-scrollbar-track {
@@ -961,7 +961,7 @@ body main section#projects div.projects-flexbox div.projects div.project div.mod
 }
 @media screen and (min-width: 1320px) {
   body main section#projects div.projects-flexbox div.projects div.project div.modal::-webkit-scrollbar {
-    width: 17px;
+    width: 13px;
   }
   body main section#projects div.projects-flexbox div.projects div.project div.modal::-webkit-scrollbar-corner {
     background-color: transparent;
@@ -970,7 +970,7 @@ body main section#projects div.projects-flexbox div.projects div.project div.mod
     height: 30%;
     background: #f4b322;
     background-clip: padding-box;
-    border: 3px solid transparent;
+    border: 2px solid transparent;
     border-radius: 10px;
   }
   body main section#projects div.projects-flexbox div.projects div.project div.modal::-webkit-scrollbar-track {
@@ -1296,6 +1296,7 @@ body main section#contact div.contents form div.status-modal {
   display: none;
   text-align: center;
   background-color: #fcfbfa;
+  border: none;
   border-radius: 4px;
   box-shadow: 0 3px 15px -1px rgba(35, 31, 32, 0.4);
   z-index: 3;
