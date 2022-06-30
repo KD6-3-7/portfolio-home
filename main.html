@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.0.6/tsparticles.bundle.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.17/dist/sweetalert2.all.min.js"></script>
     <script src="./js/index.js"></script>
     <title>Welcome to my Universe</title>
 </head>
@@ -627,6 +626,21 @@
                         <textarea name="message" id="message" class="input-text" cols="30" rows="10" placeholder="MESSAGE"></textarea>
                     </div>
                     <button id="send-btn" type="button" onclick="sendEmail()" disabled>SEND<span class="tooltip">폼을 모두 채워주세요!</span></button>
+
+                    <div id="success" class="status-modal">
+                        <h3>전송 완료 <i class="fa-regular fa-face-smile"></i></h3>
+                        <p>메일 전송 감사합니다.<br>빠른 시일 내에 확인 후 회신드리겠습니다.</p>
+                        <div class="okay">
+                            확인 <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                        </div>
+                    </div> <!-- success -->
+                    <div id="error" class="status-modal">
+                        <h3>전송 실패 <i class="fa-regular fa-face-dizzy"></i></h3>
+                        <p>오류가 발생했습니다.<br>재시도해주시기 바랍니다.</p>
+                        <div class="try-again">
+                            돌아가기 <i class="fa fa-repeat fa-flip-horizontal" aria-hidden="true"></i>
+                        </div>
+                    </div> <!-- error -->
                 </form>
             </div> <!-- contents -->
         </section> <!-- contact -->

@@ -1251,6 +1251,88 @@ body {
                             }
                         } // tooltip
                     } // button
+
+                    div.status-modal {
+                        width: 330px;
+                        height: 200px;
+                        position: absolute;
+                        overflow: hidden;
+                        display: none;
+                        text-align: center;
+                        background-color: $color-white;
+                        border-radius: 4px; 
+                        box-shadow: 0 3px 15px -1px rgba($color-black, 0.4);
+                        z-index: 3;
+
+                        @include responsive(tablet-size) {
+                            width: 380px;
+                            height: 230px;
+                        }
+
+                        &.active {
+                            display: block;
+                            animation: appear 0.8s ease-in-out;
+
+                            @keyframes appear {
+                                from {
+                                    opacity: 0;
+                                    transform: translateY(20px);
+                                }
+                                to {
+                                    opacity: 1;
+                                    transform: translateY(0);
+                                }
+                            }
+                        }
+
+                        h3 {
+                            margin: 20px 0;
+                            letter-spacing: 1px;
+                            opacity: 0.3;
+
+                            font: {
+                                size: 1.5rem;
+                                weight: 600;
+                            }
+
+                            i {
+                                margin-left: 2px;
+                            }
+
+                            @include responsive(tablet-size) {
+                                margin: 25px 0;
+                                font-size: 1.8rem;
+                            }
+                        }
+
+                        div.try-again, div.okay {
+                            width: 100%;
+                            height: 60px;
+                            position: absolute;
+                            bottom: 0;
+                            color: $color-white;
+                            text-align: center;
+                            line-height: 60px;
+                            font-size: 1.3rem;
+                            cursor: pointer;
+                        }
+
+                        div.try-again {
+                            background-color: #e74c3c;
+
+                            &:hover {
+                                background-color: #ed4f3e;
+                            }
+                        }
+
+                        div.okay {
+                            background-color: #2ecc71;
+
+                            &:hover {
+                                background-color: #30d275;
+                            }
+                        }
+                    } // status-modal
                 } // form
             } // contents
         } // #contact

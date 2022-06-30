@@ -1288,6 +1288,88 @@ body main section#contact div.contents form button span.tooltip::after {
     border-color: transparent transparent #f2ece4 transparent;
   }
 }
+body main section#contact div.contents form div.status-modal {
+  width: 330px;
+  height: 200px;
+  position: absolute;
+  overflow: hidden;
+  display: none;
+  text-align: center;
+  background-color: #fcfbfa;
+  border-radius: 4px;
+  box-shadow: 0 3px 15px -1px rgba(35, 31, 32, 0.4);
+  z-index: 3;
+}
+@media screen and (min-width: 768px) {
+  body main section#contact div.contents form div.status-modal {
+    width: 380px;
+    height: 230px;
+  }
+}
+body main section#contact div.contents form div.status-modal.active {
+  display: block;
+  -webkit-animation: appear 0.8s ease-in-out;
+          animation: appear 0.8s ease-in-out;
+}
+@-webkit-keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+body main section#contact div.contents form div.status-modal h3 {
+  margin: 20px 0;
+  letter-spacing: 1px;
+  opacity: 0.3;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+body main section#contact div.contents form div.status-modal h3 i {
+  margin-left: 2px;
+}
+@media screen and (min-width: 768px) {
+  body main section#contact div.contents form div.status-modal h3 {
+    margin: 25px 0;
+    font-size: 1.8rem;
+  }
+}
+body main section#contact div.contents form div.status-modal div.try-again, body main section#contact div.contents form div.status-modal div.okay {
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  bottom: 0;
+  color: #fcfbfa;
+  text-align: center;
+  line-height: 60px;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+body main section#contact div.contents form div.status-modal div.try-again {
+  background-color: #e74c3c;
+}
+body main section#contact div.contents form div.status-modal div.try-again:hover {
+  background-color: #ed4f3e;
+}
+body main section#contact div.contents form div.status-modal div.okay {
+  background-color: #2ecc71;
+}
+body main section#contact div.contents form div.status-modal div.okay:hover {
+  background-color: #30d275;
+}
 body footer {
   width: 100%;
   margin: 0 auto;

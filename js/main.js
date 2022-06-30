@@ -284,32 +284,26 @@ function checkForm() {
 }
 
 function setStatus(status) {
-    let icon;
-    let title;
-    let text;
+    const error = document.getElementById("error");
+    const success = document.getElementById("success");
+    const okay = document.querySelector(".okay");
+    const tryAgain =document.querySelector(".try-again");
 
-    if (status == "success") {
-        icon = "success";
-        title = "전송 완료";
-        text = "메일 전송 감사합니다. 빠른 시일 내에 확인 후 답장드리겠습니다.";
+    if(status == "success") {
+        success.classList.add("active");
+        body.style.overflow = "hidden";
+        okay.addEventListener("click", () => {
+            success.classList.remove("active");
+            body.style.overflow = "auto";
+        });
     } else {
-        icon = "error";
-        title = "전송 실패";
-        text = "오류가 발생했습니다. 재시도해주시기 바랍니다.";
+        error.classList.add("active");
+        body.style.overflow = "hidden";
+        tryAgain.addEventListener("click", () => {
+            error.classList.remove("active");
+            body.style.overflow = "auto";
+        });
     }
-
-    Swal.fire({
-        icon: icon,
-        title: title,
-        text: text,
-        confirmButtonText: "확인",
-        showClass: {
-            popup: "animate__animated animate__fadeInDown"
-        },
-        hideClass: {
-            popup: "animate__animated animate__fadeOutUp"
-        }
-    });
 }
 
 const sendEmail = () => {
