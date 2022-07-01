@@ -893,6 +893,9 @@ body main section#projects div.projects-flexbox div.projects div.project div.pre
   justify-content: space-between;
   align-items: center;
 }
+body main section#projects div.projects-flexbox div.projects div.project div.preview div.view-project.one-btn {
+  justify-content: flex-end;
+}
 body main section#projects div.projects-flexbox div.projects div.project div.preview div.view-project button {
   position: relative;
   width: calc((100% - 10px) / 2);

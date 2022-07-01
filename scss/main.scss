@@ -804,6 +804,10 @@ body {
                                 justify-content: space-between;
                                 align-items: center;
 
+                                &.one-btn {
+                                    justify-content: flex-end;
+                                }
+
                                 button {
                                     position: relative;
                                     width: calc((100% - 10px) / 2);
