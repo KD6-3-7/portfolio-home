@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Hi+Melody&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    font-size: 16px;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 3.75rem; /* 60px */
+    font-weight: 500;
+    line-height: 100%;
+    text-indent: -1.5%;
+}
+
+h2 {
+    font-size: 1.875rem; /* 30px */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #1d2951;
+}
+
+h3 {
+    font-size: 1.875rem; /* 30px */
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 1.375rem; /* 22px */
+    font-weight: 400;
+}
+
+h5 {
+    font-size: 1.125rem; /* 18px */
+    font-weight: 900;
+}
+
+h6 {
+    font-size: 1rem; /* 16px */
+    font-weight: 400;
+}
+
+p {
+    font-size: 1.25rem; /* 20px */
+    font-weight: 300;
+    word-break: keep-all;
+}
+
+img {
+    display: block;
+}
+
+header, nav, main, section, aside, article, footer {
+    display: block;
+}
