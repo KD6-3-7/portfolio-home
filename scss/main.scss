@@ -167,7 +167,7 @@ body {
                             
                             text-transform: uppercase;
                             color: $color-intro;
-                            transition: all .7s;
+                            transition: all 0.7s;
 
                             @include responsive(pc-size) {
                                 font-size: 1rem;
@@ -181,7 +181,7 @@ body {
                     bottom: 25px;
                     height: 2px;
                     background: $color-yellow;
-                    transition: 0.5s;
+                    transition: all 0.4s ease-in-out;
 
                     @include responsive(pc-size) {
                         bottom: 35px;
@@ -254,11 +254,11 @@ body {
                         position: absolute;
                         font-size: 1rem;
                         transform: translate3d(0, 110%, 0);
-                        transition: transform calc(.65s / 3);
+                        transition: transform calc(0.65s / 3);
                     
                         &.active {
                             transform: translate3d(0, 0, 0);
-                            transition: transform calc(.65s / 1.5);
+                            transition: transform calc(0.65s / 1.5);
                         }
                     } // nav-title
                 } // nav-btn
@@ -855,7 +855,7 @@ body {
                                         visibility: hidden;
                                         opacity: 0;
                                         transform: translate3d(0, -10px, 0);
-                                        transition: all .15s ease-in-out;
+                                        transition: all 0.15s ease-in-out;
 
                                         font: {
                                             family: $font-sans;
@@ -1200,7 +1200,7 @@ body {
                         text-align: center;
                         align-self: flex-end;
                         cursor: pointer;
-                        transition: all .5s ease-in-out;
+                        transition: all 0.5s ease-in-out;
     
                         font: {
                             family: $font-sans;
