@@ -799,7 +799,7 @@ body {
 
                             div.view-project {
                                 width: 25%;
-                                max-width: 170px;
+                                max-width: 230px;
                                 position: absolute;
                                 bottom: 10px;
                                 right: 10px;
@@ -808,19 +808,23 @@ body {
                                 justify-content: space-between;
                                 align-items: center;
 
-                                &.one-btn {
-                                    justify-content: flex-end;
+                                &.two-btn {
+                                    max-width: 150px;
                                 }
 
                                 button {
                                     position: relative;
-                                    width: calc((100% - 10px) / 2);
-                                    max-width: 80px;
+                                    width: calc((100% - 20px) / 3);
+                                    max-width: 70px;
                                     border: none;
                                     background-color: $color-main;
                                     box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.3), 3px 3px 5px rgba(0, 0, 0, 0.1);
                                     border-radius: 25%;
                                     cursor: pointer;
+
+                                    &.two-btn {
+                                        width: calc((100% - 10px) / 2);
+                                    }
 
                                     &:hover {
                                         @include responsive(tablet-size) {
