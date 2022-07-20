@@ -754,12 +754,6 @@ body {
         } // #skills
         
         section#projects {
-            padding-top: 100px;
-
-            @include responsive(tablet-size) {
-                padding-top: 180px;
-            }
-
             div.projects-flexbox {
                 display: flex;
                 flex-direction: row;
@@ -798,8 +792,7 @@ body {
                             position: relative;
 
                             div.view-project {
-                                width: 25%;
-                                max-width: 230px;
+                                max-width: 170px;
                                 position: absolute;
                                 bottom: 10px;
                                 right: 10px;
@@ -808,8 +801,16 @@ body {
                                 justify-content: space-between;
                                 align-items: center;
 
+                                @include responsive(pc-size) {
+                                    max-width: 230px;
+                                }
+
                                 &.two-btn {
-                                    max-width: 150px;
+                                    max-width: 110px;
+
+                                    @include responsive(pc-size) {
+                                        max-width: 150px;
+                                    }
                                 }
 
                                 button {
