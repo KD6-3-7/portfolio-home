@@ -715,12 +715,12 @@ body main section#skills div.skills-flexbox div.skill div.img-box svg circle.jav
 }
 @-webkit-keyframes circle-javascript {
   to {
-    stroke-dashoffset: 47.1;
+    stroke-dashoffset: 70.65;
   }
 }
 @keyframes circle-javascript {
   to {
-    stroke-dashoffset: 47.1;
+    stroke-dashoffset: 70.65;
   }
 }
 body main section#skills div.skills-flexbox div.skill div.img-box svg circle.sass {
@@ -743,12 +743,12 @@ body main section#skills div.skills-flexbox div.skill div.img-box svg circle.rea
 }
 @-webkit-keyframes circle-react {
   to {
-    stroke-dashoffset: 70.65;
+    stroke-dashoffset: 117.75;
   }
 }
 @keyframes circle-react {
   to {
-    stroke-dashoffset: 70.65;
+    stroke-dashoffset: 117.75;
   }
 }
 body main section#skills div.skills-flexbox div.skill div.img-box svg circle.mysql {
